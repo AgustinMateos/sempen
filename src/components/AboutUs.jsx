@@ -14,23 +14,19 @@ export default function AboutUs() {
                     url('/aboutUs.svg')`
                 }}
             >
-                <div className="h-[225px] text-[#FFFFFF] w-[944px] flex items-center text-center text-[60px] "><h4>Our mission is to produce sustainable fuels at scale</h4></div>
-                <div className="h-[150px] text-[#FFFFFF] flex  text-[26px]">
-                    <div className="w-[650px] flex items-center justify-end">
-                        <Image src="/whatwedoicon.svg"
-                        alt="Imagen"
-                        width={61}
-                        height={61}
-                        quality={100} /><p className="w-[506px]">We develop and build projects that produce sustainable fuels, enabling net-zero transportation and food production</p></div>
-                    <div className="w-[650px] flex items-center justify-end">
-                        <Image src="/ourgoalicon.svg"
-                        alt="Imagen"
-                        width={61}
-                        height={61}
-                        quality={100} /><p className="w-[506px] ">Our goal is to drive down the "green premium".</p></div>
-
+                <div className="h-[225px] text-[#FFFFFF] w-[944px] flex items-center text-center text-[60px] ">
+                    <h4>Our mission is to produce sustainable fuels at scale</h4>
                 </div>
-
+                <div className="h-[150px] text-[#FFFFFF] flex text-[26px]">
+                    <div className="w-[650px] flex items-center justify-end">
+                        <Image src="/whatwedoicon.svg" alt="What we do icon" width={61} height={61} quality={100} />
+                        <p className="w-[506px]">We develop and build projects that produce sustainable fuels, enabling net-zero transportation and food production</p>
+                    </div>
+                    <div className="w-[650px] flex items-center justify-end">
+                        <Image src="/ourgoalicon.svg" alt="Our goal icon" width={61} height={61} quality={100} />
+                        <p className="w-[506px] ">Our goal is to drive down the &quot;green premium&quot;.</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
