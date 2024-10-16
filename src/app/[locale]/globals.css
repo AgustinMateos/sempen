@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-link {
+    @apply text-[16px] leading-[22px] font-normal tracking-[-0.7%] transition-all duration-300 ease-in-out;
+}
+
+.navbar-link:hover {
+    @apply font-semibold;
+} 
