@@ -11,7 +11,7 @@ export default function GreenEnergy() {
         'By combining green hydrogen with biogenic and sustainable CO2 captured from the atmosphere, we can produce eSAF, which powers planes globally with zero emissions. This is achieved through advanced chemical processes made possible by Sempen’s technological partnerships.',
         'We also produce SAF by processing biomass, including vegetable oils, animal fats, and other waste products.'
       ],
-      image: '/saf.svg',
+      image: '/Saf.svg',
       activeImage: '/sustainableFuelsActive.svg',
     },
     button2: {
