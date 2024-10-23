@@ -1,22 +1,21 @@
-// components/PrimerComponente.jsx
-'use client'
+'use client';
 import { useEffect, useRef } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
-  const videoRef = useRef(null); // Referencia al video
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (shouldPlay && videoRef.current) {
-      videoRef.current.play(); // Reproduce el video cuando shouldPlay es true
+      videoRef.current.play();
     }
-  }, [shouldPlay]); // Ejecuta cuando shouldPlay cambia
+  }, [shouldPlay]);
 
   return (
-    <div className="relative w-full h-[760px]">
+    <div className="relative w-full max-h-[881px] overflow-hidden">
       <video
         ref={videoRef}
         src="/video.mp4"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="w-full h-full object-contain"
         loop
         muted
         playsInline
@@ -24,5 +23,3 @@ export default function PrimerComponente({ shouldPlay }) {
     </div>
   );
 }
-
-

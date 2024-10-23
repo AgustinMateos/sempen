@@ -56,35 +56,35 @@ const Navbar = () => {
                     className={`navbar-link ${activeLink === 'WhatWeDo' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('WhatWeDo')}
                 >
-                    {t('whatWeDoNavbar')}
+                    {t('navbarAboutUs')}
                 </Link>
                 <Link 
                     href="#SustainableFuels" 
                     className={`navbar-link ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('SustainableFuels')}
                 >
-                    {t('WhoWeAreNavbar')}
+                    {t('navbarWhoWeAre')}
                 </Link>
                 <Link 
                     href="/link3" 
                     className={`navbar-link ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('Projects')}
                 >
-                    {t('ProjectsNavbar')}
+                    {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
                     href="/link4" 
                     className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('WhoWeAre')}
                 >
-                    {t('WhoWeAreNavbar')}
+                    {t('navbarOurProjects')}
                 </Link>
             </div>
 
             {/* Button y Selector de Idioma en Desktop */}
             <div className="hidden md:flex space-x-4 items-center">
                 <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded">
-                    Contact Us
+                {t('navbarContactUs')}
                 </button>
                 <LanguageChanger />
             </div>

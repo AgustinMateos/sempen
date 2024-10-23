@@ -1,8 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useTranslation } from "react-i18next";
 
 export default function AboutUs() {
+    const { t } = useTranslation();
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
@@ -30,8 +32,7 @@ export default function AboutUs() {
             >
                 <div className="h-[225px] text-[#FFFFFF] w-[944px] flex items-center text-center text-[32px] leading-[40px] font-medium tracking-widest">
                     <h4>
-                        Our mission goes beyond just creating long-term value for our shareholders;
-                        we are committed to making a lasting, positive impact on our communities and the world.
+                        {t('OurMissionText')}
                     </h4>
                 </div>
 

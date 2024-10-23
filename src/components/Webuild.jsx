@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WeBuild() {
   // Palabras que se mostrarán en el div
-  const words = ["Sustainable fuels", "Clean energy", "Green hydrogen", "Renewable resources"];
+  const words = ["sustainable fuels", "game changing teams", "long-term vision "];
   
   // Estado para manejar el índice de la palabra actual
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -25,7 +25,7 @@ export default function WeBuild() {
       <div
         className="w-full bg-cover bg-center min-h-screen md:min-h-[696px] flex justify-center items-center transition-transform duration-1000 ease-out relative"
         style={{
-          backgroundImage: `url('/weBuild.webp')`,
+          backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
         }}
       >
         {/* Contenedor centrado */}

@@ -10,6 +10,7 @@ import WhoWeAre from '@/components/WhoWeAre';
 import PositiveImpact from '@/components/PositiveImpact';
 import Projects from '@/components/Projects';
 import GreenEnergy from '@/components/GreenEnergy';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [loading, setLoading] = useState(true); // Estado para manejar si el loader sigue activo
@@ -34,13 +35,16 @@ export default function Home() {
       <Navbar />
       <main className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
         <PrimerComponente shouldPlay={!loading} />
-        <AboutUs />
+         <AboutUs />
         <WhoWeAre />
         <PositiveImpact />
         <SustainableFuels />
         <GreenEnergy />
         <Projects />
         <WeBuild />
+        <Footer/> 
+        
+        
       </main>
     </>
   );
