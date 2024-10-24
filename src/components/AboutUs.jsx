@@ -6,9 +6,23 @@ export default function AboutUs() {
 
     return (
         <div className="min-h-screen overflow-hidden">
-            <div className="h-[140px] w-full bg-[#101820] flex justify-end items-end">
-                <h3 className="text-[#57B6B2] text-[80px]">About Us</h3>
+            <div className="h-[140px] w-full bg-[#101820] flex justify-center">
+                <div className="w-[1218px] flex items-end"> {/* Alinea los elementos al borde inferior */}
+                    {/* Texto "About Us" */}
+                    <h3 className="text-[#57B6B2] text-[80px] w-[331px] border-b-[2px] border-transparent">
+                        About Us
+                    </h3>
+                    {/* Línea con el degradado, con ajuste para estar en la misma línea pero sin superposición */}
+                    <div 
+                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px]"  // mt-[4px] ajusta la distancia exacta
+                        style={{
+                            borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
+                            borderImageSlice: 1,
+                        }}
+                    />
+                </div>
             </div>
+
             <div
                 className="w-full bg-cover bg-center flex flex-col items-center justify-around min-h-screen"
                 style={{

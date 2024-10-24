@@ -35,16 +35,17 @@ export default function Home() {
       <Navbar />
       <main className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
         <PrimerComponente shouldPlay={!loading} />
-         <AboutUs />
-        <WhoWeAre />
+        <AboutUs />
         <PositiveImpact />
+        <WhoWeAre />
+
         <SustainableFuels />
         <GreenEnergy />
         <Projects />
         <WeBuild />
-        <Footer/> 
-        
-        
+        <Footer />
+
+
       </main>
     </>
   );
