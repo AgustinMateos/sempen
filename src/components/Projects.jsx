@@ -58,7 +58,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
           key={project.id}
-          className="relative group mb-8 w-full lg:w-[1218px] min-h-[750px] md:min-h-[500px] lg:min-h-[300px] overflow-hidden"
+          className="relative group mb-8 w-full lg:w-[1218px] min-h-[700px] md:min-h-[500px] lg:min-h-[300px] overflow-hidden"
         >
             {/* Imagen con gradiente */}
             <div
