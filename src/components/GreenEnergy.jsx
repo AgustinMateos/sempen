@@ -36,12 +36,11 @@ export default function GreenEnergy() {
   const currentButtonData = buttonData[activeButton];
 
   return (
-
-    <div className="w-full bg-[#EDEDED] h-[790px] ">
-      <div className=" flex justify-center">
+    <div className="w-full bg-[#EDEDED] min-h-screen flex flex-col items-center">
+      <div className="flex justify-center w-full">
         <div className="flex flex-col items-center">
-          {/* Contenedor de los botones con el mismo ancho que el container del texto */}
-          <div className="flex space-x-4 mb-4 w-[1218px]">
+          {/* Contenedor de los botones */}
+          <div className="flex space-x-4 mb-4 w-full max-w-[1218px] px-4">
             {Object.keys(buttonData).map((button) => (
               <button
                 key={button}
@@ -57,25 +56,21 @@ export default function GreenEnergy() {
                   width={23}
                   className="mr-2"
                 />
-
-
                 {button === 'button1' ? 'SAF' : 'Green Ammonia'}
               </button>
             ))}
           </div>
 
-          {/* Caja de contenido con altura de 913px */}
-          <div className="w-[1218px] h-[653px] rounded-tl-[8px] rounded-bl-[8px] overflow-hidden shadow-lg">
+          {/* Caja de contenido */}
+          <div className="w-full max-w-[1218px] rounded-tl-[8px] rounded-bl-[8px] overflow-hidden shadow-lg mb-4">
             {/* Sección del texto */}
-            <div className="bg-white h-[350px] p-4 flex flex-col justify-around items-center">
+            <div className="bg-white p-4 flex flex-col justify-around items-center">
               {currentButtonData.info.map((text, index) => (
-                <p key={index} className="text-lg text-justify w-[1090px]">
+                <p key={index} className="text-lg text-justify max-w-[1090px] w-full">
                   {activeButton === 'button1' && index === 0 ? (
-                    // Aplicar negrita solo en el primer párrafo de SAF
-                    <strong style={{ fontWeight: 500, fontSize: 34 }}>{text}</strong>
+                    <strong className="font-medium text-[34px]">{text}</strong>
                   ) : activeButton === 'button2' && index === 1 ? (
-                    // Aplicar negrita y peso 600 solo en "That changes now."
-                    <strong style={{ fontWeight: 500, fontSize: 34 }}>{text}</strong>
+                    <strong className="font-medium text-[34px]">{text}</strong>
                   ) : (
                     text
                   )}
@@ -83,13 +78,13 @@ export default function GreenEnergy() {
               ))}
             </div>
             {/* Sección de la imagen */}
-            <div>
+            <div className="w-full">
               <Image
                 height={303}
                 width={1218}
                 src={currentButtonData.image}
                 alt="Descripción"
-                className="object-cover"
+                className="object-cover w-full"
               />
             </div>
           </div>

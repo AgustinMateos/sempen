@@ -10,7 +10,7 @@ export default function Projects() {
       status: "Pre-Feasibility Executed",
       description:
         "Project Grosso represents a bold leap forward in the future of aviation, spearheading the shift toward a more sustainable industry. As the most advanced eSAF project in Latin America, it places Sempen at the forefront of innovation, leading the way in sustainable fuel production. By harnessing a 200 MW electrolyzer and sourcing CO2 from concentrated biogenic sources, the project not only ensures compliance with stringent European mandates but also sets a new standard for efficiency and environmental stewardship. Strategically situated in Brazil, close to its CO2 source, Project Grosso significantly reduces capture costs and maximizes sustainability, paving the way for a cleaner, greener aviation industry.",
-      image: "/ProjectGrosso.png",
+      image: "/grosso.webp",
     },
     {
       id: 2,
