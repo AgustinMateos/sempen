@@ -51,47 +51,62 @@ export default function Projects() {
   ];
 
   return (
-    <div className="h-screen md:h-[2127px] w-full bg-[#EDEDED]">
-      <div className="w-full flex justify-end h-[319px]">
-        <div>
-          <h4 className="text-[#57B6B2] w-[1330px] text-[80px]">Our Projects</h4>
-          <div className="w-full">
-            {projects.map((project) => (
-              <div key={project.id} className="relative group flex mb-8">
-                {/* Contenedor para la imagen con gradiente */}
-                <div
-                  className="w-[1218px] h-[300px] bg-cover bg-center transition-opacity duration-300"
-                  style={{
-                    backgroundImage: `linear-gradient(270deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.64) 58.4%, rgba(16, 24, 32, 0.8) 100%), url('${project.image}')`,
-                  }}
-                ></div>
+    <div className="w-full bg-[#EDEDED] py-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <h4 className="text-[#57B6B2] text-4xl md:text-6xl lg:text-7xl mb-8">Our Projects</h4>
 
-                {/* Título e icono siempre visibles */}
-                <div className="absolute top-0 left-0 h-full flex flex-col justify-between p-4 ml-10 z-10">
-                  <div className="flex items-center w-[1146px]">
-                    <Image
-                      width={48}
-                      height={48}
-                      src="/angle-double-right.svg"
-                      alt="Right Arrow Icon"
-                      className="text-white group-hover:text-white"
-                    />
-                    <h4 className="text-white ml-2 group-hover:text-white">{project.name}</h4>
-                  </div>
-                  <div className="w-[527px] flex justify-between text-white">
-                    <p className="group-hover:text-white">Location: {project.location}</p>
-                    <p className="group-hover:text-white">Status: {project.status}</p>
-                  </div>
-                </div>
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="relative group mb-8 w-full lg:w-[1218px] h-[300px] overflow-hidden"
+          >
+            {/* Imagen con gradiente */}
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
+              style={{
+                backgroundImage: `linear-gradient(270deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.64) 58.4%, rgba(16, 24, 32, 0.8) 100%), url('${project.image}')`,
+              }}
+            ></div>
 
-                {/* Div que aparece al hacer hover */}
-                <div className="absolute w-[1218px] inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white w-[1100px] text-xl">{project.description}</p>
-                </div>
-              </div>
-            ))}
+            {/* Información del proyecto */}
+            <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
+  <div className="flex items-center">
+    <Image
+      width={48}
+      height={48}
+      src="/angle-double-right.svg"
+      alt="Right Arrow Icon"
+    />
+    <h4 className="text-white ml-2">{project.name}</h4>
+  </div>
+  <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
+  <div className="flex items-center">
+    <Image
+      width={48}
+      height={48}
+      src="/angle-double-right.svg"
+      alt="Right Arrow Icon"
+    />
+    <h4 className="text-white ml-2">{project.name}</h4>
+  </div>
+  <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
+    <p className="mr-4">Location: {project.location}</p>
+    {/* Modificamos para que el texto esté alineado a la izquierda */}
+    <p className="text-left lg:w-[300px]">Status: {project.status}</p>
+  </div>
+</div>
+
+</div>
+
+
+            {/* Descripción que aparece al hacer hover */}
+            <div className="absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%]">
+                {project.description}
+              </p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
