@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function Projects() {
-  // Array de proyectos
   const projects = [
     {
       id: 1,
@@ -50,6 +49,7 @@ export default function Projects() {
     },
   ];
 
+
   return (
     <div className="w-full bg-[#EDEDED] py-10">
       <div className="max-w-7xl mx-auto px-4">
@@ -57,9 +57,9 @@ export default function Projects() {
 
         {projects.map((project) => (
           <div
-            key={project.id}
-            className="relative group mb-8 w-full lg:w-[1218px] h-[300px] overflow-hidden"
-          >
+          key={project.id}
+          className="relative group mb-8 w-full lg:w-[1218px] min-h-[800px] md:min-h-[500px] lg:min-h-[300px] overflow-hidden"
+        >
             {/* Imagen con gradiente */}
             <div
               className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
@@ -70,34 +70,20 @@ export default function Projects() {
 
             {/* Información del proyecto */}
             <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
-  <div className="flex items-center">
-    <Image
-      width={48}
-      height={48}
-      src="/angle-double-right.svg"
-      alt="Right Arrow Icon"
-    />
-    <h4 className="text-white ml-2">{project.name}</h4>
-  </div>
-  <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
-  <div className="flex items-center">
-    <Image
-      width={48}
-      height={48}
-      src="/angle-double-right.svg"
-      alt="Right Arrow Icon"
-    />
-    <h4 className="text-white ml-2">{project.name}</h4>
-  </div>
-  <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
-    <p className="mr-4">Location: {project.location}</p>
-    {/* Modificamos para que el texto esté alineado a la izquierda */}
-    <p className="text-left lg:w-[300px]">Status: {project.status}</p>
-  </div>
-</div>
-
-</div>
-
+              <div className="flex items-center">
+                <Image
+                  width={48}
+                  height={48}
+                  src="/angle-double-right.svg"
+                  alt="Right Arrow Icon"
+                />
+                <h4 className="text-white ml-2">{project.name}</h4>
+              </div>
+              <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
+                <p className="mr-4">Location: {project.location}</p>
+                <p className="text-left lg:w-[300px]">Status: {project.status}</p>
+              </div>
+            </div>
 
             {/* Descripción que aparece al hacer hover */}
             <div className="absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
