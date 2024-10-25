@@ -10,7 +10,7 @@ export default function AboutUs() {
                 <div className="w-[1218px] flex items-end"> {/* Alinea los elementos al borde inferior */}
                     {/* Texto "About Us" */}
                     <h3 className="text-[#57B6B2] text-[80px] w-[331px] border-b-[2px] border-transparent">
-                        About Us
+                        {t('AboutUsTitle')}
                     </h3>
                     {/* Línea con el degradado, con ajuste para estar en la misma línea pero sin superposición */}
                     <div 
@@ -34,17 +34,14 @@ export default function AboutUs() {
                 }}
             >
                 <div className="h-auto max-w-[944px] text-[#FFFFFF] flex items-center text-center text-[70px]">
-                    <h4>{t('AboutUsTitle')}</h4>
+                    <h4>{t('AboutUsh2')}</h4>
                 </div>
-                <div className="flex flex-col items-center text-[#FFFFFF] text-[26px]">
-                    <div className="flex items-center justify-center mb-4">
-                        <Image src="/whatwedoicon.svg" alt="What we do icon" width={61} height={61} quality={100} />
-                        <p className="w-[506px] ml-2">{t('AboutUsTextWeDevelop')}</p>
+                <div className="flex flex-col items-center text-[#FFFFFF] text-[3rem]">
+                    <div className="flex items-center justify-center mb-4 max-w-[940px]">
+                       
+                        <p className=" ml-2">{t('AboutUsTextWeDevelop')}</p>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <Image src="/ourgoalicon.svg" alt="Our goal icon" width={61} height={61} quality={100} />
-                        <p className="w-[506px] ml-2">{t('AboutUsTextOurGoals')}</p>
-                    </div>
+                   
                 </div>
             </div>
         </div>

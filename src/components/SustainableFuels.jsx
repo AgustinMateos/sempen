@@ -1,71 +1,58 @@
 import Image from "next/image";
-import GreenEnergy from "./GreenEnergy";
 
 export default function WhoWeAre() {
-    return (
-        <div className="h-screen md:h-[760px]   w-full bg-[#EDEDED] ">
-            <div className="w-full flex justify-end h-[319px] ">
-                <div  >
-                <h4 className="text-[#57B6B2] w-[1330px] text-[80px]">Sustainable Fuels</h4>
-                <p className="font-normal w-[1117px] text-[38px] ">
-                We pioneer the production of renewable fuels to ensure a future with sustainable mobility
-              </p>
-
-            </div>
-            </div>
-            
-            <div className="flex items-center bg-[#EDEDED]">
-                 <div id='SustainableFuels' className="h-[486px] flex flex-col justify-between text-[#101820]" >
-                <div className="w-full flex justify-end ">
-                    <div className="flex w-[1330px] justify-between items-center ">
-                    <div>
-                            <Image 
-                                src="/sustainableFuels.svg"
-                                alt="Imagen"
-                                width={693}
-                                height={393}
-                            />
-                        </div>
-                        <div className="w-[557px] flex  flex-col justify-around text-[24px] font-extralight leading-8 tracking-tight text-left">
-                            <p>
-                            We are committed to ensuring no additional CO2 is added to our atmosphere. This is achievable. Sustainable fuels are the key to reducing emissions while allowing humanity to thrive in harmony with nature
-                            </p>
-                            <br />
-                            <p>
-                            Our goal is to produce drop-in fuels, which are chemically identical to the fuels used today. This allows for a reduction in emissions while utilizing the existing infrastructure, including planes, ships, logistics systems, and end users.
-                            </p>
-                            <br />
-                            
-                        </div>
-                       
-                    </div>
-                </div>
-                
-            </div>
-            
-            
-            </div>
-            {/* {<div className="w-full bg-[#EDEDED] h-[1171px] ">
-                <div className=" flex justify-center"> </div>
-            </div>} */}
-         
+  return (
+    <div className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
+      <div className="w-full flex justify-center px-4 md:px-0"> {/* Cambié justify-end a justify-center */}
+        <div className="min-h-[319px] max-w-[1330px] w-full flex flex-col justify-center">
+          <h4 className="text-[#57B6B2] text-4xl md:text-[80px] h-auto mb-4">
+            Sustainable Fuels
+          </h4>
+          <p className="font-normal text-lg md:text-[38px] max-w-[1017px] mt-4 leading-[44px]">
+            We pioneer the production of renewable fuels to ensure a future with
+            sustainable mobility
+          </p>
         </div>
-    );
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0">
+        <div
+          id="SustainableFuels"
+          className="min-h-[486px] flex flex-col md:flex-row justify-between text-[#101820] gap-6"
+        >
+          <div className="w-full flex justify-center"> {/* Cambié justify-end a justify-center */}
+            <div className="flex flex-wrap md:flex-nowrap md:w-[1330px] justify-between items-center gap-4">
+              <div className="w-full md:w-auto flex justify-center md:justify-start">
+                <Image
+                  src="/sustainableFuels.svg"
+                  alt="Imagen"
+                  width={693}
+                  height={393}
+                  className="w-full md:w-[693px] h-auto"
+                />
+              </div>
+              <div className="w-full md:w-[557px] flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left mt-4 md:mt-0">
+                <p>
+                  We are committed to ensuring no additional CO2 is added to our
+                  atmosphere. This is achievable. Sustainable fuels are the key
+                  to reducing emissions while allowing humanity to thrive in
+                  harmony with nature.
+                </p>
+                <br />
+                <p>
+                  Our goal is to produce drop-in fuels, which are chemically
+                  identical to the fuels used today. This allows for a reduction
+                  in emissions while utilizing the existing infrastructure,
+                  including planes, ships, logistics systems, and end users.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

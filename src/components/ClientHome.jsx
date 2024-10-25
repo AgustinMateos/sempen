@@ -36,9 +36,9 @@ export default function Home() {
       <main className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
         <PrimerComponente shouldPlay={!loading} />
         <AboutUs />
-        <PositiveImpact />
+        
         <WhoWeAre />
-
+<PositiveImpact />
         <SustainableFuels />
         <GreenEnergy />
         <Projects />

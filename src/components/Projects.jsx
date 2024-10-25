@@ -1,6 +1,7 @@
 import Image from "next/image";
-
+import { useTranslation } from "react-i18next"; 
 export default function Projects() {
+  const { t } = useTranslation();
   const projects = [
     {
       id: 1,
@@ -53,7 +54,7 @@ export default function Projects() {
   return (
     <div className="w-full bg-[#EDEDED] py-10">
       <div className="max-w-7xl mx-auto px-4">
-        <h4 className="text-[#57B6B2] text-4xl md:text-6xl lg:text-7xl mb-8">Our Projects</h4>
+        <h4 className="text-[#57B6B2] text-4xl md:text-6xl lg:text-7xl mb-8">{t('projectsTitle')}</h4>
 
         {projects.map((project) => (
           <div
