@@ -70,6 +70,7 @@ const Navbar = () => {
                     className={`navbar-link ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('Projects')}
                 >
+                    
                     {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
@@ -149,33 +150,34 @@ const Navbar = () => {
                     className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhatWeDo' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('WhatWeDo')}
                 >
-                    {t('whatWeDoNavbar')}
+                    {t('navbarAboutUs')}
                 </Link>
                 <Link 
                     href="#SustainableFuels" 
                     className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('SustainableFuels')}
                 >
-                    {t('SustainableFuelsNavbar')}
+                     {t('navbarWhoWeAre')}
+                     
                 </Link>
                 <Link 
                     href="/link3" 
                     className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('Projects')}
                 >
-                    {t('ProjectsNavbar')}
+                    {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
                     href="/link4" 
                     className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('WhoWeAre')}
                 >
-                    {t('WhoWeAreNavbar')}
+                    {t('navbarOurProjects')}
                 </Link>
                 {/* Contact Us button y LanguageChanger en Mobile */}
                 <div className="block px-4 py-2 mt-4">
                     <button className="bg-[#EDEDED] text-[#101820] w-full py-2 rounded mb-4">
-                        Contact Us
+                    {t('navbarContactUs')}
                     </button>
                     <LanguageChanger />
                 </div>
