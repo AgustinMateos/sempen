@@ -31,9 +31,9 @@ export default function AboutUs() {
 
     return (
         <div className="min-h-screen overflow-hidden" id="AboutUs">
-            <div className="h-[140px] w-full bg-[#101820] flex justify-center">
-                <div className="w-[1218px] flex items-end">
-                    <h3 className="text-[#57B6B2] text-[80px] w-[331px] border-b-[2px] border-transparent">
+            <div className="h-[100px] md:h-[140px] w-full bg-[#101820] flex justify-center">
+                <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
+                    <h3 className="text-[#57B6B2] text-[40px] md:text-[60px] lg:text-[80px] w-[200px] md:w-[331px] border-b-[2px] border-transparent">
                         {t('AboutUsTitle')}
                     </h3>
                     <div 
@@ -47,7 +47,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around min-h-screen"
+                className="w-full bg-cover bg-center flex flex-col items-center justify-around min-h-screen px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
@@ -56,19 +56,19 @@ export default function AboutUs() {
                     `,
                 }}
             >
-                <div className="h-auto max-w-[944px] text-[#FFFFFF] flex items-center text-center text-[70px]" ref={aboutUsRef}>
+                <div className="h-auto max-w-[944px] text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[70px]" ref={aboutUsRef}>
                     <h4>{aboutUsh2Text}</h4>
                 </div>
-                <div className="flex flex-col items-center text-[#FFFFFF] text-[3rem]">
-                    <div className="max-w-[800px] text-center mb-4"> {/* Contenedor de 689px */}
+                <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem] lg:text-[3rem]">
+                    <div className="max-w-full md:max-w-[800px] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
                                 key={index}
-                                className={`inline transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-30'}`} // Cada palabra en línea
-                                style={{ transitionDelay: `${index * 200}ms` }} // Delay para el efecto
+                                className={`inline transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-30'}`}
+                                style={{ transitionDelay: `${index * 200}ms` }}
                             >
-                                {word} {/* Renderiza la palabra */}
-                                {index < developText.split(" ").length - 1 && ' '} {/* Espacio entre palabras */}
+                                {word}
+                                {index < developText.split(" ").length - 1 && ' '}
                             </span>
                         ))}
                     </div>
@@ -77,4 +77,3 @@ export default function AboutUs() {
         </div>
     );
 }
-

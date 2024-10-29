@@ -40,43 +40,42 @@ export default function WhoWeAre() {
 
     return (
         <div
-            id='WhoWeAre'
-            ref={sectionRef} // Asocia la referencia
-            className="h-screen md:h-[760px] justify-end flex items-center w-full bg-[#101820]"
+            id="WhoWeAre"
+            ref={sectionRef}
+            className="h-screen md:h-[760px] flex items-center justify-center bg-[#101820]"
         >
-            <div className="h-[550px] flex flex-col justify-between text-[white]">
-                <div className="h-[100px]">
-                    <h3 className="text-[#57B6B2] text-[80px]">{t('WhoWeAreTitle')}</h3>
+            <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-screen-lg px-4 md:px-0">
+                <div className="h-[80px] md:h-[100px]">
+                    <h3 className="text-[#57B6B2] text-[40px] md:text-[60px] lg:text-[80px]">
+                        {t('WhoWeAreTitle')}
+                    </h3>
                 </div>
-                <div className="w-full flex justify-end">
-                    <div className="flex w-[1330px] justify-between">
-                        <div className="w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left">
-                            <p className="text-[24px] font-extralight">
-                                {t('WhoWeAreP')}
-                                <strong className={`font-bold ${allTextSmall ? 'text-[24px]' : 'text-[28px]'}`}>
-                                    {t('WhoWeArePstrong')}
-                                </strong>
-                            </p>
-                            <br />
-                            <p className="text-[24px] font-extralight">
-                                {t('WhoWeArePsecond')}
-                            </p>
-                            <br />
-                            <p className="text-[24px] font-extralight">
-                                {t('WhoWeArePThird')}
-                                <strong className={`font-bold ${allTextSmall ? 'text-[24px]' : 'text-[28px]'}`}>
-                                    {t('WhoWeArePThirdStrong')}
-                                </strong>
-                            </p>
-                        </div>
-                        <div>
-                            <Image
-                                src="/WhoWeAre.svg"
-                                alt="Imagen"
-                                width={693}
-                                height={393}
-                            />
-                        </div>
+                <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full">
+                    <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">
+                        <p className="text-[16px] md:text-[24px] font-extralight">
+                            {t('WhoWeAreP')}
+                            <strong className={`font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
+                                {t('WhoWeArePstrong')}
+                            </strong>
+                        </p>
+                        <p className="text-[16px] md:text-[24px] font-extralight mt-4">
+                            {t('WhoWeArePsecond')}
+                        </p>
+                        <p className="text-[16px] md:text-[24px] font-extralight mt-4">
+                            {t('WhoWeArePThird')}
+                            <strong className={`font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
+                                {t('WhoWeArePThirdStrong')}
+                            </strong>
+                        </p>
+                    </div>
+                    <div className="w-full md:w-auto flex justify-center md:justify-end">
+                        <Image
+                            src="/WhoWeAre.svg"
+                            alt="Imagen"
+                            width={400}
+                            height={250}
+                            className="w-full md:w-auto" // Ajusta la imagen para que sea responsiva
+                        />
                     </div>
                 </div>
             </div>
