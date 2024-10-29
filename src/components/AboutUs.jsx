@@ -30,7 +30,7 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className="min-h-screen overflow-hidden">
+        <div className="min-h-screen overflow-hidden" id="AboutUs">
             <div className="h-[140px] w-full bg-[#101820] flex justify-center">
                 <div className="w-[1218px] flex items-end">
                     <h3 className="text-[#57B6B2] text-[80px] w-[331px] border-b-[2px] border-transparent">

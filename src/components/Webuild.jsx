@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function WeBuild() {
-  const words = ["sustainable fuels", "game changing teams", "long-term vision "];
+  const words = ["sustainable fuels", "game changing teams", "long-term vision"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -23,25 +23,19 @@ export default function WeBuild() {
     >
       {/* Contenedor en fila */}
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0">
-        {/* Texto superior: We build */}
         <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px]">We Build</p>
-
-        {/* Línea con texto superpuesto */}
         <div className="relative">
           <Image src="/Line-3.webp" width={420} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
           <p className="absolute inset-0 flex justify-center items-center text-[18px] md:text-[32px]">
             {words[currentWordIndex]}
           </p>
         </div>
-
-        {/* Texto inferior */}
         <p className="text-[18px] md:text-[32px]">to decarbonize global energy</p>
       </div>
 
-      {/* Contenedor azul oscuro en la parte inferior, centrado y con max-width */}
-      <div className="absolute bottom-0 max-w-[1050px] bg-[#16222F] h-[150px] md:h-[198px] flex items-center justify-center">
-        <div className="w-full px-4 mx-auto text-center">
-          {/* Contenido adicional */}
+      {/* Contenedor azul oscuro con max-width */}
+      <div className="absolute bottom-0 w-full flex justify-center">
+        <div className="max-w-[1050px] w-full bg-[#16222F] h-[150px] md:h-[198px] flex flex-col items-center justify-center px-4 mx-auto">
           <h4 className="text-white text-[18px] md:text-[24px] mb-2">We are part of</h4>
           <div className="flex justify-center space-x-4 flex-wrap">
             <Image src="/cac.svg" width={200} height={40} alt="RSB Logo" className="w-[120px] md:w-[200px]" />
@@ -52,3 +46,4 @@ export default function WeBuild() {
     </div>
   );
 }
+

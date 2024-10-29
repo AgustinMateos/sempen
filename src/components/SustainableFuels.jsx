@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <div className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
+    <div  id="SustainableFuels" className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
       <div className="w-full flex justify-center px-4 md:px-0"> {/* Cambié justify-end a justify-center */}
         <div className="min-h-[319px] max-w-[1330px] w-full flex flex-col justify-center">
           <h4 className="text-[#57B6B2] text-4xl md:text-[80px] h-auto mb-4">
@@ -17,11 +17,11 @@ export default function WhoWeAre() {
 
       <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0">
         <div
-          id="SustainableFuels"
+         
           className="min-h-[486px] flex flex-col md:flex-row justify-between text-[#101820] gap-6"
         >
           <div className="w-full flex justify-center"> {/* Cambié justify-end a justify-center */}
-            <div className="flex flex-wrap md:flex-nowrap md:w-[1330px] justify-between items-center gap-4">
+            <div className="flex flex-wrap md:flex-nowrap md:w-full justify-between items-center gap-4">
               <div className="w-full md:w-auto flex justify-center md:justify-start">
                 <Image
                   src="/sustainableFuels.svg"

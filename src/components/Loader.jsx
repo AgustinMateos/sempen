@@ -1,33 +1,52 @@
 // components/Loader.jsx
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Loader() {
-  const [progress, setProgress] = useState(0); // Estado para manejar el progreso
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress(prev => (prev < 100 ? prev + 1 : 100)); // Incrementa el progreso
-    }, 20); // Incrementa el progreso cada 20ms
+      setProgress(prev => (prev < 100 ? prev + 1 : 100));
+    }, 20);
 
-    return () => clearInterval(interval); // Limpiar intervalo cuando el componente se desmonte
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#101820] z-50">
-      <div className="relative w-80">
+      <div className="relative w-80 flex flex-col items-center">
         {/* Número del porcentaje */}
         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xl font-bold text-[#57B6B2]">
           {progress}%
         </div>
+
         {/* Barra de progreso */}
-        <div className="h-0.5 bg-gray-300">
+        <div className="h-0.5 bg-gray-300 w-full">
           <div
             className="h-full bg-[#57B6B2] transition-all duration-200"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
+
+        {/* Imagen con brillo progresivo */}
+        <div className="flex items-center mt-4 space-x-2">
+          {/* Botón de ejemplo */}
+          <button className="bg-[#57B6B2] text-white py-2 px-4 rounded">Loading...</button>
+
+          {/* Imagen que toma brillo */}
+          <Image
+            src="/path/to/your/image.svg"
+            alt="Loading Icon"
+            width={40}
+            height={40}
+            className="transition-all duration-200"
+            style={{
+              filter: `brightness(${1 + progress / 100})`, // Ajusta el brillo según el progreso
+            }}
+          />
+        </div>
       </div>
     </div>
   );
 }
-

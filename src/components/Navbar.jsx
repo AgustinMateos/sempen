@@ -52,31 +52,31 @@ const Navbar = () => {
             {/* Links */}
             <div className="hidden md:flex space-x-4">
                 <Link 
-                    href="#WhatWeDo" 
-                    className={`navbar-link ${activeLink === 'WhatWeDo' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('WhatWeDo')}
+                    href="#AboutUs" 
+                    className={`navbar-link ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
+                    onClick={() => handleLinkClick('AboutUs')}
                 >
                     {t('navbarAboutUs')}
+                </Link>
+                <Link 
+                    href="#WhoWeAre" 
+                    className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
+                    onClick={() => handleLinkClick('WhoWeAre')}
+                >
+                    {t('navbarWhoWeAre')}
                 </Link>
                 <Link 
                     href="#SustainableFuels" 
                     className={`navbar-link ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('SustainableFuels')}
                 >
-                    {t('navbarWhoWeAre')}
-                </Link>
-                <Link 
-                    href="/link3" 
-                    className={`navbar-link ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('Projects')}
-                >
                     
                     {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
-                    href="/link4" 
+                    href="#Projects" 
                     className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('WhoWeAre')}
+                    onClick={() => handleLinkClick('Projects')}
                 >
                     {t('navbarOurProjects')}
                 </Link>
@@ -146,31 +146,31 @@ const Navbar = () => {
 
                 {/* Menu items */}
                 <Link 
-                    href="#WhatWeDo" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhatWeDo' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('WhatWeDo')}
+                    href="#AboutUs" 
+                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
+                    onClick={() => handleLinkClick('AboutUs')}
                 >
                     {t('navbarAboutUs')}
+                </Link>
+                <Link 
+                    href="#WhoWeAre" 
+                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
+                    onClick={() => handleLinkClick('WhoWeAre')}
+                >
+                     {t('navbarWhoWeAre')}
+                     
                 </Link>
                 <Link 
                     href="#SustainableFuels" 
                     className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('SustainableFuels')}
                 >
-                     {t('navbarWhoWeAre')}
-                     
-                </Link>
-                <Link 
-                    href="/link3" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('Projects')}
-                >
                     {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
-                    href="/link4" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('WhoWeAre')}
+                    href="#Projects" 
+                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
+                    onClick={() => handleLinkClick('Projects')}
                 >
                     {t('navbarOurProjects')}
                 </Link>

@@ -11,7 +11,7 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full max-h-[881px] overflow-hidden">
+    <div className="relative w-full max-h-[950px] overflow-hidden">
       <video
         ref={videoRef}
         src="/New.mp4"

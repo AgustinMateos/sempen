@@ -40,7 +40,7 @@ export default function WhoWeAre() {
 
     return (
         <div
-            id='SustainableFuels'
+            id='WhoWeAre'
             ref={sectionRef} // Asocia la referencia
             className="h-screen md:h-[760px] justify-end flex items-center w-full bg-[#101820]"
         >
