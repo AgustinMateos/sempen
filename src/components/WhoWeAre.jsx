@@ -4,37 +4,37 @@ import { useEffect, useState, useRef } from "react";
 
 export default function WhoWeAre() {
     const { t } = useTranslation();
-    const [allTextSmall, setAllTextSmall] = useState(false); // Controla el cambio de tamaño de fuente
-    const [isVisible, setIsVisible] = useState(false); // Controla si la sección es visible
-    const sectionRef = useRef(null); // Referencia al contenedor de la sección
+    const [allTextSmall, setAllTextSmall] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        setIsVisible(true); // Activa cuando la sección está en vista
+                        setIsVisible(true);
                     }
                 });
             },
-            { threshold: 0.5 } // Inicia el efecto cuando el 50% de la sección es visible
+            { threshold: 0.5 }
         );
 
         if (sectionRef.current) {
-            observer.observe(sectionRef.current); // Observa el contenedor de la sección
+            observer.observe(sectionRef.current);
         }
 
         return () => {
             if (sectionRef.current) {
-                observer.unobserve(sectionRef.current); // Limpia el observer al desmontar
+                observer.unobserve(sectionRef.current);
             }
         };
     }, []);
 
     useEffect(() => {
         if (isVisible) {
-            const timer = setTimeout(() => setAllTextSmall(true), 5000); // Inicia el temporizador cuando la sección es visible
-            return () => clearTimeout(timer); // Limpia el temporizador al desmontar o al cambiar de sección
+            const timer = setTimeout(() => setAllTextSmall(true), 5000);
+            return () => clearTimeout(timer);
         }
     }, [isVisible]);
 
@@ -42,9 +42,9 @@ export default function WhoWeAre() {
         <div
             id="WhoWeAre"
             ref={sectionRef}
-            className="h-screen md:h-[760px] flex items-center justify-center bg-[#101820]"
+            className="h-screen md:h-[760px] flex items-center justify-end bg-[#101820]"
         >
-            <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-screen-lg px-4 md:px-0">
+            <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-[1330px] w-full px-4 md:px-0">
                 <div className="h-[80px] md:h-[100px]">
                     <h3 className="text-[#57B6B2] text-[40px] md:text-[60px] lg:text-[80px]">
                         {t('WhoWeAreTitle')}
@@ -74,7 +74,7 @@ export default function WhoWeAre() {
                             alt="Imagen"
                             width={400}
                             height={250}
-                            className="w-full md:w-auto" // Ajusta la imagen para que sea responsiva
+                            className="w-full md:w-auto"
                         />
                     </div>
                 </div>
