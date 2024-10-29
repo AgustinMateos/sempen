@@ -31,15 +31,14 @@ export default function Loader() {
 
         {/* Imagen con brillo progresivo */}
         <div className="flex items-center mt-4 space-x-2">
-          {/* Botón de ejemplo */}
-          <button className="bg-[#57B6B2] text-white py-2 px-4 rounded">Loading...</button>
+          
 
           {/* Imagen que toma brillo */}
           <Image
-            src="/path/to/your/image.svg"
+            src="/SempenLoader.svg"
             alt="Loading Icon"
-            width={40}
-            height={40}
+            width={1323}
+            height={329}
             className="transition-all duration-200"
             style={{
               filter: `brightness(${1 + progress / 100})`, // Ajusta el brillo según el progreso
