@@ -14,7 +14,7 @@ export default function Loader() {
   }, []);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-[#101820] z-50">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#101820] z-50">
       <div className="relative w-80 flex flex-col items-center">
         {/* Número del porcentaje */}
         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xl font-bold text-[#57B6B2]">
@@ -28,23 +28,22 @@ export default function Loader() {
             style={{ width: `${progress}%` }}
           ></div>
         </div>
+      </div>
 
-        {/* Imagen con brillo progresivo */}
-        <div className="flex items-center mt-4 space-x-2">
-          
-
-          {/* Imagen que toma brillo */}
-          <Image
-            src="/SempenLoader.svg"
-            alt="Loading Icon"
-            width={1323}
-            height={329}
-            className="transition-all duration-200"
-            style={{
-              filter: `brightness(${1 + progress / 100})`, // Ajusta el brillo según el progreso
-            }}
-          />
-        </div>
+      {/* Imagen con brillo y opacidad progresivos en el pie de pantalla */}
+      <div className="absolute bottom-0 flex justify-center w-full">
+        <Image
+          src="/SempenLoader.svg"
+          alt="Loading Icon"
+          width={1323}
+          height={329}
+          className="transition-all duration-200"
+          style={{
+            filter: `brightness(${0.2 + (progress / 100) * 0.8})`,  // Incrementa el brillo
+            opacity: `${0.3 + (progress / 100) * 0.8}`,              // Incrementa la opacidad
+            clipPath: `inset(0 ${100 - progress}% 0 0)`              // Revela la imagen de izquierda a derecha
+          }}
+        />
       </div>
     </div>
   );
