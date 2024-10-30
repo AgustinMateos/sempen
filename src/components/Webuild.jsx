@@ -23,14 +23,14 @@ export default function WeBuild() {
     >
       {/* Contenedor en fila */}
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0">
-        <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px]">We Build</p>
-        <div className="relative">
-          <Image src="/Line-3.webp" width={420} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
-          <p className="absolute inset-0 flex justify-center items-center text-[18px] md:text-[32px]">
+        <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px] mb-[40px]">We Build</p>
+        <div className="relative mb-[40px]">
+          <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
+          <p className="absolute inset-0 flex justify-center items-center mb-[40px] text-[18px] md:text-[32px]">
             {words[currentWordIndex]}
           </p>
         </div>
-        <p className="text-[18px] md:text-[32px]">to decarbonize global energy</p>
+        <p className="text-[18px] md:text-[32px] pb-[40px]">to decarbonize global energy</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}
@@ -46,4 +46,3 @@ export default function WeBuild() {
     </div>
   );
 }
-

@@ -62,7 +62,7 @@ export default function GreenEnergy() {
           </div>
 
           {/* Caja de contenido */}
-          <div className="w-full max-w-[1218px] rounded-tl-[8px] rounded-bl-[8px] overflow-hidden shadow-lg mb-4">
+          <div className="w-full max-w-[1218px] rounded-tl-[8px] rounded-[8px] overflow-hidden shadow-lg mb-4">
             {/* Sección del texto */}
             <div className="bg-white p-4 flex flex-col justify-around items-center">
               {currentButtonData.info.map((text, index) => (
