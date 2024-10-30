@@ -50,37 +50,37 @@ const Navbar = () => {
             </div>
 
             {/* Links */}
-            <div className="hidden md:flex space-x-4">
-                <Link 
-                    href="#AboutUs" 
-                    className={`navbar-link ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('AboutUs')}
-                >
-                    {t('navbarAboutUs')}
-                </Link>
-                <Link 
-                    href="#WhoWeAre" 
-                    className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('WhoWeAre')}
-                >
-                    {t('navbarWhoWeAre')}
-                </Link>
-                <Link 
-                    href="#SustainableFuels" 
-                    className={`navbar-link ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('SustainableFuels')}
-                >
-                    
-                    {t('navbarSustainableFuels')}
-                </Link>
-                <Link 
-                    href="#Projects" 
-                    className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
-                    onClick={() => handleLinkClick('Projects')}
-                >
-                    {t('navbarOurProjects')}
-                </Link>
-            </div>
+<div className="hidden md:flex space-x-8 max-w-[700px] mx-auto justify-center">
+    <Link 
+        href="#AboutUs" 
+        className={`navbar-link ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
+        onClick={() => handleLinkClick('AboutUs')}
+    >
+        {t('navbarAboutUs')}
+    </Link>
+    <Link 
+        href="#WhoWeAre" 
+        className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
+        onClick={() => handleLinkClick('WhoWeAre')}
+    >
+        {t('navbarWhoWeAre')}
+    </Link>
+    <Link 
+        href="#SustainableFuels" 
+        className={`navbar-link ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
+        onClick={() => handleLinkClick('SustainableFuels')}
+    >
+        {t('navbarSustainableFuels')}
+    </Link>
+    <Link 
+        href="#Projects" 
+        className={`navbar-link ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
+        onClick={() => handleLinkClick('Projects')}
+    >
+        {t('navbarOurProjects')}
+    </Link>
+</div>
+
 
             {/* Button y Selector de Idioma en Desktop */}
             <div className="hidden md:flex space-x-4 items-center">

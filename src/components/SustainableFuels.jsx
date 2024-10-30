@@ -1,16 +1,17 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function WhoWeAre() {
+  const {t}=useTranslation();
   return (
     <div  id="SustainableFuels" className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
       <div className="w-full flex justify-center px-4 md:px-0"> {/* Cambié justify-end a justify-center */}
         <div className="min-h-[319px] max-w-[1330px] w-full flex flex-col justify-center">
           <h4 className="text-[#57B6B2] text-4xl md:text-[80px] h-auto mb-4">
-            Sustainable Fuels
+            {t('SustainableFuelsTitle')}
           </h4>
           <p className="font-normal text-lg md:text-[38px] max-w-[1017px] mt-4 leading-[44px]">
-            We pioneer the production of renewable fuels to ensure a future with
-            sustainable mobility
+          {t('SustainableFuelsRenewableFuels')}
           </p>
         </div>
       </div>
@@ -33,17 +34,11 @@ export default function WhoWeAre() {
               </div>
               <div className="w-full md:w-[557px] flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left mt-4 md:mt-0">
                 <p>
-                  We are committed to ensuring no additional CO2 is added to our
-                  atmosphere. This is achievable. Sustainable fuels are the key
-                  to reducing emissions while allowing humanity to thrive in
-                  harmony with nature.
+                {t('SustainableFuelsNature')}
                 </p>
                 <br />
                 <p>
-                  Our goal is to produce drop-in fuels, which are chemically
-                  identical to the fuels used today. This allows for a reduction
-                  in emissions while utilizing the existing infrastructure,
-                  including planes, ships, logistics systems, and end users.
+                {t('SustainableFuelsDropInFuels')}
                 </p>
               </div>
             </div>
