@@ -6,7 +6,7 @@ export default function WhoWeAre() {
   return (
     <div  id="SustainableFuels" className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
       <div className="w-full flex justify-center px-4 md:px-0"> {/* Cambié justify-end a justify-center */}
-        <div className="min-h-[319px] max-w-[1330px] w-full flex flex-col justify-center">
+        <div className="min-h-[350px] max-w-[1330px] w-full flex flex-col justify-end">
           <h4 className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4">
             {t('SustainableFuelsTitle')}
           </h4>

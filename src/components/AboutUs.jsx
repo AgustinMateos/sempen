@@ -31,13 +31,13 @@ export default function AboutUs() {
 
     return (
         <div className="min-h-screen overflow-hidden" id="AboutUs">
-            <div className="h-[100px] md:h-[140px] w-full bg-[#101820] flex justify-center">
-                <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
+            <div className="h-[100px] md:h-[200px] w-full bg-[#101820] flex justify-center">
+                <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 ">
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] w-[290px] md:w-[371px] border-b-[2px] border-transparent">
                         {t('AboutUsTitle')}
                     </h3>
                     <div 
-                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px]"
+                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px]  "
                         style={{
                             borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
                             borderImageSlice: 1,
