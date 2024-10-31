@@ -26,17 +26,17 @@ export default function WeBuild() {
         <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px] mb-[40px]">We Build</p>
         <div className="relative mb-[40px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
-          <p className="absolute inset-0 flex justify-center items-center mb-[40px] text-[18px] md:text-[32px]">
+          <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[40px] text-[18px] md:text-[32px]">
             {words[currentWordIndex]}
           </p>
         </div>
-        <p className="text-[18px] md:text-[32px] pb-[40px]">to decarbonize global energy</p>
+        <p className="font-archivo text-[18px] md:text-[32px] pb-[40px] ">to decarbonize global energy</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}
       <div className="absolute bottom-0 w-full flex justify-center">
         <div className="max-w-[1050px] w-full bg-[#16222F] h-[150px] md:h-[198px] flex flex-col items-center justify-center px-4 mx-auto">
-          <h4 className="text-white text-[18px] md:text-[24px] mb-2">We are part of</h4>
+          <h4 className="font-archivo text-white text-[18px] md:text-[24px] mb-2">We are part of</h4>
           <div className="flex justify-center space-x-4 flex-wrap">
             <Image src="/cac.svg" width={200} height={40} alt="RSB Logo" className="w-[120px] md:w-[200px]" />
             <Image src="/rsb.svg" width={100} height={40} alt="CAC Logo" className="w-[60px] md:w-[100px]" />

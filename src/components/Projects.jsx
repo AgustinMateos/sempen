@@ -78,17 +78,17 @@ export default function Projects() {
                   src="/angle-double-right.svg"
                   alt="Right Arrow Icon"
                 />
-                <h4 className="text-white ml-2">{project.name}</h4>
+                <h4 className="text-white ml-2 font-archivo">{project.name}</h4>
               </div>
               <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
-                <p className="mr-4">Location: {project.location}</p>
-                <p className="text-left lg:w-[300px]">Status: {project.status}</p>
+                <p className="mr-4 font-archivo">Location: {project.location}</p>
+                <p className="text-left lg:w-[300px] font-archivo">Status: {project.status}</p>
               </div>
             </div>
 
             {/* Descripción que aparece al hacer hover */}
             <div className="absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%]">
+              <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%] font-archivo">
                 {project.description}
               </p>
             </div>

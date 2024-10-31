@@ -33,7 +33,7 @@ export default function AboutUs() {
         <div className="min-h-screen overflow-hidden" id="AboutUs">
             <div className="h-[100px] md:h-[140px] w-full bg-[#101820] flex justify-center">
                 <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
-                    <h3 className="text-[#57B6B2] text-[40px] md:text-[60px] lg:text-[80px] w-[280px] md:w-[381px] border-b-[2px] border-transparent">
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] w-[290px] md:w-[371px] border-b-[2px] border-transparent">
                         {t('AboutUsTitle')}
                     </h3>
                     <div 
@@ -56,15 +56,15 @@ export default function AboutUs() {
                     `,
                 }}
             >
-                <div className="h-auto max-w-[944px] text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[70px]" ref={aboutUsRef}>
-                    <h4>{aboutUsh2Text}</h4>
+                <div className="h-auto max-w-[1218px] text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[70px]" ref={aboutUsRef}>
+                    <h4 className="font-archivo">{aboutUsh2Text}</h4>
                 </div>
                 <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem] lg:text-[3rem]">
-                    <div className="max-w-full md:max-w-[780px] text-left mb-4">
+                    <div className="max-w-full md:max-w-[1170px] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
                                 key={index}
-                                className={`inline transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-30'}`}
+                                className={`inline transition-opacity font-archivo duration-500 ${visible ? 'opacity-100' : 'opacity-30'}`}
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
                                 {word}

@@ -24,14 +24,14 @@ export default function AboutUs() {
     return (
         <div className="relative overflow-hidden h-[50vh]  md:min-h-[796px]">
             <div
-                className="w-full bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
+                className="w-full  bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}
             >
                 {/* Contenedor de texto optimizado para móviles */}
                 <div className="text-center text-white w-[90%] max-w-[821px] sm:w-[80%] md:w-[60%] lg:w-[944px] flex items-center justify-center text-sm sm:text-base md:text-2xl lg:text-[32px] leading-tight font-medium tracking-widest p-2 md:h-[225px]">
-                    <h4>
+                    <h4 className='font-archivo'>
                         {t('OurMissionText')}
                     </h4>
                 </div>

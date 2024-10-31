@@ -46,7 +46,7 @@ export default function WhoWeAre() {
         >
             <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-[1330px] w-full px-4 md:px-0">
                 <div className="h-[80px] md:h-[100px]">
-                    <h3 className="text-[#57B6B2] text-[40px] md:text-[60px] lg:text-[80px]">
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px]">
                         {t('WhoWeAreTitle')}
                     </h3>
                 </div>
@@ -54,16 +54,16 @@ export default function WhoWeAre() {
                     <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">
                         <p className="text-[16px] md:text-[24px] font-extralight">
                             {t('WhoWeAreP')}
-                            <strong className={`font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
+                            <strong className={`font-archivo font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
                                 {t('WhoWeArePstrong')}
                             </strong>
                         </p>
-                        <p className="text-[16px] md:text-[24px] font-extralight mt-4">
+                        <p className=" font-archivotext-[16px] md:text-[24px] font-extralight mt-4">
                             {t('WhoWeArePsecond')}
                         </p>
-                        <p className="text-[16px] md:text-[24px] font-extralight mt-4">
+                        <p className="text-[16px] font-archivo md:text-[24px] font-extralight mt-4">
                             {t('WhoWeArePThird')}
-                            <strong className={`font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
+                            <strong className={`font-bold font-archivo ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
                                 {t('WhoWeArePThirdStrong')}
                             </strong>
                         </p>

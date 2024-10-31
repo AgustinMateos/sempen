@@ -7,10 +7,10 @@ export default function WhoWeAre() {
     <div  id="SustainableFuels" className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
       <div className="w-full flex justify-center px-4 md:px-0"> {/* Cambié justify-end a justify-center */}
         <div className="min-h-[319px] max-w-[1330px] w-full flex flex-col justify-center">
-          <h4 className="text-[#57B6B2] text-4xl md:text-[80px] h-auto mb-4">
+          <h4 className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4">
             {t('SustainableFuelsTitle')}
           </h4>
-          <p className="font-normal text-lg md:text-[38px] max-w-[1017px] mt-4 leading-[44px]">
+          <p className="font-normal font-archivo text-lg md:text-[38px] max-w-[1017px] mt-4 leading-[44px]">
           {t('SustainableFuelsRenewableFuels')}
           </p>
         </div>
@@ -33,11 +33,11 @@ export default function WhoWeAre() {
                 />
               </div>
               <div className="w-full md:w-[557px] flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left mt-4 md:mt-0">
-                <p>
+                <p className="font-archivo">
                 {t('SustainableFuelsNature')}
                 </p>
                 <br />
-                <p>
+                <p className="font-archivo">
                 {t('SustainableFuelsDropInFuels')}
                 </p>
               </div>

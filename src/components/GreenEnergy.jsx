@@ -54,7 +54,7 @@ export default function GreenEnergy() {
                   alt={`Icono ${button}`}
                   height={24}
                   width={23}
-                  className="mr-2"
+                  className="mr-2 "
                 />
                 {button === 'button1' ? 'SAF' : 'Green Ammonia'}
               </button>
@@ -64,13 +64,13 @@ export default function GreenEnergy() {
           {/* Caja de contenido */}
           <div className="w-full max-w-[1218px] rounded-tl-[8px] rounded-[8px] overflow-hidden shadow-lg mb-4">
             {/* Sección del texto */}
-            <div className="bg-white p-4 flex flex-col justify-around items-center">
+            <div className="bg-white p-4 flex flex-col justify-around items-center min-h-[1098px] md:min-h-[746px] lg:min-h-[510px]">
               {currentButtonData.info.map((text, index) => (
-                <p key={index} className="text-lg text-justify max-w-[1090px] w-full">
+                <p key={index} className="text-lg text-justify font-archivo max-w-[1090px] w-full">
                   {activeButton === 'button1' && index === 0 ? (
-                    <strong className="font-medium text-[34px]">{text}</strong>
+                    <strong className="font-medium text-[34px] font-archivo">{text}</strong>
                   ) : activeButton === 'button2' && index === 1 ? (
-                    <strong className="font-medium text-[34px]">{text}</strong>
+                    <strong className="font-medium text-[34px] font-archivo">{text}</strong>
                   ) : (
                     text
                   )}

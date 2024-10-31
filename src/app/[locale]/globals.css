@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Archivo:wght@400;500;700&family=Nunito+Sans:wght@400;600;700&display=swap');
 
 .navbar-link {
     @apply text-[16px] leading-[22px] font-normal tracking-[-0.7%] transition-all duration-300 ease-in-out;

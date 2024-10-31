@@ -52,7 +52,7 @@ export default function LanguageChanger() {
     height={30}
     className="mr-2"
   />
-  <span>{currentLocale.toUpperCase()}</span>
+  <span className='font-nunito'>{currentLocale.toUpperCase()}</span>
   <svg
     className={`ml-2 w-4 h-4 transition-transform transform ${isDropdownOpen ? 'rotate-180' : 'rotate-0'}`}
     fill="none"
@@ -65,7 +65,7 @@ export default function LanguageChanger() {
 </button>
 
       {isDropdownOpen && (
-        <ul className="absolute mt-2 bg-white border border-transparent rounded-md shadow-lg w-full">
+        <ul className="absolute mt-2 bg-white  rounded-md shadow-lg w-full">
           {Object.entries(languages).map(([locale, language]) => (
             <li key={locale}>
               <button
@@ -73,7 +73,7 @@ export default function LanguageChanger() {
                   setDropdownOpen(false);
                   handleChange(locale);
                 }}
-                className="block px-4 py-2 text-gray-800 hover:bg-[#101820] hover:text-[#EDEDED] w-full text-left flex items-center"
+                className="font-nunito block hover:rounded-[5px] px-4 py-2 text-gray-800 hover:bg-[#101820] hover:text-[#EDEDED] w-full text-left flex items-center"
               >
                 {language}
               </button>

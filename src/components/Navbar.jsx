@@ -53,28 +53,28 @@ const Navbar = () => {
 <div className="hidden md:flex space-x-8 max-w-[700px] mx-auto justify-center">
     <Link 
         href="#AboutUs" 
-        className={`navbar-link ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
+        className={`navbar-link font-jakarta ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
         onClick={() => handleLinkClick('AboutUs')}
     >
         {t('navbarAboutUs')}
     </Link>
     <Link 
         href="#WhoWeAre" 
-        className={`navbar-link ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
+        className={`navbar-link font-jakarta ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
         onClick={() => handleLinkClick('WhoWeAre')}
     >
         {t('navbarWhoWeAre')}
     </Link>
     <Link 
         href="#SustainableFuels" 
-        className={`navbar-link ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
+        className={`navbar-link font-jakarta ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
         onClick={() => handleLinkClick('SustainableFuels')}
     >
         {t('navbarSustainableFuels')}
     </Link>
     <Link 
         href="#Projects" 
-        className={`navbar-link ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
+        className={`navbar-link font-jakarta ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
         onClick={() => handleLinkClick('Projects')}
     >
         {t('navbarOurProjects')}
@@ -84,7 +84,7 @@ const Navbar = () => {
 
             {/* Button y Selector de Idioma en Desktop */}
             <div className="hidden md:flex space-x-4 items-center">
-                <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded">
+                <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta">
                 {t('navbarContactUs')}
                 </button>
                 <LanguageChanger />
@@ -147,14 +147,14 @@ const Navbar = () => {
                 {/* Menu items */}
                 <Link 
                     href="#AboutUs" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
+                    className={`block font-jakarta px-4 py-2 hover:bg-gray-700 ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('AboutUs')}
                 >
                     {t('navbarAboutUs')}
                 </Link>
                 <Link 
                     href="#WhoWeAre" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
+                    className={`block font-jakarta px-4 py-2 hover:bg-gray-700 ${activeLink === 'WhoWeAre' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('WhoWeAre')}
                 >
                      {t('navbarWhoWeAre')}
@@ -162,21 +162,21 @@ const Navbar = () => {
                 </Link>
                 <Link 
                     href="#SustainableFuels" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
+                    className={`block font-jakarta px-4 py-2 hover:bg-gray-700 ${activeLink === 'SustainableFuels' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('SustainableFuels')}
                 >
                     {t('navbarSustainableFuels')}
                 </Link>
                 <Link 
                     href="#Projects" 
-                    className={`block px-4 py-2 hover:bg-gray-700 ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
+                    className={`block font-jakarta px-4 py-2 hover:bg-gray-700 ${activeLink === 'Projects' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('Projects')}
                 >
                     {t('navbarOurProjects')}
                 </Link>
                 {/* Contact Us button y LanguageChanger en Mobile */}
                 <div className="block px-4 py-2 mt-4">
-                    <button className="bg-[#EDEDED] text-[#101820] w-full py-2 rounded mb-4">
+                    <button className="bg-[#101820] font-jakarta text-[#EDEDED] w-full py-2 rounded-[4px] mb-4">
                     {t('navbarContactUs')}
                     </button>
                     <LanguageChanger />

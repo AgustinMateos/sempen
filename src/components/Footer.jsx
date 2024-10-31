@@ -39,26 +39,26 @@ export default function Footer() {
           {/* Sección Izquierda: Logo y Enlaces */}
           <div className='flex flex-col items-start text-white space-y-4 lg:w-2/3'>
             <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
-            <p>Fueling the future</p>
+            <p className='font-archivo'>Fueling the future</p>
             <div className='flex flex-wrap gap-4'>
-              <Link href={"/"}> About Us </Link>
-              <Link href={"/"}> Who we are </Link>
-              <Link href={"/"}> Sustainable fuels </Link>
-              <Link href={"/"}> Projects </Link>
+              <Link href={"/"} className='font-archivo'> About Us </Link>
+              <Link href={"/"} className='font-archivo'> Who we are </Link>
+              <Link href={"/"} className='font-archivo'> Sustainable fuels </Link>
+              <Link href={"/"} className='font-archivo'> Projects </Link>
             </div>
           </div>
           
           {/* Sección Derecha: Contacto */}
           <div className='flex flex-col items-start lg:items-end text-white lg:w-1/3'>
-            <p>Contact information</p>
-            <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded">Contact Us</button>
+            <p className='font-archivo'>Contact information</p>
+            <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded font-archivo">Contact Us</button>
           </div>
         </div>
         
         {/* Sección de Copyright y Redes Sociales */}
         <div className='border-t border-[#CBD5E1] text-white mt-8 pt-4 flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0'>
           <div className='text-center lg:text-left'>
-            <p>Copyright 2024© SEMPEN. All Rights Reserved.</p>
+            <p className='font-archivo'>Copyright 2024© SEMPEN. All Rights Reserved.</p>
           </div>
           <div className='flex space-x-4'>
             {redes.map((red) => (
