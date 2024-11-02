@@ -34,7 +34,7 @@ export default function WhoWeAre() {
 
     useEffect(() => {
         if (isVisible) {
-            const timer = setTimeout(() => setAllTextSmall(true), 5000);
+            const timer = setTimeout(() => setAllTextSmall(true), 16000);
             return () => clearTimeout(timer);
         }
     }, [isVisible]);
