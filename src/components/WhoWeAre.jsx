@@ -45,7 +45,7 @@ export default function WhoWeAre() {
             ref={sectionRef}
             className="h-screen md:h-[760px] flex items-center justify-end bg-[#101820]"
         >
-            <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-[1330px] 2xl:max-w-[1470px] w-full px-4 md:px-0">
+            <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
 
                 <div className="h-[80px] md:h-[100px]">
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap">
