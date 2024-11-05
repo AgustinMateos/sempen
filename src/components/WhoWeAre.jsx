@@ -47,7 +47,8 @@ export default function WhoWeAre() {
         >
             <div className="h-[80%] md:h-[550px] flex flex-col justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
 
-                <div className="h-[80px] md:h-[100px]">
+            <div className="h-[80px] md:h-[100px] flex items-end">
+                    {/* Título animado letra por letra */}
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap">
                         {t('WhoWeAreTitle').split("").map((letter, index) => (
                             <span
@@ -64,6 +65,14 @@ export default function WhoWeAre() {
                             </span>
                         ))}
                     </h3>
+                    {/* Línea decorativa ajustada automáticamente */}
+                    <div
+                        className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
+                        style={{
+                            borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
+                            borderImageSlice: 1,
+                        }}
+                    />
                 </div>
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full">
                     <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">

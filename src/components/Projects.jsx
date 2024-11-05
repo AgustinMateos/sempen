@@ -1,8 +1,13 @@
+
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 
 export default function Projects() {
   const { t } = useTranslation();
+  const [visible, setVisible] = useState(false);
+  const titleRef = useRef([]);
+  const projectsRef = useRef(null);
 
   const projects = [
     {
@@ -46,16 +51,57 @@ export default function Projects() {
       image: "/projectHoleum.webp",
     },
   ];
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      });
+    });
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="w-full bg-[#EDEDED] py-10">
-      <div id="Projects" className="max-w-7xl mx-auto px-4 min-h-[200px] flex items-end">
-        <div>
-          <h4 className="text-[#7bc7c3] text-4xl md:text-6xl lg:text-7xl mb-8">
-            {t("projectsTitle")}
-          </h4>
-        </div>
-      </div>
+    <div className="w-full bg-[#EDEDED] py-10" ref={projectsRef}>
+      <div className="w-full flex justify-center">
+  <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
+    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+      {t("projectsTitle").split("").map((letter, index) => (
+        <span
+          key={index}
+          ref={(el) => (titleRef.current[index] = el)}
+          style={{
+            display: 'inline-block', // Ajusta el ancho automáticamente
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(100%)',
+            margin: letter === " " ? "0 10px" : "0 2px",
+            transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
+          }}
+        >
+          {letter}
+        </span>
+      ))}
+    </h3>
+
+    {/* Línea de borde con gradiente */}
+    <div
+      className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[25px]"
+      style={{
+        borderImageSource: 'linear-gradient(90deg, #57B6B2 45.5%, #101820 100%)',
+        borderImageSlice: 1,
+      }}
+    />
+  </div>
+</div>
+
+      {/* Mapeo de los proyectos */}
       <div className="max-w-7xl mx-auto px-4">
         {projects.map((project) => (
           <div

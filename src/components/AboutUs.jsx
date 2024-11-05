@@ -34,24 +34,25 @@ export default function AboutUs() {
             <div className="h-[100px] md:h-[200px] w-full bg-[#101820] flex justify-center">
                 <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
-                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] w-[290px] md:w-[671px] lg:w-auto border-b-[2px] border-transparent flex flex-wrap">
-                        {aboutUsTitle.split("").map((letter, index) => (
-                            <span
-                                key={index}
-                                ref={(el) => (titleRef.current[index] = el)}
-                                style={{
-                                    opacity: visible ? 1 : 0,
-                                    transform: visible ? 'translateY(0)' : 'translateY(100%)',
-                                    margin: letter === " " ? "0 10px" : "0 2px",
-                                    transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-                                }}
-                            >
-                                {letter}
-                            </span>
-                        ))}
-                    </h3>
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+    {aboutUsTitle.split("").map((letter, index) => (
+        <span
+            key={index}
+            ref={(el) => (titleRef.current[index] = el)}
+            style={{
+                display: 'inline-block', // Ajusta el ancho automáticamente
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0)' : 'translateY(100%)',
+                margin: letter === " " ? "0 10px" : "0 2px",
+                transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
+            }}
+        >
+            {letter}
+        </span>
+    ))}
+</h3>
                     <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px]"
+                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[25px]"
                         style={{
                             borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
                             borderImageSlice: 1,
