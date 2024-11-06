@@ -22,7 +22,7 @@ export default function AboutUs() {
     const startingPosition = -250;
 
     return (
-        <div className="relative overflow-hidden h-[50vh]  md:min-h-[796px]">
+        <div className="relative overflow-hidden h-[50vh] 2xl:h-[100vh] md:min-h-[796px]">
             <div
                 className="w-full  bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
