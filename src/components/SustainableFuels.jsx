@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 export default function WhoWeAre() {
   const { t } = useTranslation();
   return (
-    <div id="SustainableFuels" className="min-h-screen md:min-h-[760px] w-full bg-[#EDEDED]">
+    <div id="SustainableFuels" className="min-h-screen md:min-h-[870px] w-full bg-[#EDEDED] flex flex-col">
       <div className="w-full flex justify-center px-4 md:px-0">
-        <div className="min-h-[350px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-end">
+        <div className="min-h-[310px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
           <h4 className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4">
             {t("SustainableFuelsTitle")}
           </h4>
@@ -15,7 +15,7 @@ export default function WhoWeAre() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0 min-h-[486px] ">
+      <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0 min-h-[406px] ">
         <div className="flex flex-col md:flex-row justify-between items-center text-[#101820] gap-6 w-full max-w-[1470px] md:max-w-[1350px]">
           {/* Contenedor de la imagen alineada a la izquierda */}
           <div className="flex-shrink-0 w-full md:w-auto flex justify-start md:justify-start">
