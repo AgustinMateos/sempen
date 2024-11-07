@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Sección Izquierda: Logo y Enlaces */}
           <div className='flex flex-col items-start text-white space-y-4 lg:w-2/3'>
             <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
-            <p className='font-archivo'>{t('footerFueling')}</p>
+            <p className='font-archivo pb-[20px]'>{t('footerFueling')}</p>
             {/* Enlaces en columna en pantallas pequeñas, en fila en pantallas grandes */}
             <div className='flex flex-col xs:items-start sm:flex-row lg:flex-row lg:space-x-4 gap-4'>
               <Link href={"#AboutUs"} className='font-archivo'>{t('navbarAboutUs')}</Link>

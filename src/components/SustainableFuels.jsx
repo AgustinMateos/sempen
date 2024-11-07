@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 export default function WhoWeAre() {
   const { t } = useTranslation();
   return (
-    <div id="SustainableFuels" className="min-h-screen md:min-h-[870px] w-full bg-[#EDEDED] flex flex-col">
+    <div id="SustainableFuels" className="min-h-screen md:min-h-[870px] w-full bg-[#EDEDED] flex flex-col justify-center">
       <div className="w-full flex justify-center px-4 md:px-0">
         <div className="min-h-[310px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
           <h4 className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4">
