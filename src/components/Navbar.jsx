@@ -38,10 +38,12 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 px-20 text-white p-4 flex items-center justify-between transition-all duration-300 ease-in-out ${
-                scrollPosition > 0 ? 'bg-[#101820]' : 'bg-transparent'
-            }`}
-        >
+    className={`fixed top-0 left-0 w-full z-50 px-[1rem] md:px-20 text-white p-4 flex items-center justify-between transition-all duration-300 ease-in-out ${
+        scrollPosition > 0 ? 'bg-[#101820]' : 'bg-transparent'
+    }`}
+>
+
+    
             {/* Logo */}
             <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
