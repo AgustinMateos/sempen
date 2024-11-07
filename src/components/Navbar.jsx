@@ -178,7 +178,7 @@ const Navbar = () => {
                     {t('navbarOurProjects')}
                 </Link>{/* Contact Us button y LanguageChanger en Mobile */}
                 <div className="block px-4 py-2 mt-4">
-                    <button className="bg-[#101820] font-jakarta text-[#EDEDED] w-full py-2 rounded-[4px] mb-4">
+                    <button className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4">
                     {t('navbarContactUs')}
                     </button>
                     <LanguageChanger />
