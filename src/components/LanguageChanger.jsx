@@ -43,7 +43,7 @@ export default function LanguageChanger() {
     <div className="relative">
       <button
   onClick={() => setDropdownOpen(!isDropdownOpen)}
-  className="bg-transparent text-[#F2F2F2] pl-4 pr-4 py-2 rounded-md flex items-center outline-none border-none"
+  className="bg-transparent text-[#F2F2F2]  pl-4 pr-4 py-2 rounded-md flex items-center outline-none border-none"
 >
   <Image
     src="/language.svg"
@@ -65,7 +65,7 @@ export default function LanguageChanger() {
 </button>
 
       {isDropdownOpen && (
-        <ul className="absolute mt-2 bg-white  rounded-md shadow-lg w-full">
+        <ul className="absolute mt-2 bg-white  rounded-md shadow-lg w-[109px]">
           {Object.entries(languages).map(([locale, language]) => (
             <li key={locale}>
               <button

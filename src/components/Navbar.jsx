@@ -116,10 +116,10 @@ const Navbar = () => {
 
             {/* Mobile menu */}
             <div
-                className={`md:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full bg-[#101820] text-white z-50`}
+                className={`md:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full text-white z-50`}
             >
                 {/* Logo and close button in mobile menu */}
-                <div className="flex items-center justify-between p-4">
+                <div className="flex items-center justify-between p-4 bg-[#101820]">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
@@ -145,7 +145,8 @@ const Navbar = () => {
                 </div>
 
                 {/* Menu items */}
-                <Link 
+                <div className='bg-[#EDEDED] text-[#101820]'>
+                    <Link 
                     href="#AboutUs" 
                     className={`block font-jakarta px-4 py-2 hover:bg-gray-700 ${activeLink === 'AboutUs' ? 'text-[#57B6B2]' : ''}`}
                     onClick={() => handleLinkClick('AboutUs')}
@@ -173,14 +174,15 @@ const Navbar = () => {
                     onClick={() => handleLinkClick('Projects')}
                 >
                     {t('navbarOurProjects')}
-                </Link>
-                {/* Contact Us button y LanguageChanger en Mobile */}
+                </Link>{/* Contact Us button y LanguageChanger en Mobile */}
                 <div className="block px-4 py-2 mt-4">
                     <button className="bg-[#101820] font-jakarta text-[#EDEDED] w-full py-2 rounded-[4px] mb-4">
                     {t('navbarContactUs')}
                     </button>
                     <LanguageChanger />
-                </div>
+                </div></div>
+                
+                
             </div>
         </nav>
     );
