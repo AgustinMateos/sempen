@@ -68,9 +68,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="w-full bg-[#EDEDED] py-10" ref={projectsRef}>
+    <div id="Projects" className=" w-full bg-[#EDEDED] py-10" ref={projectsRef}>
       <div className="w-full flex justify-center">
-  <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
+  <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 min-h-[162px]">
     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
       {t("projectsTitle").split("").map((letter, index) => (
         <span
@@ -91,7 +91,7 @@ export default function Projects() {
 
     {/* Línea de borde con gradiente */}
     <div
-      className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[25px]"
+      className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[35px]"
       style={{
         borderImageSource: 'linear-gradient(90deg, #57B6B2 45.5%, #101820 100%)',
         borderImageSlice: 1,
@@ -101,7 +101,7 @@ export default function Projects() {
 </div>
 
       {/* Mapeo de los proyectos */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mt-[20px] pt-[20px]">
         {projects.map((project) => (
           <div
             key={project.id}

@@ -16,7 +16,7 @@ export default function WeBuild() {
   }, [words.length]);
 
   return (
-    <div className="min-h-screen  relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
+    <div className="min-h-screen relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
