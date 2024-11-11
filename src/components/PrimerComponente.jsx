@@ -11,11 +11,11 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full max-h-[950px] overflow-hidden">
+    <div className="relative w-full h-[100vh] sm:h-[8000px]  overflow-hidden">
       <video
         ref={videoRef}
         src="/New.mp4"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-fill sm:object-contain"
         loop
         muted
         playsInline

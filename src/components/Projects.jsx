@@ -107,7 +107,7 @@ export default function Projects() {
             key={project.id}
             onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
             className={`rounded-[8px] relative group mb-8 w-full lg:w-[1218px] overflow-hidden transition-all duration-300 ${
-              activeCard === project.id ? "h-[800px] sm:h-[468px]" : "h-[300px]"
+              activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
             } 
             lg:h-[350px] 
             ${activeCard !== project.id && "lg:group-hover:h-[490px]"}`}
