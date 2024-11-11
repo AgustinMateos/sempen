@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Projects() {
   const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
   const titleRef = useRef([]);
   const projectsRef = useRef(null);
 
@@ -50,6 +51,7 @@ export default function Projects() {
       image: "/projectHoleum.webp",
     },
   ];
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -68,54 +70,53 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="Projects" className=" w-full bg-[#EDEDED] py-10" ref={projectsRef}>
+    <div id="Projects" className="w-full bg-[#EDEDED] py-10" ref={projectsRef}>
       <div className="w-full flex justify-center">
-  <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 min-h-[162px]">
-    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-      {t("projectsTitle").split("").map((letter, index) => (
-        <span
-          key={index}
-          ref={(el) => (titleRef.current[index] = el)}
-          style={{
-            display: 'inline-block', // Ajusta el ancho automáticamente
-            opacity: visible ? 1 : 0,
-            transform: visible ? 'translateY(0)' : 'translateY(100%)',
-            margin: letter === " " ? "0 10px" : "0 2px",
-            transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-          }}
-        >
-          {letter}
-        </span>
-      ))}
-    </h3>
+        <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 min-h-[162px]">
+          <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+            {t("projectsTitle").split("").map((letter, index) => (
+              <span
+                key={index}
+                ref={(el) => (titleRef.current[index] = el)}
+                style={{
+                  display: "inline-block",
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? "translateY(0)" : "translateY(100%)",
+                  margin: letter === " " ? "0 10px" : "0 2px",
+                  transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
+                }}
+              >
+                {letter}
+              </span>
+            ))}
+          </h3>
 
-    {/* Línea de borde con gradiente */}
-    <div
-      className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[35px]"
-      style={{
-        borderImageSource: 'linear-gradient(90deg, #57B6B2 45.5%, #101820 100%)',
-        borderImageSlice: 1,
-      }}
-    />
-  </div>
-</div>
+          <div
+            className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[35px]"
+            style={{
+              borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #101820 100%)",
+              borderImageSlice: 1,
+            }}
+          />
+        </div>
+      </div>
 
-      {/* Mapeo de los proyectos */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mt-[20px] pt-[20px]">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="rounded-[8px] relative group mb-8 w-full lg:w-[1218px] min-h-[700px] md:min-h-[500px] lg:min-h-[300px] overflow-hidden"
+            onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
+            className={`rounded-[8px] relative group mb-8 w-full lg:w-[1218px] overflow-hidden transition-all duration-300 ${
+              activeCard === project.id ? "h-[868px] sm:h-[568px]" : "h-[300px]"
+            } ${activeCard !== project.id && "lg:h-[350px] lg:group-hover:h-[490px]"}`}
           >
-            {/* Imagen con gradiente */}
             <div
-              className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
+              className="absolute inset-0 bg-cover bg-center transition-all duration-300"
               style={{
                 backgroundImage: `linear-gradient(270deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.64) 58.4%, rgba(16, 24, 32, 0.8) 100%), url('${project.image}')`,
               }}
             ></div>
 
-            {/* Información del proyecto */}
             <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
               <div className="flex items-center">
                 <Image
@@ -136,8 +137,11 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Descripción que aparece al hacer hover */}
-            <div className="absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div
+              className={`absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] transition-opacity duration-300 ${
+                activeCard === project.id || "lg:opacity-0 lg:group-hover:opacity-100"
+              } ${activeCard === project.id ? "opacity-100" : "opacity-0"}`}
+            >
               <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%] font-archivo">
                 {project.description}
               </p>
