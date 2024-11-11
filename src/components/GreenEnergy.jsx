@@ -41,7 +41,7 @@ export default function GreenEnergy() {
 
   return (
     <div className="w-full bg-[#EDEDED] min-h-screen flex flex-col items-center ">
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center  w-[332px] md:w-[700px] sm:w-[600px] lg:w-[950px] xl:w-[1212px] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
           <div className="flex space-x-4 mb-4 w-full max-w-[1218px] px-4">
             {Object.keys(buttonData).map((button) => (
@@ -75,14 +75,14 @@ export default function GreenEnergy() {
           </div>
 
           {/* Caja de contenido */}
-          <div className="w-full max-w-[1218px] rounded-tl-[8px] rounded-[8px] overflow-hidden shadow-lg mb-4">
-            <div className="bg-white p-4 flex flex-col justify-around items-center min-h-[1098px] md:min-h-[746px] lg:min-h-[510px]">
+          <div className=" h-auto rounded-[8px] overflow-hidden shadow-lg mb-4">
+            <div className="bg-white p-4 flex flex-col justify-around items-center  h-[1234px] sm:h-[700px] md:h-[650px]">
               {currentButtonData.info.map((text, index) => (
-                <p key={index} className="text-lg text-justify font-archivo max-w-[1090px] w-full">
+                <p key={index} className="leading-[38px]  tracking-[-0.01em] text-[16px] md:text-[22px] text-justify font-archivo max-w-[1090px] w-full">
                   {activeButton === 'button1' && index === 0 ? (
-                    <strong className="font-medium text-[34px] font-archivo">{text}</strong>
+                    <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                   ) : activeButton === 'button2' && index === 1 ? (
-                    <strong className="font-medium text-[34px] font-archivo">{text}</strong>
+                    <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                   ) : (
                     text
                   )}
