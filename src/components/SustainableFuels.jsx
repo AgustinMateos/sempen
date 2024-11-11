@@ -25,7 +25,7 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <div id="SustainableFuels" className="min-h-screen md:min-h-[870px] w-full bg-[#EDEDED] flex flex-col justify-center">
+    <div id="SustainableFuels" className="h-[110vh] md:min-h-[870px] w-full bg-[#EDEDED] flex flex-col justify-center">
       <div className="w-full flex justify-center px-4 md:px-0">
         <div className="min-h-[310px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
           {/* Título con animación letra por letra */}

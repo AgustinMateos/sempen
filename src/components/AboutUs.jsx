@@ -40,7 +40,7 @@ export default function AboutUs() {
             key={index}
             ref={(el) => (titleRef.current[index] = el)}
             style={{
-                display: 'inline-block', // Ajusta el ancho automáticamente
+                display: 'inline-block', 
                 opacity: visible ? 1 : 0,
                 transform: visible ? 'translateY(0)' : 'translateY(100%)',
                 margin: letter === " " ? "0 10px" : "0 2px",
