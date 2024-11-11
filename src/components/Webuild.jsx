@@ -16,13 +16,13 @@ export default function WeBuild() {
   }, [words.length]);
 
   return (
-    <div className="min-h-screen relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
+    <div className="h-[500px] md:h-[900px] relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
     >
       {/* Contenedor en fila */}
-      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0">
+      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0 h-[300px]">
         <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px] mb-[40px]">We Build</p>
         <div className="relative mb-[40px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
