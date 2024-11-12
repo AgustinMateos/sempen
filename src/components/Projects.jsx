@@ -70,7 +70,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="Projects" className="w-full bg-[#EDEDED] py-10" ref={projectsRef}>
+    <div id="Projects" className="w-full bg-[#EDEDED] py-10 p-[20px]"  ref={projectsRef}>
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 min-h-[162px]">
           <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
