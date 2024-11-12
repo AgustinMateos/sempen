@@ -19,11 +19,12 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full  overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {/* Video para pantallas grandes (horizontal) */}
       <video
         ref={videoRefLarge}
         src="/New.mp4"
+        preload="auto" // Precarga el video completamente
         className="w-full h-full object-contain hidden sm:block" // Solo visible en pantallas grandes horizontales (>= 640px)
         loop
         muted
@@ -33,6 +34,7 @@ export default function PrimerComponente({ shouldPlay }) {
       <video
         ref={videoRefSmall}
         src="/Mobile.mp4"
+        preload="auto" // Precarga el video completamente
         className="w-full h-full object-contain sm:hidden block" // Solo visible en pantallas pequeñas o verticales (< 640px)
         loop
         muted

@@ -62,7 +62,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[715px] md:h-[862px] lg:h-[750px] px-4 md:px-0"
+                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px] lg:h-[750px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
