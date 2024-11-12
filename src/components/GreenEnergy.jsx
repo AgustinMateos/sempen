@@ -42,18 +42,10 @@ export default function GreenEnergy() {
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 640) {
-        setActiveButton('button1'); // Por defecto, en vistas sm o mayores se activa button1
-      } else {
-        setActiveButton(null); // En vistas menores a sm no hay botón activo por defecto
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
+    // Configura el estado inicial de activeButton solo en el primer renderizado
+    if (window.innerWidth >= 640) {
+      setActiveButton('button1'); // En vistas sm o mayores activa button1 por defecto
+    }
   }, []);
 
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
@@ -127,4 +119,3 @@ export default function GreenEnergy() {
     </div>
   );
 }
-
