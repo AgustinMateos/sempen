@@ -106,7 +106,7 @@ export default function Projects() {
           <div
             key={project.id}
             onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
-            className={`rounded-[8px] relative group mb-8 w-full lg:w-[1218px] overflow-hidden transition-all duration-300 ${
+            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[1100px] overflow-hidden transition-all duration-300 ${
               activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
             } 
             lg:h-[350px] 

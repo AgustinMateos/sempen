@@ -2,43 +2,38 @@
 import { useEffect, useRef } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
-  const videoRefLarge = useRef(null);
-  const videoRefSmall = useRef(null);
+  const videoRefLarge = useRef(null);  // Video para pantallas grandes (horizontal)
+  const videoRefSmall = useRef(null);  // Video para pantallas pequeñas (vertical)
 
   useEffect(() => {
-    const playCorrectVideo = () => {
-      if (window.innerWidth > 1100 && videoRefLarge.current) {
+    if (shouldPlay) {
+      // Reproduce el video adecuado según el tamaño de la pantalla
+      if (window.innerWidth > 640 && videoRefLarge.current) {
         videoRefLarge.current.play();
-        videoRefSmall.current.pause();
-      } else if (window.innerWidth <= 1100 && videoRefSmall.current) {
+        if (videoRefSmall.current) videoRefSmall.current.pause(); // Pausar el video pequeño si está jugando
+      } else if (window.innerWidth <= 640 && videoRefSmall.current) {
         videoRefSmall.current.play();
-        videoRefLarge.current.pause();
+        if (videoRefLarge.current) videoRefLarge.current.pause(); // Pausar el video grande si está jugando
       }
-    };
-
-    // Ejecuta la función en el primer renderizado y cada vez que cambia el tamaño de pantalla
-    playCorrectVideo();
-    window.addEventListener("resize", playCorrectVideo);
-    
-    return () => window.removeEventListener("resize", playCorrectVideo);
+    }
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
-      {/* Video para pantallas grandes */}
+    <div className="relative w-full  overflow-hidden">
+      {/* Video para pantallas grandes (horizontal) */}
       <video
         ref={videoRefLarge}
         src="/New.mp4"
-        className="w-full h-full object-cover hidden lg:block" // visible solo en pantallas grandes (>1100px)
+        className="w-full h-full object-contain hidden sm:block" // Solo visible en pantallas grandes horizontales (>= 640px)
         loop
         muted
         playsInline
       />
-      {/* Video para pantallas pequeñas */}
+      {/* Video para pantallas medianas a pequeñas (vertical) */}
       <video
         ref={videoRefSmall}
         src="/Mobile.mp4"
-        className="w-full h-full object-fill block lg:hidden" // visible solo en pantallas pequeñas (<=1100px)
+        className="w-full h-full object-contain sm:hidden block" // Solo visible en pantallas pequeñas o verticales (< 640px)
         loop
         muted
         playsInline
