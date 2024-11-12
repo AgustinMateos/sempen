@@ -33,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className='w-full bg-[#101820] flex justify-center items-center py-8 min-h-[520px]'>
+    <div className='w-full bg-[#101820] flex justify-center items-center py-8  h-[634px] sm:h-[520px]'>
       <div className='w-full max-w-[1216px] px-4 min-h-[280px] xs:w-[698px]'>
         {/* Contenedor de contenido principal */}
         <div className="flex flex-col min-h-[160px] lg:flex-row items-start justify-between lg:space-x-8 space-y-8 lg:space-y-0">
