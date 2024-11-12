@@ -22,15 +22,15 @@ export default function WeBuild() {
       }}
     >
       {/* Contenedor en fila */}
-      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0 h-[300px]">
-        <p className="text-[24px] md:text-[32px] font-light md:leading-[108.8px] mb-[40px]">We Build</p>
+      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0 h-[200px] sm:h-[300px]">
+        <p className="text-[14px] sm:text-[18px] md:text-[32px] font-light md:leading-[108.8px] mb-[15px] sm:mb-[40px]">We Build</p>
         <div className="relative mb-[40px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
-          <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[40px] text-[18px] md:text-[32px]">
+          <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[40px] text-[14px] sm:text-[18px] md:text-[32px]">
             {words[currentWordIndex]}
           </p>
         </div>
-        <p className="font-archivo text-[18px] md:text-[32px] pb-[40px] ">to decarbonize global energy</p>
+        <p className="font-archivo text-[14px] sm:text-[18px] md:text-[32px] pb-[40px] ">to decarbonize global energy</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}
