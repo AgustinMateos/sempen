@@ -53,7 +53,7 @@ export default function LanguageChanger() {
     <div className="relative">
       <button
         onClick={() => setDropdownOpen(!isDropdownOpen)}
-        className={`bg-transparent pl-4 pr-4 py-2 rounded-md flex items-center outline-none border-none ${
+        className={`bg-transparent sm:pl-4 pr-4 py-2 rounded-md flex items-center outline-none border-none ${
           isMobile ? 'text-[#101820]' : 'text-[#F2F2F2]'
         }`}
       >
