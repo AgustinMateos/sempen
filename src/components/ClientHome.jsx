@@ -35,8 +35,8 @@ export default function Home() {
         <AboutUs />
         <WhoWeAre />
         <PositiveImpact />
-        
-       
+        <SustainableFuels />
+        <GreenEnergy />
         <Projects />
         <WeBuild />
         <Footer />
