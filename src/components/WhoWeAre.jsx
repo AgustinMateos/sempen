@@ -43,28 +43,30 @@ export default function WhoWeAre() {
         <div
             id="WhoWeAre"
             ref={sectionRef}
-            className="h-[120vh] md:h-[760px] flex items-center justify-end bg-[#101820]"
+            className="h-[150vh] md:h-[760px] flex items-center justify-end bg-[#101820]"
         >
             <div className="h-[120vh] m-[20px] md:m-[0px] md:h-[550px] flex flex-col justify-evenly md:justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
 
-            <div className="h-[80px] md:h-[100px] flex items-end">
+                <div className="h-[80px] md:h-[100px] flex items-end">
                     {/* Título animado letra por letra */}
-                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap">
-                        {t('WhoWeAreTitle').split("").map((letter, index) => (
-                            <span
-                                key={index}
-                                ref={(el) => (titleRef.current[index] = el)}
-                                style={{
-                                    opacity: isVisible ? 1 : 0,
-                                    transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
-                                    margin: letter === " " ? "0 10px" : "0 2px",
-                                    transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-                                }}
-                            >
-                                {letter}
-                            </span>
-                        ))}
-                    </h3>
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
+    {t('WhoWeAreTitle').split(" ").map((word, index) => (
+        <span
+            key={index}
+            ref={(el) => (titleRef.current[index] = el)}
+            style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
+                margin: word === " " ? "0 20px" : "0 10px", // Aquí agregas un margen mayor entre las palabras
+                transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
+            }}
+        >
+            {word}
+        </span>
+    ))}
+</h3>
+
+
                     {/* Línea decorativa ajustada automáticamente */}
                     <div
                         className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"

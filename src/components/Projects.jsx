@@ -73,28 +73,33 @@ export default function Projects() {
     <div id="Projects" className="w-full bg-[#EDEDED] py-10 p-[20px]"  ref={projectsRef}>
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 h-[160px]">
-          <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-            {t("projectsTitle").split("").map((letter, index) => (
-              <span
-                key={index}
-                ref={(el) => (titleRef.current[index] = el)}
-                style={{
-                  display: "inline-block",
-                  opacity: visible ? 1 : 0,
-                  transform: visible ? "translateY(0)" : "translateY(100%)",
-                  margin: letter === " " ? "0 10px" : "0 2px",
-                  transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
-                }}
-              >
-                {letter}
-              </span>
-            ))}
-          </h3>
+        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+  {t("projectsTitle").split(" ").map((word, wordIndex) => (
+    <span key={wordIndex} className="inline-block mr-[20px]"> {/* Ajuste aquí */}
+      {word.split("").map((letter, letterIndex) => (
+        <span
+          key={letterIndex}
+          ref={(el) => (titleRef.current[`${wordIndex}-${letterIndex}`] = el)}
+          style={{
+            display: "inline-block",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(100%)",
+            transition: `opacity 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms, transform 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms`,
+          }}
+        >
+          {letter}
+        </span>
+      ))}
+    </span>
+  ))}
+</h3>
+
+
 
           <div
             className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[35px]"
             style={{
-              borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #101820 100%)",
+              borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00  100%)",
               borderImageSlice: 1,
             }}
           />

@@ -31,26 +31,28 @@ export default function AboutUs() {
 
     return (
         <div className=" h-auto overflow-hidden" id="AboutUs">
-            <div className="h-[120px] md:h-[200px] w-full bg-[#101820] flex justify-center">
+            <div className="h-[120px] md:h-[170px] w-full bg-[#101820] flex justify-center">
                 <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-    {aboutUsTitle.split("").map((letter, index) => (
-        <span
-            key={index}
-            ref={(el) => (titleRef.current[index] = el)}
-            style={{
-                display: 'inline-block', 
-                opacity: visible ? 1 : 0,
-                transform: visible ? 'translateY(0)' : 'translateY(100%)',
-                margin: letter === " " ? "0 10px" : "0 2px",
-                transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-            }}
-        >
-            {letter}
-        </span>
-    ))}
+  {aboutUsTitle.split(" ").map((word, index) => (
+    <span
+      key={index}
+      ref={(el) => (titleRef.current[index] = el)}
+      style={{
+        display: "inline-block",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(100%)",
+        margin: "0 10px", // Añade separación entre palabras
+        transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
+        whiteSpace: "nowrap", // Esto evita que las palabras se rompan en varias líneas
+      }}
+    >
+      {word}
+    </span>
+  ))}
 </h3>
+
                     <div
                         className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[25px]"
                         style={{
@@ -62,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px] lg:h-[750px] px-4 md:px-0"
+                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px]  lg:h-[660px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
