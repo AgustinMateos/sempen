@@ -1,11 +1,16 @@
 'use client';
-import { useEffect, useState } from 'react';
+
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslation } from "react-i18next";
 
-export default function AboutUs() {
+export default function PositiveImpact() {
     const { t } = useTranslation();
+    const OurMisionText = t('OurMissionText');
     const [scrollY, setScrollY] = useState(0);
+    const [visible, setVisible] = useState(false); // Estado para la visibilidad del texto
+    const aboutUsRef = useRef(null); // Referencia del contenedor
+    const titleRef = useRef([]); // Referencia para las palabras del título
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,18 +26,46 @@ export default function AboutUs() {
 
     const startingPosition = -250;
 
+    // IntersectionObserver para detectar cuando el contenedor entra en vista
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect(); // Deja de observar una vez sea visible
+                }
+            });
+        });
+
+        if (aboutUsRef.current) {
+            observer.observe(aboutUsRef.current);
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
-        <div className="relative overflow-hidden h-[50vh] 2xl:h-[100vh] md:min-h-[796px]">
+        <div className="relative overflow-hidden h-[90vh] sm:h-[80vh] md:h-[100vh] 2xl:h-[100vh] " ref={aboutUsRef}>
             <div
-                className="w-full  bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
+                className="w-full bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}
             >
                 {/* Contenedor de texto optimizado para móviles */}
-                <div className="text-center text-white w-[90%] mt-[30px] max-w-[821px] sm:w-[80%] md:w-[60%] lg:w-[944px] flex items-center justify-center text-sm sm:text-base md:text-2xl lg:text-[32px] leading-tight font-medium tracking-widest p-2 md:h-[225px]">
-                    <h4 className='font-archivo'>
-                        {t('OurMissionText')}
+                <div className="h-auto  text-[#FFFFFF] flex items-center text-center lg:w-[880px] md:w-[500px] w-[323px] text-[30px] md:text-[32px] lg:text-[32px]">
+                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px]" >
+                        {OurMisionText.split(" ").map((word, index) => (
+                            <span
+                                key={index}
+                                className={`inline transition-opacity font-archivo  duration-500 ${visible ? 'opacity-100' : 'opacity-30'} mx-3`} // Cambia a mx-3 o mx-4
+                                style={{ transitionDelay: `${index * 200}ms` }}
+                            >
+                                {word}
+                            </span>
+                        ))}
                     </h4>
                 </div>
 
