@@ -16,21 +16,21 @@ export default function WeBuild() {
   }, [words.length]);
 
   return (
-    <div className="h-[500px] md:h-[900px] relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
+    <div className="h-[450px] md:h-[600px] relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
     >
       {/* Contenedor en fila */}
-      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0 h-[200px] sm:h-[300px]">
-        <p className="text-[14px] sm:text-[18px] md:text-[32px] font-light md:leading-[108.8px] mb-[15px] sm:mb-[40px]">We Build</p>
-        <div className="relative mb-[40px]">
+      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left px-4 md:px-0 h-[280px] sm:h-[300px]">
+        <p className="text-[14px] sm:text-[18px] md:text-[32px] font-light md:leading-[108.8px] mb-[10px] sm:mb-[25px]">We Build</p>
+        <div className="relative mb-[25px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] md:w-[420px]" />
-          <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[40px] text-[14px] sm:text-[18px] md:text-[32px]">
+          <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[25px] text-[14px] sm:text-[18px] md:text-[32px]">
             {words[currentWordIndex]}
           </p>
         </div>
-        <p className="font-archivo text-[14px] sm:text-[18px] md:text-[32px] pb-[40px] ">to decarbonize global energy</p>
+        <p className="font-archivo text-[14px] sm:text-[18px] md:text-[32px] pb-[25px] ">to decarbonize global energy</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}
