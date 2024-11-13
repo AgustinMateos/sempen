@@ -10,30 +10,30 @@ export default function Footer() {
       id: 1,
       name: "facebook",
       image: "/facebookSempen.svg",
-      link: "https://www.facebook.com", // Enlace de Facebook
+      link: "https://www.facebook.com",
     },
     {
       id: 2,
       name: "x",
       image: "/xSempen.svg",
-      link: "https://www.twitter.com", // Enlace de X (Twitter)
+      link: "https://www.twitter.com",
     },
     {
       id: 3,
       name: "instagram",
       image: "/instagramSempen.svg",
-      link: "https://www.instagram.com", // Enlace de Instagram
+      link: "https://www.instagram.com",
     },
     {
       id: 4,
       name: "linkedin",
       image: "/linkedinSempen.svg",
-      link: "https://www.linkedin.com", // Enlace de LinkedIn
+      link: "https://www.linkedin.com",
     },
   ];
 
   return (
-    <div className='w-full bg-[#101820] flex justify-center items-center py-8  h-[634px] sm:h-[520px]'>
+    <div className='w-full bg-[#101820] flex justify-center items-center py-8 h-[634px] sm:h-[520px]'>
       <div className='w-full max-w-[1216px] px-4 min-h-[280px] xs:w-[698px]'>
         {/* Contenedor de contenido principal */}
         <div className="flex flex-col min-h-[160px] lg:flex-row items-start justify-between lg:space-x-8 space-y-8 lg:space-y-0">
@@ -43,11 +43,19 @@ export default function Footer() {
             <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
             <p className='font-archivo pb-[20px]'>{t('footerFueling')}</p>
             {/* Enlaces en columna en pantallas pequeñas, en fila en pantallas grandes */}
-            <div className='flex flex-col xs:items-start sm:flex-row lg:flex-row lg:space-x-4 gap-4'>
-              <Link href={"#AboutUs"} className='font-archivo'>{t('navbarAboutUs')}</Link>
-              <Link href={"#WhoWeAre"} className='font-archivo'>{t('navbarWhoWeAre')}</Link>
-              <Link href={"#SustainableFuels"} className='font-archivo'>{t('navbarSustainableFuels')}</Link>
-              <Link href={"#Projects"} className='font-archivo'>{t('navbarOurProjects')}</Link>
+            <div className='flex  flex-col xs:items-start sm:flex-row lg:flex-row lg:space-x-4 gap-4 lg:w-[850px]'>
+              <Link className='lg:w-[100px]' href={"#AboutUs"}>
+                <span className="font-archivo   hover:font-bold hover:text-white">{t('navbarAboutUs')}</span>
+              </Link>
+              <Link className='lg:w-[120px]' href={"#WhoWeAre"}>
+                <span className="font-archivo  hover:font-bold hover:text-white">{t('navbarWhoWeAre')}</span>
+              </Link>
+              <Link className='lg:w-[220px]' href={"#SustainableFuels"}>
+                <span className="font-archivo   hover:font-bold hover:text-white">{t('navbarSustainableFuels')}</span>
+              </Link>
+              <Link className='lg:w-[150px]' href={"#Projects"}>
+                <span className="font-archivo    hover:font-bold hover:text-white">{t('navbarOurProjects')}</span>
+              </Link>
             </div>
           </div>
           
@@ -71,7 +79,7 @@ export default function Footer() {
                   height={24}
                   src={red.image} 
                   alt={red.name}
-                  className="cursor-pointer" // Añadimos un cursor para mejorar la UX
+                  className="cursor-pointer"
                 />
               </Link>
             ))}

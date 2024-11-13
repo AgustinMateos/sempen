@@ -70,29 +70,29 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="Projects" className="w-full bg-[#EDEDED] py-10 p-[20px]"  ref={projectsRef}>
+    <div id="OurProjects" className="w-full bg-[#EDEDED] py-10 p-[20px]" ref={projectsRef}>
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 h-[160px]">
-        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-  {t("projectsTitle").split(" ").map((word, wordIndex) => (
-    <span key={wordIndex} className="inline-block mr-[20px]"> {/* Ajuste aquí */}
-      {word.split("").map((letter, letterIndex) => (
-        <span
-          key={letterIndex}
-          ref={(el) => (titleRef.current[`${wordIndex}-${letterIndex}`] = el)}
-          style={{
-            display: "inline-block",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(100%)",
-            transition: `opacity 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms, transform 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms`,
-          }}
-        >
-          {letter}
-        </span>
-      ))}
-    </span>
-  ))}
-</h3>
+          <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+            {t("projectsTitle").split(" ").map((word, wordIndex) => (
+              <span key={wordIndex} className="inline-block mr-[20px]"> {/* Ajuste aquí */}
+                {word.split("").map((letter, letterIndex) => (
+                  <span
+                    key={letterIndex}
+                    ref={(el) => (titleRef.current[`${wordIndex}-${letterIndex}`] = el)}
+                    style={{
+                      display: "inline-block",
+                      opacity: visible ? 1 : 0,
+                      transform: visible ? "translateY(0)" : "translateY(100%)",
+                      transition: `opacity 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms, transform 0.5s ease ${(wordIndex * 100) + (letterIndex * 50)}ms`,
+                    }}
+                  >
+                    {letter}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </h3>
 
 
 
@@ -111,9 +111,8 @@ export default function Projects() {
           <div
             key={project.id}
             onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
-            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[1100px] overflow-hidden transition-all duration-300 ${
-              activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
-            } 
+            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[1100px] overflow-hidden transition-all duration-300 ${activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
+              } 
             lg:h-[350px] 
             ${activeCard !== project.id && "lg:group-hover:h-[490px]"}`}
           >
@@ -145,9 +144,8 @@ export default function Projects() {
             </div>
 
             <div
-              className={`absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] transition-opacity duration-300 ${
-                activeCard === project.id || "lg:opacity-0 lg:group-hover:opacity-100"
-              } ${activeCard === project.id ? "opacity-100" : "opacity-0"}`}
+              className={`absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] transition-opacity duration-300 ${activeCard === project.id || "lg:opacity-0 lg:group-hover:opacity-100"
+                } ${activeCard === project.id ? "opacity-100" : "opacity-0"}`}
             >
               <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%] font-archivo">
                 {project.description}

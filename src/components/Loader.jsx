@@ -16,12 +16,12 @@ export default function Loader() {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#101820] z-50">
       <div className="relative w-80 flex flex-col items-center">
-        {/* Número del porcentaje */}
+        {/* Número de porcentaje arriba de la linea de carga */}
         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xl font-bold text-[#57B6B2]">
           {progress}%
         </div>
 
-        {/* Barra de progreso */}
+        {/* linea de progreso/carga */}
         <div className="h-0.5 bg-gray-300 w-full">
           <div
             className="h-full bg-[#57B6B2] transition-all duration-200"
@@ -30,7 +30,7 @@ export default function Loader() {
         </div>
       </div>
 
-      {/* Imagen con brillo y opacidad progresivos en el pie de pantalla */}
+      {/* Imagen con brillo y opacidad progresivos  */}
       <div className="absolute bottom-0 flex justify-center w-full">
         <Image
           src="/SempenLoader.svg"

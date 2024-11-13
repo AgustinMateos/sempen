@@ -12,3 +12,6 @@
     @apply font-semibold;
 } 
 
+html {
+    scroll-behavior: smooth;
+}
