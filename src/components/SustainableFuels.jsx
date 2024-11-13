@@ -25,7 +25,7 @@ export default function SustainableFuels() {
   }, []);
 
   return (
-    <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[130vh] w-full bg-[#EDEDED] p-[20px] md:p-[0px] flex items-center justify-center flex-col sm:min-h-screen">
+    <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED] p-[20px] md:p-[0px] flex items-center justify-center flex-col sm:min-h-screen">
       <div className="w-[365px] sm:w-full">
         <div className="w-full flex justify-center px-4 md:px-0">
           <div className="min-h-[310px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
@@ -73,7 +73,7 @@ export default function SustainableFuels() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0 min-h-[406px] sm:min-h-[500px] md:min-h-[406px] lg:min-h-[600px]">
+        <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0 min-h-[406px] sm:min-h-[500px] md:min-h-[406px] lg:min-h-[500px]">
           <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center text-[#101820] gap-6 w-full max-w-[1470px] md:max-w-[1350px]">
             {/* Contenedor de la imagen alineada a la izquierda */}
             <div className="flex-shrink-0 w-full md:w-auto flex justify-start md:justify-start">
