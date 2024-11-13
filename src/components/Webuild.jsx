@@ -35,11 +35,11 @@ export default function WeBuild() {
 
       {/* Contenedor azul oscuro con max-width */}
       <div className="absolute bottom-0 w-full flex justify-center">
-        <div className="max-w-[1050px] rounded-[8px] w-full bg-[#16222F] h-[150px] md:h-[198px] flex flex-col items-center justify-center px-4 mx-auto">
+        <div className="max-w-[1050px] rounded-[8px] w-full bg-[#16222F] h-[200px] md:h-[198px] flex flex-col items-center justify-center px-4 mx-auto">
           <h4 className="font-archivo text-white text-[18px] md:text-[24px] mb-2">We are part of</h4>
           <div className="flex justify-center space-x-4 flex-wrap">
-            <Image src="/cac.svg" width={200} height={40} alt="RSB Logo" className="w-[120px] md:w-[200px]" />
-            <Image src="/rsb.svg" width={100} height={40} alt="CAC Logo" className="w-[60px] md:w-[100px]" />
+            <Image src="/cac.svg" width={300} height={50} alt="RSB Logo" className="w-[250px] md:w-[400px]" />
+            <Image src="/rsb.svg" width={200} height={50} alt="CAC Logo" className="w-[180px] md:w-[300px]" />
           </div>
         </div>
       </div>

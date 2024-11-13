@@ -43,7 +43,7 @@ export default function WhoWeAre() {
         <div
             id="WhoWeAre"
             ref={sectionRef}
-            className="h-[150vh] md:h-[760px] flex items-center justify-end bg-[#101820]"
+            className="h-[150vh] md:h-[760px]  flex items-center justify-end bg-[#101820]"
         >
             <div className="h-[120vh] m-[20px] md:m-[0px] md:h-[550px] flex flex-col justify-evenly md:justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
 
@@ -76,7 +76,7 @@ export default function WhoWeAre() {
                         }}
                     />
                 </div>
-                <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full">
+                <div className="flex flex-col md:flex-col lg:flex-row items-center md:items-start justify-between w-full">
                     <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">
                         {/* Efecto de aparición palabra por palabra en WhoWeAreP */}
                         <p className="text-[16px] md:text-[24px] font-extralight">
