@@ -60,7 +60,7 @@ export default function PositiveImpact() {
                         {OurMisionText.split(" ").map((word, index) => (
                             <span
                                 key={index}
-                                className={`inline transition-opacity font-archivo  duration-500 ${visible ? 'opacity-100' : 'opacity-30'} mx-3`} // Cambia a mx-3 o mx-4
+                                className={`inline transition-opacity font-archivo  duration-500 ${visible ? 'opacity-100' : 'opacity-30'} mr-2.5`} // Cambia a mx-3 o mx-4
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
                                 {word}
