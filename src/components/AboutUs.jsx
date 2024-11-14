@@ -35,23 +35,23 @@ export default function AboutUs() {
                 <div className="w-full max-w-[1218px]  flex items-end px-4 md:px-0">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-  {aboutUsTitle.split(" ").map((word, index) => (
-    <span
-      key={index}
-      ref={(el) => (titleRef.current[index] = el)}
-      style={{
-        display: "inline-block",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(100%)",
-        margin: "0 10px", // Añade separación entre palabras
-        transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
-        whiteSpace: "nowrap", // Esto evita que las palabras se rompan en varias líneas
-      }}
-    >
-      {word}
-    </span>
-  ))}
-</h3>
+                        {aboutUsTitle.split(" ").map((word, index) => (
+                            <span
+                                key={index}
+                                ref={(el) => (titleRef.current[index] = el)}
+                                style={{
+                                    display: "inline-block",
+                                    opacity: visible ? 1 : 0,
+                                    transform: visible ? "translateY(0)" : "translateY(100%)",
+                                    margin: "0 10px", // Añade separación entre palabras
+                                    transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
+                                    whiteSpace: "nowrap", // Esto evita que las palabras se rompan en varias líneas
+                                }}
+                            >
+                                {word}
+                            </span>
+                        ))}
+                    </h3>
 
                     <div
                         className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[25px]"

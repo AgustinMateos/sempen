@@ -55,7 +55,7 @@ export default function PositiveImpact() {
                 }}
             >
                 {/* Contenedor de texto optimizado para móviles */}
-                <div className="h-auto  text-[#FFFFFF] flex items-center text-center lg:w-[880px] md:w-[500px] w-[325px] text-[30px] md:text-[32px] lg:text-[32px]">
+                <div className="h-auto  text-[#FFFFFF] flex items-center text-center lg:w-[880px] md:w-[500px] sm:w-[540px] w-[370px] text-[30px] md:text-[32px] lg:text-[32px]">
                     <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px]" >
                         {OurMisionText.split(" ").map((word, index) => (
                             <span

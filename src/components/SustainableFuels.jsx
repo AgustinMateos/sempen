@@ -28,46 +28,46 @@ export default function SustainableFuels() {
     <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED] p-[20px] md:p-[0px] flex items-center justify-center flex-col sm:min-h-screen">
       <div className="w-[365px] sm:w-[500px] md:w-full">
         <div className="w-full flex justify-center px-4 md:px-0">
-          <div className="min-h-[310px] max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
+          <div className="min-h-[310px] lg:items-center max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
             {/* Título con animación letra por letra */}
             <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 h-[160px]">
-        <h4
-  ref={titleRef}
-  className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4"
-  style={{
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(100%)',
-    transition: `opacity 0.5s ease, transform 0.5s ease`,
-  }}
->
-  {t("SustainableFuelsTitle")
-    .split(" ")
-    .map((word, wordIndex) => (
-      <span
-        key={wordIndex}
-        style={{
-          display: "inline-block",
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(100%)",
-          marginRight: "20px", // Mayor espacio entre palabras
-          transition: `opacity 0.5s ease ${wordIndex * 100}ms, transform 0.5s ease ${wordIndex * 100}ms`,
-        }}
-      >
-        {word}
-      </span>
-    ))}
-</h4>
+              <div className="w-full max-w-[1218px] flex items-end sm:px-0 md:px-0 h-[160px]">
+                <h4
+                  ref={titleRef}
+                  className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4"
+                  style={{
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? 'translateY(0)' : 'translateY(100%)',
+                    transition: `opacity 0.5s ease, transform 0.5s ease`,
+                  }}
+                >
+                  {t("SustainableFuelsTitle")
+                    .split(" ")
+                    .map((word, wordIndex) => (
+                      <span
+                        key={wordIndex}
+                        style={{
+                          display: "inline-block",
+                          opacity: visible ? 1 : 0,
+                          transform: visible ? "translateY(0)" : "translateY(100%)",
+                          marginRight: "20px", // Mayor espacio entre palabras
+                          transition: `opacity 0.5s ease ${wordIndex * 100}ms, transform 0.5s ease ${wordIndex * 100}ms`,
+                        }}
+                      >
+                        {word}
+                      </span>
+                    ))}
+                </h4>
 
-            <div
-            className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[10px]"
-            style={{
-              borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
-              borderImageSlice: 1,
-            }}
-          /></div></div>
+                <div
+                  className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[10px]"
+                  style={{
+                    borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
+                    borderImageSlice: 1,
+                  }}
+                /></div></div>
             {/* Texto sin animación */}
-            <p className="font-normal font-archivo text-lg md:text-[38px] mt-4 leading-[44px]">
+            <p className="font-normal font-archivo text-lg md:text-[38px] mt-4 leading-[44px] lg:w-[1218px]">
               {t("SustainableFuelsRenewableFuels")}
             </p>
           </div>

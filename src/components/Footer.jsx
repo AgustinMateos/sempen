@@ -44,7 +44,7 @@ export default function Footer() {
             <p className='font-archivo pb-[20px]'>{t('footerFueling')}</p>
             {/* Enlaces en columna en pantallas pequeñas, en fila en pantallas grandes */}
             <div className='flex  flex-col xs:items-start sm:flex-row lg:flex-row lg:space-x-4 gap-4 lg:w-[850px]'>
-              <Link className='lg:w-[100px]' href={"#AboutUs"}>
+              <Link className='lg:w-[120px]' href={"#AboutUs"}>
                 <span className="font-archivo   hover:font-bold hover:text-white">{t('navbarAboutUs')}</span>
               </Link>
               <Link className='lg:w-[120px]' href={"#WhoWeAre"}>
@@ -53,7 +53,7 @@ export default function Footer() {
               <Link className='lg:w-[220px]' href={"#SustainableFuels"}>
                 <span className="font-archivo   hover:font-bold hover:text-white">{t('navbarSustainableFuels')}</span>
               </Link>
-              <Link className='lg:w-[150px]' href={"#Projects"}>
+              <Link className='lg:w-[180px]' href={"#OurProjects"}>
                 <span className="font-archivo    hover:font-bold hover:text-white">{t('navbarOurProjects')}</span>
               </Link>
             </div>

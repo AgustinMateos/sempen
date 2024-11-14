@@ -30,7 +30,7 @@ export default function Loader() {
         </div>
       </div>
 
-      {/* Imagen con brillo y opacidad progresivos  */}
+      {/* Imagen con brillo y opacidad progresivos en el pie de pantalla */}
       <div className="absolute bottom-0 flex justify-center w-full">
         <Image
           src="/SempenLoader.svg"
