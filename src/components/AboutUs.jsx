@@ -31,7 +31,7 @@ export default function AboutUs() {
 
     return (
         <div className=" h-auto overflow-hidden" id="AboutUs">
-            <div className="h-[120px] md:h-[190px] w-full bg-[#101820] flex justify-center">
+            <div className="h-[120px] md:h-[190px] lg:h-[195px] w-full bg-[#101820] flex justify-center">
                 <div className="w-full max-w-[1218px]  flex items-end px-4 md:px-0">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px]  lg:h-[600px] px-4 md:px-0"
+                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px]  lg:h-[650px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
