@@ -43,7 +43,7 @@ export default function WhoWeAre() {
         <div
             id="WhoWeAre"
             ref={sectionRef}
-            className="h-[150vh] md:h-[760px]  flex items-center justify-end bg-[#101820]"
+            className="h-[150vh] sm:h-[120vh] md:h-[760px]  flex items-center justify-end bg-[#101820]"
         >
             <div className="h-[120vh] m-[20px] md:m-[0px] md:h-[550px] flex flex-col justify-evenly md:justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
 
