@@ -38,39 +38,37 @@ export default function WhoWeAre() {
             className="h-[125vh] md:h-[130vh] lg:h-[150vh] xl:h-[100vh]  flex items-center md:justify-end bg-[#101820]"
         >
             <div className="h-[120vh] xl:h-[90vh] ml-[24px] md:m-[0px] flex flex-col justify-evenly text-white  2xl:max-w-[1565px] w-full">
-                <div className="md:flex md:flex-col md:items-end">
-                    <div className="h-[80px] md:h-[100px] md:w-[90%] xl:w-[95%]  flex items-end justify-end">
-                        {/* Título animado letra por letra */}
-                        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px]  flex flex-wrap whitespace-nowrap overflow-hidden">
-                            {t("WhoWeAreTitle").split(" ").map((word, index) => (
-                                <span
-                                    key={index}
-                                    ref={(el) => (titleRef.current[index] = el)}
-                                    style={{
-                                        opacity: isVisible ? 1 : 0,
-                                        transform: isVisible
-                                            ? "translateY(0)"
-                                            : "translateY(100%)",
-                                        margin: word === " " ? "0 20px" : "0 10px",
-                                        transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
-                                    }}
-                                >
-                                    {word}
-                                </span>
-                            ))}
-                        </h3>
+            <div className="md:flex md:flex-col md:items-end">
+  <div className="h-[80px] md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
+    {/* Título animado letra por letra */}
+    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
+      {t("WhoWeAreTitle").split(" ").map((word, index) => (
+        <span
+          key={index}
+          ref={(el) => (titleRef.current[index] = el)}
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(100%)",
+            margin: index === 0 ? "0" : "0 10px", // Sin margen izquierdo en la primera palabra
+            transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
+          }}
+        >
+          {word}
+        </span>
+      ))}
+    </h3>
 
-                        {/* Línea decorativa ajustada automáticamente */}
-                        <div
-                            className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
-                            style={{
-                                borderImageSource:
-                                    "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
-                                borderImageSlice: 1,
-                            }}
-                        />
-                    </div>
-                </div>
+    {/* Línea decorativa ajustada automáticamente */}
+    <div
+      className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
+      style={{
+        borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
+        borderImageSlice: 1,
+      }}
+    />
+  </div>
+</div>
+
 
                 <div className="flex flex-col xl:flex-row items-center justify-between w-full ">
                     <div className="md:flex md:w-full md:justify-end">
