@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from "react";
 
 export default function WhoWeAre() {
     const { t } = useTranslation();
-    const [allTextSmall, setAllTextSmall] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
     const titleRef = useRef([]);
@@ -32,123 +31,200 @@ export default function WhoWeAre() {
         };
     }, []);
 
-    useEffect(() => {
-        if (isVisible) {
-            const timer = setTimeout(() => setAllTextSmall(true), 16000)
-            return () => clearTimeout(timer);
-        }
-    }, [isVisible]);
-
     return (
         <div
             id="WhoWeAre"
             ref={sectionRef}
-            className=" h-[150vh] sm:h-[120vh] md:h-[760px] 
-             flex items-center justify-end bg-[#101820]"
+            className="h-[125vh] md:h-[130vh] lg:h-[150vh] xl:h-[100vh]  flex items-center md:justify-end bg-[#101820]"
         >
-            <div className="h-[120vh] lg:h-[70vh] m-[20px] md:m-[0px] md:w-[500px] lg:w-[160vh] 
-             flex flex-col justify-evenly md:justify-between text-white    px-4 md:px-0">
-
-                <div className="h-[80px] md:h-[100px] flex items-end">
-                    {/* Título animado letra por letra */}
-                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
-                        {t('WhoWeAreTitle').split(" ").map((word, index) => (
-                            <span
-                                key={index}
-                                ref={(el) => (titleRef.current[index] = el)}
-                                style={{
-                                    opacity: isVisible ? 1 : 0,
-                                    transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
-                                    margin: word === " " ? "0 20px" : "0 10px", // Aquí agregas un margen mayor entre las palabras
-                                    transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-                                }}
-                            >
-                                {word}
-                            </span>
-                        ))}
-                    </h3>
-
-
-                    {/* Línea decorativa ajustada automáticamente */}
-                    <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
-                        style={{
-                            borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
-                            borderImageSlice: 1,
-                        }}
-                    />
-                </div>
-                <div className="flex flex-col md:flex-col lg:flex-row items-center md:items-start justify-between w-full">
-                    <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">
-                        {/* Efecto de aparición palabra por palabra en WhoWeAreP */}
-                        <p className="text-[16px] md:text-[24px] font-extralight">
-                            {t('WhoWeAreP').split(" ").map((word, index) => (
+            <div className="h-[120vh] xl:h-[90vh] ml-[24px] md:m-[0px] flex flex-col justify-evenly text-white  2xl:max-w-[1565px] w-full">
+                <div className="md:flex md:flex-col md:items-end">
+                    <div className="h-[80px] md:h-[100px] md:w-[90%] xl:w-[95%]  flex items-end justify-end">
+                        {/* Título animado letra por letra */}
+                        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px]  flex flex-wrap whitespace-nowrap overflow-hidden">
+                            {t("WhoWeAreTitle").split(" ").map((word, index) => (
                                 <span
                                     key={index}
-                                    className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-                                    style={{ transitionDelay: `${index * 200}ms` }}
+                                    ref={(el) => (titleRef.current[index] = el)}
+                                    style={{
+                                        opacity: isVisible ? 1 : 0,
+                                        transform: isVisible
+                                            ? "translateY(0)"
+                                            : "translateY(100%)",
+                                        margin: word === " " ? "0 20px" : "0 10px",
+                                        transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
+                                    }}
                                 >
                                     {word}
-                                    {index < t('WhoWeAreP').split(" ").length - 1 && ' '}
                                 </span>
                             ))}
-                            <strong className={`font-archivo font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
-                                {t('WhoWeArePstrong').split(" ").map((word, index) => (
-                                    <span
-                                        key={index}
-                                        className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-                                        style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-                                    >
-                                        {word}
-                                        {index < t('WhoWeArePstrong').split(" ").length - 1 && ' '}
-                                    </span>
-                                ))}
-                            </strong>
-                        </p>
-                        <p className="font-archivo text-[16px] md:text-[24px] font-extralight mt-4">
-                            {t('WhoWeArePsecond').split(" ").map((word, index) => (
-                                <span
-                                    key={index}
-                                    className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-                                    style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-                                >
-                                    {word}
-                                    {index < t('WhoWeArePsecond').split(" ").length - 1 && ' '}
-                                </span>
-                            ))}
-                        </p>
-                        <p className="text-[16px] font-archivo md:text-[24px] font-extralight mt-4">
-                            {t('WhoWeArePThird').split(" ").map((word, index) => (
-                                <span
-                                    key={index}
-                                    className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-                                    style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + t('WhoWeArePsecond').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-                                >
-                                    {word}
-                                    {index < t('WhoWeArePThird').split(" ").length - 1 && ' '}
-                                </span>
-                            ))}
-                            <strong className={`font-bold font-archivo ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
-                                {t('WhoWeArePThirdStrong').split(" ").map((word, index) => (
-                                    <span
-                                        key={index}
-                                        className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-                                        style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + t('WhoWeArePsecond').split(" ").length + t('WhoWeArePThird').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-                                    >
-                                        {word}
-                                        {index < t('WhoWeArePThirdStrong').split(" ").length - 1 && ' '}
-                                    </span>
-                                ))}
-                            </strong>
-                        </p>
+                        </h3>
+
+                        {/* Línea decorativa ajustada automáticamente */}
+                        <div
+                            className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
+                            style={{
+                                borderImageSource:
+                                    "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
+                                borderImageSlice: 1,
+                            }}
+                        />
                     </div>
-                    <div className="w-full md:w-auto lg:h-[400px] lg:w-[500px] flex justify-center md:justify-end">
+                </div>
+
+                <div className="flex flex-col xl:flex-row items-center justify-between w-full ">
+                    <div className="md:flex md:w-full md:justify-end">
+                        <div className="w-full md:w-[87%] xl:w-[86%] pr-[20px] md:mr-[10px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
+                            {/* Efecto de aparición palabra por palabra */}
+                            <p className="text-[16px] xl:text-[24px] font-extralight md:w-[600px] lg:w-[80%] xl:w-[100%]">
+                                {t("WhoWeAreP")
+                                    .split(" ")
+                                    .map((word, index) => (
+                                        <span
+                                            key={index}
+                                            className={`inline transition-opacity font-archivo duration-500 ${
+                                                isVisible ? "opacity-100" : "opacity-30"
+                                            }`}
+                                            style={{
+                                                transitionDelay: `${index * 200}ms`,
+                                            }}
+                                        >
+                                            {word}
+                                            {index <
+                                                t("WhoWeAreP").split(" ").length - 1 &&
+                                                " "}
+                                        </span>
+                                    ))}
+                                <strong className="font-archivo font-bold text-[16px] xl:text-[24px] ">
+                                    {t("WhoWeArePstrong")
+                                        .split(" ")
+                                        .map((word, index) => (
+                                            <span
+                                                key={index}
+                                                className={`inline transition-opacity font-archivo duration-500 ${
+                                                    isVisible
+                                                        ? "opacity-100"
+                                                        : "opacity-30"
+                                                }`}
+                                                style={{
+                                                    transitionDelay: `${
+                                                        (t("WhoWeAreP").split(" ").length +
+                                                            index) *
+                                                        200
+                                                    }ms`,
+                                                }}
+                                            >
+                                                {word}
+                                                {index <
+                                                    t("WhoWeArePstrong").split(" ").length -
+                                                        1 &&
+                                                    " "}
+                                            </span>
+                                        ))}
+                                </strong>
+                            </p>
+                            <p className="font-archivo text-[16px] xl:text-[24px]  font-extralight mt-4 md:w-[600px] lg:w-[80%] xl:w-[100%] ">
+                                {t("WhoWeArePsecond")
+                                    .split(" ")
+                                    .map((word, index) => (
+                                        <span
+                                            key={index}
+                                            className={`inline transition-opacity font-archivo duration-500 ${
+                                                isVisible ? "opacity-100" : "opacity-30"
+                                            }`}
+                                            style={{
+                                                transitionDelay: `${
+                                                    (t("WhoWeAreP").split(" ").length +
+                                                        t("WhoWeArePstrong").split(" ").length +
+                                                        index) *
+                                                    200
+                                                }ms`,
+                                            }}
+                                        >
+                                            {word}
+                                            {index <
+                                                t("WhoWeArePsecond").split(" ").length - 1 &&
+                                                " "}
+                                        </span>
+                                    ))}
+                            </p>
+                            <p className="text-[16px] xl:text-[24px]  font-archivo md:w-[600px] lg:w-[80%] xl:w-[100%]  font-extralight mt-4">
+                                {t("WhoWeArePThird")
+                                    .split(" ")
+                                    .map((word, index) => (
+                                        <span
+                                            key={index}
+                                            className={`inline transition-opacity font-archivo duration-500 ${
+                                                isVisible ? "opacity-100" : "opacity-30"
+                                            }`}
+                                            style={{
+                                                transitionDelay: `${
+                                                    (t("WhoWeAreP").split(" ").length +
+                                                        t("WhoWeArePstrong")
+                                                            .split(" ")
+                                                            .length +
+                                                        t("WhoWeArePsecond")
+                                                            .split(" ")
+                                                            .length +
+                                                        index) *
+                                                    200
+                                                }ms`,
+                                            }}
+                                        >
+                                            {word}
+                                            {index <
+                                                t("WhoWeArePThird").split(" ").length - 1 &&
+                                                " "}
+                                        </span>
+                                    ))}
+                                <strong className="font-bold font-archivo text-[16px] xl:text-[24px] ">
+                                    {t("WhoWeArePThirdStrong")
+                                        .split(" ")
+                                        .map((word, index) => (
+                                            <span
+                                                key={index}
+                                                className={`inline transition-opacity font-archivo duration-500 ${
+                                                    isVisible
+                                                        ? "opacity-100"
+                                                        : "opacity-30"
+                                                }`}
+                                                style={{
+                                                    transitionDelay: `${
+                                                        (t("WhoWeAreP").split(" ").length +
+                                                            t("WhoWeArePstrong")
+                                                                .split(" ")
+                                                                .length +
+                                                            t("WhoWeArePsecond")
+                                                                .split(" ")
+                                                                .length +
+                                                            t("WhoWeArePThird")
+                                                                .split(" ")
+                                                                .length +
+                                                            index) *
+                                                        200
+                                                    }ms`,
+                                                }}
+                                            >
+                                                {word}
+                                                {index <
+                                                    t("WhoWeArePThirdStrong")
+                                                        .split(" ")
+                                                        .length -
+                                                        1 &&
+                                                    " "}
+                                            </span>
+                                        ))}
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="w-full flex  justify-center md:justify-end">
                         <Image
                             src="/WhoWeAre.svg"
                             alt="Imagen"
-                            width={400}
+                            width={766}
                             height={250}
-                            className="w-full md:w-auto lg:h-[100%]"
+                            className="w-full md:w-[88%] h-auto"
                         />
                     </div>
                 </div>
@@ -156,162 +232,3 @@ export default function WhoWeAre() {
         </div>
     );
 }
-
-
-// {
-// import Image from "next/image";
-// import { useTranslation } from "react-i18next";
-// import { useEffect, useState, useRef } from "react";
-
-// export default function WhoWeAre() {
-//     const { t } = useTranslation();
-//     const [allTextSmall, setAllTextSmall] = useState(false);
-//     const [isVisible, setIsVisible] = useState(false);
-//     const sectionRef = useRef(null);
-//     const titleRef = useRef([]);
-
-//     useEffect(() => {
-//         const observer = new IntersectionObserver(
-//             (entries) => {
-//                 entries.forEach((entry) => {
-//                     if (entry.isIntersecting) {
-//                         setIsVisible(true);
-//                     }
-//                 });
-//             },
-//             { threshold: 0.5 }
-//         );
-
-//         if (sectionRef.current) {
-//             observer.observe(sectionRef.current);
-//         }
-
-//         return () => {
-//             if (sectionRef.current) {
-//                 observer.unobserve(sectionRef.current);
-//             }
-//         };
-//     }, []);
-
-//     useEffect(() => {
-//         if (isVisible) {
-//             const timer = setTimeout(() => setAllTextSmall(true), 16000);
-//             return () => clearTimeout(timer);
-//         }
-//     }, [isVisible]);
-
-//     return (
-//         <div
-//             id="WhoWeAre"
-//             ref={sectionRef}
-//             className="h-[150vh] md:h-[760px]  flex items-center justify-end bg-[#101820]"
-//         >
-//             <div className="h-[120vh] m-[20px] md:m-[0px] md:h-[550px] flex flex-col justify-evenly md:justify-between text-white max-w-[1330px] 2xl:max-w-[1565px] w-full px-4 md:px-0">
-
-//                 <div className="h-[80px] md:h-[100px] flex items-end">
-//                     {/* Título animado letra por letra */}
-//                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
-//     {t('WhoWeAreTitle').split(" ").map((word, index) => (
-//         <span
-//             key={index}
-//             ref={(el) => (titleRef.current[index] = el)}
-//             style={{
-//                 opacity: isVisible ? 1 : 0,
-//                 transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
-//                 margin: word === " " ? "0 20px" : "0 10px", // Aquí agregas un margen mayor entre las palabras
-//                 transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`
-//             }}
-//         >
-//             {word}
-//         </span>
-//     ))}
-// </h3>
-
-
-//                     {/* Línea decorativa ajustada automáticamente */}
-//                     <div
-//                         className="flex-1 h-0 border-t-[2px] ml-4 md:mb-[25px]"
-//                         style={{
-//                             borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
-//                             borderImageSlice: 1,
-//                         }}
-//                     />
-//                 </div>
-//                 <div className="flex flex-col md:flex-col lg:flex-row items-center md:items-start justify-between w-full">
-//                     <div className="w-full md:w-[557px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 md:mb-0">
-//                         {/* Efecto de aparición palabra por palabra en WhoWeAreP */}
-//                         <p className="text-[16px] md:text-[24px] font-extralight">
-//                             {t('WhoWeAreP').split(" ").map((word, index) => (
-//                                 <span
-//                                     key={index}
-//                                     className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-//                                     style={{ transitionDelay: `${index * 200}ms` }}
-//                                 >
-//                                     {word}
-//                                     {index < t('WhoWeAreP').split(" ").length - 1 && ' '}
-//                                 </span>
-//                             ))}
-//                             <strong className={`font-archivo font-bold ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
-//                                 {t('WhoWeArePstrong').split(" ").map((word, index) => (
-//                                     <span
-//                                         key={index}
-//                                         className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-//                                         style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-//                                     >
-//                                         {word}
-//                                         {index < t('WhoWeArePstrong').split(" ").length - 1 && ' '}
-//                                     </span>
-//                                 ))}
-//                             </strong>
-//                         </p>
-//                         <p className="font-archivo text-[16px] md:text-[24px] font-extralight mt-4">
-//                             {t('WhoWeArePsecond').split(" ").map((word, index) => (
-//                                 <span
-//                                     key={index}
-//                                     className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-//                                     style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-//                                 >
-//                                     {word}
-//                                     {index < t('WhoWeArePsecond').split(" ").length - 1 && ' '}
-//                                 </span>
-//                             ))}
-//                         </p>
-//                         <p className="text-[16px] font-archivo md:text-[24px] font-extralight mt-4">
-//                             {t('WhoWeArePThird').split(" ").map((word, index) => (
-//                                 <span
-//                                     key={index}
-//                                     className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-//                                     style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + t('WhoWeArePsecond').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-//                                 >
-//                                     {word}
-//                                     {index < t('WhoWeArePThird').split(" ").length - 1 && ' '}
-//                                 </span>
-//                             ))}
-//                             <strong className={`font-bold font-archivo ${allTextSmall ? 'text-[16px] md:text-[24px]' : 'text-[20px] md:text-[28px]'}`}>
-//                                 {t('WhoWeArePThirdStrong').split(" ").map((word, index) => (
-//                                     <span
-//                                         key={index}
-//                                         className={`inline transition-opacity font-archivo duration-500 ${isVisible ? 'opacity-100' : 'opacity-30'}`}
-//                                         style={{ transitionDelay: `${(t('WhoWeAreP').split(" ").length + t('WhoWeArePstrong').split(" ").length + t('WhoWeArePsecond').split(" ").length + t('WhoWeArePThird').split(" ").length + index) * 200}ms` }} // Ajuste para la duración
-//                                     >
-//                                         {word}
-//                                         {index < t('WhoWeArePThirdStrong').split(" ").length - 1 && ' '}
-//                                     </span>
-//                                 ))}
-//                             </strong>
-//                         </p>
-//                     </div>
-//                     <div className="w-full md:w-auto flex justify-center md:justify-end">
-//                         <Image
-//                             src="/WhoWeAre.svg"
-//                             alt="Imagen"
-//                             width={400}
-//                             height={250}
-//                             className="w-full md:w-auto"
-//                         />
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }}

@@ -30,11 +30,11 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className=" h-auto overflow-hidden" id="AboutUs">
-            <div className="h-[120px] md:h-[190px] lg:h-[195px] w-full bg-[#101820] flex justify-center">
-                <div className="w-full max-w-[1218px]  flex items-end px-4 md:px-0">
+        <div className=" h-auto overflow-hidden bg-[#101820]" id="AboutUs">
+            <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full  flex justify-center md:justify-end">
+                <div className=" w-[95%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end ">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
-                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
                         {aboutUsTitle.split(" ").map((word, index) => (
                             <span
                                 key={index}
@@ -54,7 +54,7 @@ export default function AboutUs() {
                     </h3>
 
                     <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[25px]"
+                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[20px]"
                         style={{
                             borderImageSource: 'linear-gradient(90deg, #005D63 45.5%, #101820 100%)',
                             borderImageSlice: 1,
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around h-[545px] sm:h-[415px] md:h-[862px]  lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
+                className="w-full bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[550px] lg:h-[630px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
@@ -75,7 +75,7 @@ export default function AboutUs() {
                 ref={aboutUsRef} // Mueve la referencia aquí para activar visible
             >
                 {/* Efecto de aparición palabra por palabra en aboutUsh2Text */}
-                <div className="h-auto max-w-[1218px] text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[70px]">
+                <div className="h-auto w-[90%] md:w-[70%] lg:w-[85%] xl:w-[99%] justify-center text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[60px]">
                     <h4 className="font-archivo flex flex-wrap justify-center">
                         {aboutUsh2Text.split(" ").map((word, index) => (
                             <span
@@ -92,8 +92,8 @@ export default function AboutUs() {
 
 
                 {/* Efecto de aparición palabra por palabra en developText */}
-                <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem] lg:text-[3rem]">
-                    <div className="max-w-full md:max-w-[1170px] text-center mb-4">
+                <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem]  lg:text-[2rem] xl:text-[3rem] w-full">
+                    <div className="w-[85%] md:w-[65%] xl:w-[80%] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
                                 key={index}

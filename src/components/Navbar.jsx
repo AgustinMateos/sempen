@@ -46,8 +46,8 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            {/* Links en desktop (visibles en md hacia arriba) */}
-            <div className="hidden md:flex lg:w-[700px] lg:justify-around mx-auto justify-center">
+            {/* Links en desktop (visibles en xl hacia arriba) */}
+            <div className="hidden xl:flex lg:w-[700px] lg:justify-around mx-auto justify-center">
                 {['AboutUs', 'WhoWeAre', 'SustainableFuels', 'OurProjects'].map((link, index) => (
                     <Link 
                         key={link}
@@ -63,16 +63,16 @@ const Navbar = () => {
                 ))}
             </div>
 
-            {/* Button y Selector de Idioma en Desktop */}
-            <div className="hidden md:flex space-x-4 items-center">
+            {/* Botón y Selector de Idioma en Desktop */}
+            <div className="hidden xl:flex space-x-4 items-center">
                 <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500">
                     {t('navbarContactUs')}
                 </button>
                 <LanguageChanger />
             </div>
 
-            {/* Botón para el menú móvil en pantallas menores a md */}
-            <div className="md:hidden flex items-center">
+            {/* Botón para el menú móvil en pantallas hasta lg */}
+            <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsOpen(!isOpen)} className="text-white">
                     <svg
                         className="w-6 h-6"
@@ -95,8 +95,8 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Menú móvil, visible solo cuando `isOpen` es true */}
-            <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full text-white z-50`}>
+            {/* Menú móvil/hamburguesa (visible hasta lg) */}
+            <div className={`xl:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full text-white z-50`}>
                 <div className="flex items-center justify-between p-4 bg-[#101820]">
                     <Link href="/" className="flex items-center">
                         <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
@@ -145,3 +145,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

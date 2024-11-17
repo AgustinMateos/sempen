@@ -26,7 +26,7 @@ export default function SustainableFuels() {
 
   return (
     <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED] p-[20px] md:p-[0px] flex items-center  justify-center sm:justify-start flex-col sm:min-h-screen">
-      <div className="w-[365px] sm:w-[500px] md:w-full">
+      <div className="w-[365px] sm:w-[600px] md:w-full">
         <div className="w-full flex justify-center px-4 md:px-0">
           <div className="min-h-[310px] lg:items-center max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
             {/* Título con animación letra por letra */}
@@ -65,7 +65,8 @@ export default function SustainableFuels() {
                     borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
                     borderImageSlice: 1,
                   }}
-                /></div></div>
+                />
+                </div></div>
             {/* Texto sin animación */}
             <p className="font-normal font-archivo text-lg md:text-[38px] mt-4 leading-[44px] lg:w-[1218px]">
               {t("SustainableFuelsRenewableFuels")}

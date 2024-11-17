@@ -39,7 +39,7 @@ export default function LanguageChanger() {
   // Actualizar el estado de isMobile según el tamaño de la ventana
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Cambia el valor de 768 si deseas otro tamaño para "responsive"
+      setIsMobile(window.innerWidth <= 1279); // Cambia el valor de 768 si deseas otro tamaño para "responsive"
     };
 
     handleResize(); // Ejecutar al montar el componente
