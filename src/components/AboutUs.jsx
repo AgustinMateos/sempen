@@ -32,36 +32,36 @@ export default function AboutUs() {
     return (
         <div className=" h-auto overflow-hidden bg-[#101820]" id="AboutUs">
             <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
-  <div className="w-[95%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
-    {/* Efecto de aparición letra por letra en aboutUsTitle */}
-    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
-      {aboutUsTitle.split(" ").map((word, index) => (
-        <span
-          key={index}
-          ref={(el) => (titleRef.current[index] = el)}
-          style={{
-            display: "inline-block",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(100%)",
-            margin: index === 0 ? "0" : "0 10px", // Sin margen izquierdo para la primera palabra
-            transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
-            whiteSpace: "nowrap", // Evitar que las palabras se rompan en varias líneas
-          }}
-        >
-          {word}
-        </span>
-      ))}
-    </h3>
+                <div className="w-[95%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
+                    {/* Efecto de aparición letra por letra en aboutUsTitle */}
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+                        {aboutUsTitle.split(" ").map((word, index) => (
+                            <span
+                                key={index}
+                                ref={(el) => (titleRef.current[index] = el)}
+                                style={{
+                                    display: "inline-block",
+                                    opacity: visible ? 1 : 0,
+                                    transform: visible ? "translateY(0)" : "translateY(100%)",
+                                    margin: index === 0 ? "0" : "0 10px", // Sin margen izquierdo para la primera palabra
+                                    transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
+                                    whiteSpace: "nowrap", // Evitar que las palabras se rompan en varias líneas
+                                }}
+                            >
+                                {word}
+                            </span>
+                        ))}
+                    </h3>
 
-    <div
-      className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[20px]"
-      style={{
-        borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
-        borderImageSlice: 1,
-      }}
-    />
-  </div>
-</div>
+                    <div
+                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[20px] mb-[15px]"
+                        style={{
+                            borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
+                            borderImageSlice: 1,
+                        }}
+                    />
+                </div>
+            </div>
 
             <div
                 className="w-full bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[550px] lg:h-[630px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"

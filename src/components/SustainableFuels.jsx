@@ -25,10 +25,10 @@ export default function SustainableFuels() {
   }, []);
 
   return (
-    <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED] p-[20px] md:p-[0px] flex items-center  justify-center sm:justify-start flex-col sm:min-h-screen">
-      <div className="w-[365px] sm:w-[600px] md:w-full">
-        <div className="w-full flex justify-center px-4 md:px-0">
-          <div className="min-h-[310px] lg:items-center max-w-[1218px] 2xl:max-w-[1470px] w-full flex flex-col justify-evenly">
+    <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED]  md:p-[0px] flex items-center  justify-center sm:justify-start flex-col sm:min-h-screen">
+      <div className="w-[100%] sm:w-[600px] md:w-full">
+        <div className="w-full flex justify-center md:px-0">
+          <div className="min-h-[310px] lg:items-center  2xl:max-w-[1470px] w-[90%] sm:w-[100%] flex flex-col justify-evenly">
             {/* Título con animación letra por letra */}
             <div className="w-full flex justify-center">
               <div className="w-full max-w-[1218px] flex items-end sm:px-0 md:px-0 h-[160px] sm:h-[120px]">
@@ -74,25 +74,25 @@ export default function SustainableFuels() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center bg-[#EDEDED] px-4 md:px-0 min-h-[406px] sm:min-h-[500px] md:min-h-[406px] lg:min-h-[500px]">
-          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row justify-between items-center  text-[#101820] gap-6 w-full max-w-[1470px] md:max-w-[1350px]">
+        <div className="flex flex-col md:flex-row  bg-[#EDEDED]  md:px-0 min-h-[406px] sm:min-h-[500px] md:min-h-[406px] lg:min-h-[500px]">
+          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row justify-between  text-[#101820] gap-6 w-full  ">
             {/* Contenedor de la imagen alineada a la izquierda */}
-            <div className="flex-shrink-0 w-full md:w-auto flex justify-start md:justify-start">
+            <div className="flex-shrink-0 w-full  flex justify-start md:justify-start">
               <Image
                 src="/sustainableFuels.svg"
                 alt="Imagen"
                 width={693}
                 height={393}
-                className="w-full md:w-[693px] h-auto"
+                className="w-[95%] md:w-[693px] h-auto"
               />
             </div>
             {/* Contenedor del texto a la derecha, centrado verticalmente */}
-            <div className="w-full md:w-[557px] flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left">
-              <p className="font-archivo">
+            <div className="w-full md:w-[557px] items-center flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left">
+              <p className="font-archivo w-[92%]">
                 {t("SustainableFuelsNature")}
               </p>
               <br />
-              <p className="font-archivo">
+              <p className="font-archivo w-[92%]">
                 {t("SustainableFuelsDropInFuels")}
               </p>
             </div>
