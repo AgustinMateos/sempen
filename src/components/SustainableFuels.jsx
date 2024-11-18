@@ -25,16 +25,17 @@ export default function SustainableFuels() {
   }, []);
 
   return (
-    <div id="SustainableFuels" className="h-auto sm:h-[150vh] md:h-[110vh] w-full bg-[#EDEDED]  md:p-[0px] flex items-center  justify-center sm:justify-start flex-col sm:min-h-screen">
-      <div className="w-[100%] sm:w-[600px] md:w-full">
-        <div className="w-full flex justify-center md:px-0">
-          <div className="min-h-[310px] lg:items-center  2xl:max-w-[1470px] w-[90%] sm:w-[100%] flex flex-col justify-evenly">
+    <div id="SustainableFuels" className="h-auto sm:h-[130vh] md:h-[150vh] lg:h-[165vh]  w-full bg-[#EDEDED]  md:p-[0px] flex items-center  justify-center sm:justify-start flex-col ">
+      <div className="w-[100%] sm:w-full md:w-full">
+        <div className="w-full flex justify-center lg:justify-end md:px-0">
+          <div className="  2xl:max-w-[1470px] w-[90%] sm:w-[95%] md:w-[95%] lg:w-[90%] md:h-[40vh] flex flex-col justify-evenly">
             {/* Título con animación letra por letra */}
             <div className="w-full flex justify-center">
-              <div className="w-full max-w-[1218px] flex items-end sm:px-0 md:px-0 h-[160px] sm:h-[120px]">
+              <div className="w-full  flex items-end sm:px-0 md:px-0 h-[160px] md:h-auto ">
                 <h4
+
                   ref={titleRef}
-                  className="text-[#57B6B2] font-archivo text-4xl md:text-[80px] h-auto mb-4"
+                  className="text-[#57B6B2] font-archivo text-4xl md:text-[60px] h-auto md:leading-[3.5rem] mb-4 sm:mb-[15px]"
                   style={{
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'translateY(0)' : 'translateY(100%)',
@@ -66,35 +67,38 @@ export default function SustainableFuels() {
                     borderImageSlice: 1,
                   }}
                 />
-                </div></div>
+              </div></div>
             {/* Texto sin animación */}
-            <p className="font-normal font-archivo text-lg md:text-[38px] mt-4 leading-[44px] lg:w-[1218px]">
+            <p className="font-normal md:w-[90%]  font-archivo text-lg md:text-[24px] mt-4 leading-[44px] ">
               {t("SustainableFuelsRenewableFuels")}
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row  bg-[#EDEDED]  md:px-0 min-h-[406px] sm:min-h-[500px] md:min-h-[406px] lg:min-h-[500px]">
-          <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row justify-between  text-[#101820] gap-6 w-full  ">
+        <div className="flex flex-col md:flex-row  bg-[#EDEDED]  md:px-0 min-h-[406px] sm:min-h-[500px] ">
+          <div className="flex flex-col sm:flex-col md:flex-col  justify-between  text-[#101820] gap-6 w-full  ">
             {/* Contenedor de la imagen alineada a la izquierda */}
-            <div className="flex-shrink-0 w-full  flex justify-start md:justify-start">
+            <div className="flex-shrink-0 w-full  flex justify-start ">
               <Image
                 src="/sustainableFuels.svg"
                 alt="Imagen"
                 width={693}
                 height={393}
-                className="w-[95%] md:w-[693px] h-auto"
+                className="w-[95%] md:w-[90%] h-auto"
               />
             </div>
             {/* Contenedor del texto a la derecha, centrado verticalmente */}
-            <div className="w-full md:w-[557px] items-center flex flex-col text-base md:text-[24px] font-extralight leading-8 tracking-tight text-left">
-              <p className="font-archivo w-[92%]">
+            <div className="w-full  items-center flex flex-col text-base text-[16px] md:text-[24px] font-extralight leading-8 tracking-tight text-left">
+              <div className="sm:pl-[20px] pl-[20px] md:pl-[25px] lg:flex lg:pl-[0px] lg:justify-center">
+                <p className="font-archivo w-[92%] md:w-[88%]   lg:w-[80%]">
                 {t("SustainableFuelsNature")}
               </p>
+              </div>
               <br />
-              <p className="font-archivo w-[92%]">
+              <div className="pb-[20px] pl-[20px] sm:pl-[20px] md:pl-[25px] lg:pl-[0px] lg:flex lg:justify-center"><p className="font-archivo w-[92%]  md:w-[88%] lg:w-[80%]">
                 {t("SustainableFuelsDropInFuels")}
-              </p>
+              </p></div>
+
             </div>
           </div>
         </div>
