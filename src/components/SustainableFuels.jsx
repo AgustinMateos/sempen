@@ -32,93 +32,97 @@ export default function SustainableFuels() {
 
   return (
     <div
-      id="SustainableFuels"
-      ref={sectionRef}
-      className="h-[170vh] sm:h-[170vh] md:h-[190vh] lg:h-[150vh] xl:h-[100vh] flex items-center md:justify-end bg-[#EDEDED]"
-    >
-      <div className="h-[100vh] md:h-[120vh] xl:h-[90vh] flex flex-col justify-evenly text-[#101820] 2xl:max-w-[1565px] w-full">
-        <div className="flex flex-col items-center md:items-center w-full">
-          <div className="w-[90%] h-[80px] md:h-[100px] md:w-[80%] xl:w-[90%] flex items-end justify-end">
-            <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden">
-              {t("SustainableFuelsTitle").split(" ").map((word, index) => (
+  id="SustainableFuels"
+  ref={sectionRef}
+  className="min-h-screen flex items-center md:justify-end bg-[#EDEDED]"
+>
+  <div className="flex flex-col justify-evenly text-[#101820] 2xl:max-w-[1565px] w-full">
+    {/* Contenedor superior */}
+    <div className="flex flex-col items-center md:items-center w-full">
+      <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
+        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden">
+          {t("SustainableFuelsTitle").split(" ").map((word, index) => (
+            <span
+              key={index}
+              ref={(el) => (titleRef.current[index] = el)}
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "translateY(0)" : "translateY(100%)",
+                marginRight: "20px",
+                transition: `opacity 0.3s ease ${index * 30}ms, transform 0.3s ease ${index * 30}ms`,
+              }}
+            >
+              {word}
+            </span>
+          ))}
+        </h3>
+        <div
+          className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[31px]"
+          style={{
+            borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
+            borderImageSlice: 1,
+          }}
+        />
+      </div>
+      <div className="w-full flex justify-center">
+        <p className="w-[90%] md:w-[79%] xl:w-[88%] font-archivo text-lg md:text-[24px] lg:text-[38px] mt-4 leading-[44px]">
+          {t("SustainableFuelsRenewableFuels")}
+        </p>
+      </div>
+    </div>
+
+    {/* Contenedor inferior */}
+    <div className="flex flex-col xl:flex-row items-center justify-between w-full">
+      <div className="w-full flex justify-start">
+        <Image
+          src="/sustainableFuels.svg"
+          alt="Imagen"
+          layout="intrinsic"
+          width={356}
+          height={207}
+          className="w-[95%] md:w-[88%] h-auto"
+        />
+      </div>
+      <div className="flex justify-center md:w-full md:justify-end xl:justify-start">
+        <div className="w-[90%] md:w-[87%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
+          <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%]">
+            {t("SustainableFuelsNature")
+              .split(" ")
+              .map((word, index) => (
                 <span
                   key={index}
-                  ref={(el) => (titleRef.current[index] = el)}
+                  className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
                   style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateY(0)" : "translateY(100%)",
-                    marginRight: "20px",
-                    transition: `opacity 0.3s ease ${index * 30}ms, transform 0.3s ease ${index * 30}ms`,
+                    transitionDelay: `${index * 100}ms`,
+                    transitionDuration: "0.3s",
                   }}
                 >
-                  {word}
+                  {word}{" "}
                 </span>
               ))}
-            </h3>
-            <div
-              className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[31px]"
-              style={{
-                borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
-                borderImageSlice: 1,
-              }}
-            />
-          </div>
-          <div className="w-full flex justify-center">
-            <p className="w-[90%] md:w-[79%] xl:w-[88%] font-archivo text-lg md:text-[24px] lg:text-[38px] mt-4 leading-[44px]">
-              {t("SustainableFuelsRenewableFuels")}
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col xl:flex-row items-center justify-between w-full">
-          <div className="w-full flex justify-start">
-            <Image
-              src="/sustainableFuels.svg"
-              alt="Imagen"
-              layout="intrinsic"
-              width={356}
-              height={207}
-              className="w-[95%] md:w-[88%] h-[207px]"
-            />
-          </div>
-          <div className="flex justify-center md:flex md:w-full md:justify-end xl:justify-start">
-            <div className="w-[90%] md:w-[87%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
-              <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%]">
-                {t("SustainableFuelsNature")
-                  .split(" ")
-                  .map((word, index) => (
-                    <span
-                      key={index}
-                      className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
-                      style={{
-                        transitionDelay: `${index * 100}ms`,
-                        transitionDuration: "0.3s",
-                      }}
-                    >
-                      {word}{" "}
-                    </span>
-                  ))}
-              </p>
-              <p className="font-archivo text-[16px] xl:text-[24px] font-extralight mt-4 md:w-[600px] lg:w-[80%] xl:w-[100%]">
-                {t("SustainableFuelsDropInFuels")
-                  .split(" ")
-                  .map((word, index) => (
-                    <span
-                      key={index}
-                      className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
-                      style={{
-                        transitionDelay: `${(t("SustainableFuelsNature").split(" ").length + index) * 100}ms`,
-                        transitionDuration: "0.3s",
-                      }}
-                    >
-                      {word}{" "}
-                    </span>
-                  ))}
-              </p>
-            </div>
-          </div>
+          </p>
+          <p className="font-archivo text-[16px] xl:text-[24px] font-extralight mt-4 md:w-[600px] lg:w-[80%] xl:w-[100%]">
+            {t("SustainableFuelsDropInFuels")
+              .split(" ")
+              .map((word, index) => (
+                <span
+                  key={index}
+                  className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
+                  style={{
+                    transitionDelay: `${(t("SustainableFuelsNature").split(" ").length + index) * 100}ms`,
+                    transitionDuration: "0.3s",
+                  }}
+                >
+                  {word}{" "}
+                </span>
+              ))}
+          </p>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
