@@ -37,7 +37,7 @@ export default function WhoWeAre() {
             ref={sectionRef}
             className="h-[125vh] md:h-[130vh] lg:h-[150vh] xl:h-[100vh]  flex items-center md:justify-end bg-[#101820]"
         >
-            <div className="h-[120vh] xl:h-[90vh] ml-[24px] md:m-[0px] flex flex-col justify-evenly text-white  2xl:max-w-[1565px] w-full">
+            <div className="h-[120vh] xl:h-[90vh] ml-[24px] md:m-[0px] flex flex-col justify-evenly text-white   w-full">
                 <div className="md:flex md:flex-col md:items-end">
                     <div className="h-[80px] md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
                         {/* Título animado letra por letra */}

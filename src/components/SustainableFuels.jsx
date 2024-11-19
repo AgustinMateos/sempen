@@ -36,7 +36,7 @@ export default function SustainableFuels() {
   ref={sectionRef}
   className="min-h-screen flex items-center md:justify-end bg-[#EDEDED]"
 >
-  <div className="flex flex-col justify-evenly text-[#101820] 2xl:max-w-[1565px] w-full">
+  <div className="flex flex-col justify-evenly text-[#101820] w-full">
     {/* Contenedor superior */}
     <div className="flex flex-col items-center md:items-center w-full">
       <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
