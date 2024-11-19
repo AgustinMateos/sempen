@@ -75,7 +75,7 @@ export default function AboutUs() {
                 ref={aboutUsRef} // Mueve la referencia aquí para activar visible
             >
                 {/* Efecto de aparición palabra por palabra en aboutUsh2Text */}
-                <div className="h-auto w-[90%] md:w-[90%] lg:w-[85%] xl:w-[99%] justify-center text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[60px]">
+                <div className="h-auto w-[90%] md:w-[90%] lg:w-[85%] xl:w-[90%] justify-center text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[60px]">
                     <h4 className="font-archivo flex flex-wrap justify-center">
                         {aboutUsh2Text.split(" ").map((word, index) => (
                             <span
