@@ -71,7 +71,7 @@ export default function Projects() {
 
   return (
     <div id="OurProjects" className="w-full bg-[#EDEDED] py-10 p-[20px]" ref={projectsRef}>
-      <div className="w-full flex justify-center">
+      <div className="w-full  flex justify-center">
         <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 h-[160px]">
           <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
             {t("projectsTitle").split(" ").map((word, wordIndex) => (
@@ -111,9 +111,9 @@ export default function Projects() {
           <div
             key={project.id}
             onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
-            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[1100px] overflow-hidden transition-all duration-300 ${activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
+            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[98%] overflow-hidden transition-all duration-300 ${activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
               } 
-            lg:h-[350px] 
+            lg:h-[390px] 
             ${activeCard !== project.id && "lg:group-hover:h-[490px]"}`}
           >
             <div

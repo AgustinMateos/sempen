@@ -52,7 +52,7 @@ export default function GreenEnergy() {
 
   return (
     <div className="w-full bg-[#EDEDED] flex flex-col items-center">
-      <div className="flex justify-center w-[332px] md:w-[700px] sm:w-[600px] lg:w-[950px] xl:w-[1212px] rounded-tl-[8px]">
+      <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
           <div className="flex space-x-4 mb-4 w-full max-w-[1218px]">
             {Object.keys(buttonData).map((button) => (
