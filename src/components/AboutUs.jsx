@@ -32,7 +32,7 @@ export default function AboutUs() {
     return (
         <div className=" h-auto overflow-hidden bg-[#101820] scroll-mt-20" id="AboutUs" >
             <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
-                <div className="w-[95%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
+                <div className="w-[90%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
                         {aboutUsTitle.split(" ").map((word, index) => (
@@ -54,7 +54,7 @@ export default function AboutUs() {
                     </h3>
 
                     <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 mt-[4px] md:mb-[20px] mb-[15px]"
+                        className="flex-1 h-0 border-t-[2px] ml-4 "
                         style={{
                             borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
                             borderImageSlice: 1,
@@ -93,7 +93,7 @@ export default function AboutUs() {
 
                 {/* Efecto de aparición palabra por palabra en developText */}
                 <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem]  lg:text-[2rem] xl:text-[3rem] w-full">
-                    <div className="w-[85%] md:w-[70%] xl:w-[80%] text-center mb-4">
+                    <div className="w-[85%] md:w-[75%] xl:w-[80%] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
                                 key={index}
