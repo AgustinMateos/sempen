@@ -51,7 +51,7 @@ export default function GreenEnergy() {
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
 
   return (
-    <div className="w-full bg-[#EDEDED] flex flex-col items-center">
+    <div className="w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
           <div className="flex space-x-4 mb-4 w-full max-w-[1218px]">
