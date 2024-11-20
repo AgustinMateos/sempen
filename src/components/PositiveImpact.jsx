@@ -47,16 +47,16 @@ export default function PositiveImpact() {
     }, []);
 
     return (
-        <div className="relative overflow-hidden h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[90vh] 2xl:h-[100vh] " ref={aboutUsRef}>
+        <div className="relative overflow-hidden h-full  " ref={aboutUsRef}>
             <div
-                className="w-full bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
+                className="w-full bg-cover bg-center h-[55vh]  sm:h-[60vh] md:h-[65vh] lg:h-[70vh] xl:h-[75vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}
             >
                 {/* Contenedor de texto optimizado para móviles */}
                 <div className="h-auto  text-[#FFFFFF] flex items-center text-center  w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%]   text-[30px] md:text-[32px] lg:text-[32px]">
-                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px] xl:text-[30px]" >
+                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px] xl:text-[30px] " >
                         {OurMisionText.split(" ").map((word, index) => (
                             <span
                                 key={index}
