@@ -30,7 +30,7 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className=" h-auto overflow-hidden bg-[#101820]" id="AboutUs">
+        <div className=" h-auto overflow-hidden bg-[#101820] scroll-mt-20" id="AboutUs" >
             <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
                 <div className="w-[95%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}

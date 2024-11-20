@@ -47,9 +47,9 @@ export default function PositiveImpact() {
     }, []);
 
     return (
-        <div className="relative overflow-hidden h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[50vh] 2xl:h-[100vh] " ref={aboutUsRef}>
+        <div className="relative overflow-hidden h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[90vh] 2xl:h-[100vh] " ref={aboutUsRef}>
             <div
-                className="w-full bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
+                className="w-full bg-cover bg-center h-full flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}

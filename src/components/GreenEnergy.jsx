@@ -90,9 +90,13 @@ export default function GreenEnergy() {
           {/* Solo muestra el contenido si activeButton tiene un valor */}
           {currentButtonData && (
             <div className="h-auto rounded-[8px] overflow-hidden shadow-lg mb-4">
-              <div className="bg-white p-4 flex flex-col justify-around items-center h-[1234px] sm:h-[700px] md:h-[650px]">
+              <div 
+      className={`bg-white pt-[20px] pb-[20px]   flex flex-col justify-around items-center ${
+        activeButton === 'button1' ? ' min-h-[75vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[50vh]' : ' min-h-[55vh] sm:min-h-[40vh] md:min-h-[50vh] lg:min-h-[40vh] xl:min-h-[40vh]'
+      }`}
+    >
                 {currentButtonData.info.map((text, index) => (
-                  <p key={index} className="leading-[38px] tracking-[-0.01em] text-[16px] md:text-[22px] text-justify font-archivo max-w-[1090px] w-full">
+                  <p key={index} className="leading-[38px] w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] md:text-[22px] text-justify font-archivo max-w-[1090px] ">
                     {activeButton === 'button1' && index === 0 ? (
                       <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : activeButton === 'button2' && index === 1 ? (

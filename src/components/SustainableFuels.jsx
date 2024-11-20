@@ -34,12 +34,12 @@ export default function SustainableFuels() {
     <div
     id="SustainableFuels"
     ref={sectionRef}
-    className="min-h-[80vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-20"
+    className="min-h-[60vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-20"
   >
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
     {/* Contenedor superior */}
-    <div className="flex flex-col items-center md:items-center w-full xl:h-[25vh] 2xl:h-[25vh]">
+    <div className="flex flex-col items-center md:items-center w-full  xl:h-auto 2xl:h-[25vh]">
       <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
         <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden">
           {t("SustainableFuelsTitle").split(" ").map((word, index) => (
@@ -85,7 +85,7 @@ export default function SustainableFuels() {
         />
       </div>
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">
-        <div className="w-[90%] md:w-[90%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
+        <div className="w-[90%] md:w-[90%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 lg:mb-[30px]">
           <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%] lg:pt-[20px]">
             {t("SustainableFuelsNature")
               .split(" ")
