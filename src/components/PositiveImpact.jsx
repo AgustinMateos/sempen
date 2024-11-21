@@ -49,13 +49,13 @@ export default function PositiveImpact() {
     return (
         <div className="relative overflow-hidden h-full  " ref={aboutUsRef}>
             <div
-                className="w-full bg-cover bg-center h-[75vh]  sm:h-[60vh] md:h-[65vh] lg:h-[80vh] xl:h-[75vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
+                className="w-full bg-cover bg-center h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[120vh] xl:h-[120vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}
             >
                 {/* Contenedor de texto optimizado para móviles */}
-                <div className="h-auto  text-[#FFFFFF] flex items-center text-center  w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%]   text-[30px] md:text-[32px] lg:text-[32px]">
+                <div className="  text-[#FFFFFF] flex items-center text-center h-[330px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%]   text-[30px] md:text-[32px] lg:text-[32px]">
                     <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px] xl:text-[30px] " >
                         {OurMisionText.split(" ").map((word, index) => (
                             <span
