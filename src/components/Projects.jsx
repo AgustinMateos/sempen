@@ -72,7 +72,7 @@ export default function Projects() {
   return (
     <div id="OurProjects" className="w-full bg-[#EDEDED] py-10 p-[20px]" ref={projectsRef}>
       <div className="w-full  flex justify-center">
-        <div className="w-full max-w-[1218px] flex items-end px-4 md:px-0 h-[110px] sm:h-[10vh] md:h-[15vh] lg:w-[95%] xl:w-[95%]">
+        <div className="w-full  flex items-end px-4 md:px-0 h-[135px] sm:h-[10vh] md:h-[15vh] lg:w-[95%] xl:w-[93%] 2xl:w-[90%]">
           <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
             {t("projectsTitle").split(" ").map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block mr-[20px]"> {/* Ajuste aquí */}
