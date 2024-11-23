@@ -49,7 +49,7 @@ export default function PositiveImpact() {
     return (
         <div className="relative overflow-hidden h-full  " ref={aboutUsRef}>
             <div
-                className="w-full bg-cover bg-center h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[120vh] xl:h-[120vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
+                className=" overflow-hidden w-full bg-cover bg-center h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[120vh] xl:h-[120vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
                 style={{
                     backgroundImage: `url('/OurMissionImg.svg')`,
                 }}

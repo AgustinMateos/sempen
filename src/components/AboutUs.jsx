@@ -30,7 +30,7 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className=" h-auto overflow-hidden bg-[#101820] scroll-mt-20" id="AboutUs" >
+        <div className=" h-auto  bg-[#101820] " id="AboutUs" >
             <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
                 <div className="w-[90%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
                     {/* Efecto de aparición letra por letra en aboutUsTitle */}
@@ -54,7 +54,7 @@ export default function AboutUs() {
                     </h3>
 
                     <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 "
+                        className="flex-1 h-0 border-t-[2px] ml-4 mb-[31px] "
                         style={{
                             borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
                             borderImageSlice: 1,
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[550px] lg:h-[630px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
+                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[550px] lg:h-[630px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
