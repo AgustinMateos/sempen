@@ -39,9 +39,9 @@ export default function SustainableFuels() {
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
     {/* Contenedor superior */}
-    <div className="flex flex-col items-center md:items-center w-full  xl:h-auto 2xl:h-[25vh]">
+    <div className="flex flex-col items-center md:items-center w-full h-[35vh] justify-evenly  xl:h-[38vh] 2xl:h-[25vh]">
       <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
-        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden">
+        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden leading-[50px] sm:leading-[70px]">
           {t("SustainableFuelsTitle").split(" ").map((word, index) => (
             <span
               key={index}
@@ -66,7 +66,7 @@ export default function SustainableFuels() {
         />
       </div>
       <div className="w-full flex justify-center">
-        <p className="w-[90%] md:w-[79%] xl:w-[88%] lg:pb-[20px] font-archivo text-lg md:text-[24px] lg:text-[38px] mt-4 leading-[44px]">
+        <p className="w-[90%] mb-[20px] md:w-[79%] font-normal xl:w-[88%] lg:pb-[20px] font-archivo text-[24px] md:text-[24px] lg:text-[38px] mt-4 leading-[30px]  sm:leading-[44px]">
           {t("SustainableFuelsRenewableFuels")}
         </p>
       </div>

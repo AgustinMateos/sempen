@@ -54,14 +54,14 @@ export default function GreenEnergy() {
     <div className="w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
-          <div className="flex space-x-4 mb-4 w-full max-w-[1218px]">
+          <div className="flex flex-col sm:flex-row mt-[20px] sm:space-x-4 mb-4 w-full max-w-[1218px]">
             {Object.keys(buttonData).map((button) => (
               <button
                 key={button}
                 onClick={() => handleButtonClick(button)}
                 onMouseEnter={() => setHoveredButton(button)}
                 onMouseLeave={() => setHoveredButton(null)}
-                className={`h-[78px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
+                className={`h-[78px] mb-[10px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
                   activeButton === button
                     ? 'bg-[#101820] text-white'
                     : 'bg-[#D9D8D6] text-[#76777A] hover:bg-[#76777A] hover:text-white'
@@ -96,10 +96,10 @@ export default function GreenEnergy() {
       }`}
     >
                 {currentButtonData.info.map((text, index) => (
-                  <p key={index} className="leading-[38px] w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] md:text-[22px] text-justify font-archivo max-w-[1090px] ">
+                  <p key={index} className="leading-[38px] font-extralight w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo max-w-[1090px] ">
                    
                     {activeButton === 'button1' && index === 0 ? (
-                      <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[24px] md:text-[32px]  font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : activeButton === 'button2' && index === 1 ? (
                       <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : (

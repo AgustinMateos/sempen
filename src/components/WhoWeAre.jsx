@@ -35,13 +35,13 @@ export default function WhoWeAre() {
         <div
         id="WhoWeAre"
         ref={sectionRef}
-        className="h-auto  scroll-mt-20 lg:scroll-mt-10 flex items-center md:justify-end bg-[#101820]"
+        className="h-auto   scroll-mt-20  flex items-center md:justify-end bg-[#101820]"
     >
-            <div className=" ml-[24px] md:m-[0px] flex flex-col justify-center text-white   w-full">
-                <div className="md:flex md:flex-col md:items-end h-auto 2xl:justify-center lg:h-[35vh] lg:justify-center 2xl:h-[190px]">
+            <div className=" ml-[24px] md:m-[0px] flex flex-col justify-center text-white min-h-[90vh] md:min-h-[100vh] lg:min-h-[80vh] xl:min-h-[85vh] lg:justify-around  w-full">
+                <div className="md:flex md:flex-col md:items-end h-auto 2xl:justify-center lg:h-auto lg:justify-center 2xl:h-[190px]">
                     <div className="h-auto md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
                         {/* Título animado letra por letra */}
-                        <h3 className="text-[#57B6B2]  font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
+                        <h3 id="WhoWeAre" className="text-[#57B6B2]  font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
                             {t("WhoWeAreTitle").split(" ").map((word, index) => (
                                 <span
                                     key={index}
@@ -70,11 +70,11 @@ export default function WhoWeAre() {
                 </div>
 
 
-                <div className="flex flex-col xl:flex-row items-center justify-between w-full ">
+                <div className="flex flex-col xl:flex-row items-center xl:justify-between w-full h-auto  justify-around  ">
                     <div className="md:flex md:w-full md:justify-end">
                         <div className="w-full md:w-[87%] xl:w-[86%] pr-[20px] md:mr-[10px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
                             
-                            <p className="text-[16px] xl:text-[24px] font-extralight md:w-[600px] lg:w-[80%] xl:w-[100%]">
+                            <p className="text-[16px] lg:text-[24px] xl:text-[24px] font-extralight md:w-[600px] lg:w-[80%] xl:w-[100%]">
                                 {t("WhoWeAreP")
                                     .split(" ")
                                     .map((word, index) => (
@@ -92,7 +92,7 @@ export default function WhoWeAre() {
                                                 " "}
                                         </span>
                                     ))}
-                                <strong className="font-archivo font-bold text-[16px] xl:text-[24px] ">
+                                <strong className="font-archivo font-bold text-[16px] lg:text-[24px] xl:text-[24px] ">
                                     {t("WhoWeArePstrong")
                                         .split(" ")
                                         .map((word, index) => (
@@ -118,7 +118,7 @@ export default function WhoWeAre() {
                                         ))}
                                 </strong>
                             </p>
-                            <p className="font-archivo text-[16px] xl:text-[24px]  font-extralight mt-4 md:w-[600px] lg:w-[80%] xl:w-[100%] ">
+                            <p className="font-archivo text-[16px] xl:text-[24px]  font-extralight mt-4 md:w-[600px] lg:text-[24px] lg:w-[80%] xl:w-[100%] ">
                                 {t("WhoWeArePsecond")
                                     .split(" ")
                                     .map((word, index) => (
@@ -141,7 +141,7 @@ export default function WhoWeAre() {
                                         </span>
                                     ))}
                             </p>
-                            <p className="text-[16px] xl:text-[24px]  font-archivo md:w-[600px] lg:w-[80%] xl:w-[100%]  font-extralight mt-4">
+                            <p className="text-[16px]   xl:text-[24px]  font-archivo md:w-[600px] lg:w-[80%] xl:w-[100%] lg:text-[24px] font-extralight mt-4">
                                 {t("WhoWeArePThird")
                                     .split(" ")
                                     .map((word, index) => (
@@ -168,7 +168,7 @@ export default function WhoWeAre() {
                                                 " "}
                                         </span>
                                     ))}
-                                <strong className="font-bold font-archivo text-[16px] xl:text-[24px] ">
+                                <strong className="font-bold font-archivo text-[16px] lg:text-[24px] xl:text-[24px] ">
                                     {t("WhoWeArePThirdStrong")
                                         .split(" ")
                                         .map((word, index) => (

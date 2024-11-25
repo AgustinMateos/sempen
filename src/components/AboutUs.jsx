@@ -30,9 +30,9 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className=" h-auto   bg-[#101820]  " id="AboutUs"  >
-            <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
-                <div className="w-[90%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
+        <div className="   lg:scroll-mt-[3.5rem] h-auto   bg-[#101820]  " id="AboutUs"  >
+            <div className=" w-full h-[20vh] flex justify-center md:justify-end">
+                <div className="w-[90%]  md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
                    
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
                         {aboutUsTitle.split(" ").map((word, index) => (
@@ -54,7 +54,7 @@ export default function AboutUs() {
                     </h3>
 
                     <div
-                        className="flex-1 h-0 border-t-[2px] ml-4 mb-[31px] "
+                        className="flex-1 h-0 border-t-[2px] ml-4 mb-[18px] md:mb-[31px] "
                         style={{
                             borderImageSource: "linear-gradient(90deg, #005D63 45.5%, #101820 100%)",
                             borderImageSlice: 1,
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[550px] lg:h-[630px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
+                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[555px] lg:h-[645px]  xl:h-[650px] 2xl:h-[790px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
