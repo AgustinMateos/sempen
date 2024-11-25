@@ -75,7 +75,7 @@ export default function Projects() {
         <div className="w-full  flex items-end px-4 md:px-0 h-[135px] sm:h-[10vh] md:h-[15vh] lg:h-[20vh] lg:w-[95%] xl:w-[93%] 2xl:w-[90%]">
           <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
             {t("projectsTitle").split(" ").map((word, wordIndex) => (
-              <span key={wordIndex} className="inline-block mr-[20px]"> {/* Ajuste aquí */}
+              <span key={wordIndex} className="inline-block mr-[20px]"> 
                 {word.split("").map((letter, letterIndex) => (
                   <span
                     key={letterIndex}

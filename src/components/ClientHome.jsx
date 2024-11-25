@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
-import Loader from '@/components/Loader'; // Importa el loader
+import Loader from '@/components/Loader'; 
 import PrimerComponente from '@/components/PrimerComponente';
 import Navbar from '@/components/Navbar';
 import SustainableFuels from '@/components/SustainableFuels';
@@ -17,16 +17,16 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Oculta el loader después del tiempo establecido
-    }, 3000); // Duración del loader (3 segundos en este ejemplo)
+      setLoading(false); 
+    }, 3000); 
 
-    return () => clearTimeout(timer); // Limpia el timer si el componente se desmonta
+    return () => clearTimeout(timer); 
   }, []);
 
   return (
     <>
       <Navbar />
-      {loading && <Loader />} {/* Muestra el loader mientras loading es true */}
+      {loading && <Loader />} 
       
       <main
         className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`} 

@@ -30,10 +30,10 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className=" h-auto  bg-[#101820] " id="AboutUs" >
+        <div className=" h-auto   bg-[#101820]  " id="AboutUs"  >
             <div className="h-[120px] md:h-[150px] lg:h-[195px] w-full flex justify-center md:justify-end">
                 <div className="w-[90%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
-                    {/* Efecto de aparición letra por letra en aboutUsTitle */}
+                   
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
                         {aboutUsTitle.split(" ").map((word, index) => (
                             <span
@@ -43,9 +43,9 @@ export default function AboutUs() {
                                     display: "inline-block",
                                     opacity: visible ? 1 : 0,
                                     transform: visible ? "translateY(0)" : "translateY(100%)",
-                                    margin: index === 0 ? "0" : "0 10px", // Sin margen izquierdo para la primera palabra
+                                    margin: index === 0 ? "0" : "0 10px", 
                                     transition: `opacity 0.5s ease ${index * 100}ms, transform 0.5s ease ${index * 100}ms`,
-                                    whiteSpace: "nowrap", // Evitar que las palabras se rompan en varias líneas
+                                    whiteSpace: "nowrap", 
                                 }}
                             >
                                 {word}
@@ -69,12 +69,12 @@ export default function AboutUs() {
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
                         linear-gradient(0deg, rgba(16, 24, 32, 0) 41.5%, rgba(16, 24, 32, 0.446541) 64%, #101820 97%),
-                        url('/aboutUs.svg')
+                        url('/aboutUs.webp')
                     `,
                 }}
-                ref={aboutUsRef} // Mueve la referencia aquí para activar visible
+                ref={aboutUsRef} 
             >
-                {/* Efecto de aparición palabra por palabra en aboutUsh2Text */}
+              
                 <div className="h-auto w-[90%] md:w-[90%] lg:w-[85%] xl:w-[90%] justify-center text-[#FFFFFF] flex items-center text-center text-[30px] md:text-[50px] lg:text-[60px]">
                     <h4 className="font-archivo flex flex-wrap justify-center">
                         {aboutUsh2Text.split(" ").map((word, index) => (
@@ -91,7 +91,6 @@ export default function AboutUs() {
 
 
 
-                {/* Efecto de aparición palabra por palabra en developText */}
                 <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem]  lg:text-[2rem] xl:text-[3rem] w-full">
                     <div className="w-[85%] md:w-[75%] xl:w-[80%] text-center mb-4">
                         {developText.split(" ").map((word, index) => (

@@ -26,13 +26,13 @@ export default function PositiveImpact() {
 
     const startingPosition = -250;
 
-    // IntersectionObserver para detectar cuando el contenedor entra en vista
+  
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setVisible(true);
-                    observer.disconnect(); // Deja de observar una vez sea visible
+                    observer.disconnect(); 
                 }
             });
         });
@@ -51,10 +51,10 @@ export default function PositiveImpact() {
             <div
                 className=" overflow-hidden w-full bg-cover bg-center h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[120vh] xl:h-[120vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
                 style={{
-                    backgroundImage: `url('/OurMissionImg.svg')`,
+                    backgroundImage: `url('/OurMissionImg.webp')`,
                 }}
             >
-                {/* Contenedor de texto optimizado para móviles */}
+               
                 <div className="  text-[#FFFFFF] flex items-center text-center h-[330px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%]   text-[30px] md:text-[32px] lg:text-[32px]">
                     <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px] xl:text-[30px] " >
                         {OurMisionText.split(" ").map((word, index) => (
@@ -69,9 +69,9 @@ export default function PositiveImpact() {
                     </h4>
                 </div>
 
-                {/* Imagen Parallax a pantalla completa */}
+             
                 <Image
-                    src="/sempenparallax.svg"
+                    src="/sempenparallax.webp"
                     alt="Parallax Image"
                     layout="responsive"
                     width={1587}

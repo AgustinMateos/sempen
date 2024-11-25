@@ -27,7 +27,7 @@ export default function WeBuild() {
         <div className="relative mb-[25px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] lg:w-[420px]" />
           <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[25px] text-[14px] sm:text-[18px] lg:text-[32px]">
-            {words[currentWordIndex]}
+            {/* {words[currentWordIndex]} */} sustainable fuels
           </p>
         </div>
         <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[25px] ">to decarbonize global energy</p>

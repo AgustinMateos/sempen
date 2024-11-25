@@ -76,7 +76,7 @@ export default function SustainableFuels() {
     <div className="flex flex-col xl:flex-row items-center justify-between w-full">
       <div className="w-full flex justify-start">
         <Image
-          src="/sustainableFuels.svg"
+          src="/sustainableFuels.webp"
           alt="Imagen"
           layout="intrinsic"
           width={356}

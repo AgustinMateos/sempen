@@ -12,7 +12,7 @@ export default function LanguageChanger() {
   const router = useRouter();
   const currentPathname = usePathname();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Estado para verificar si es responsive
+  const [isMobile, setIsMobile] = useState(false); 
 
   const languages = {
     en: 'English',
@@ -36,13 +36,13 @@ export default function LanguageChanger() {
     router.refresh();
   };
 
-  // Actualizar el estado de isMobile según el tamaño de la ventana
+
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1279); // Cambia el valor de 768 si deseas otro tamaño para "responsive"
+      setIsMobile(window.innerWidth <= 1279); 
     };
 
-    handleResize(); // Ejecutar al montar el componente
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -58,7 +58,7 @@ export default function LanguageChanger() {
         }`}
       >
         <Image
-          src={isMobile ? '/iconotraduccion.svg' : '/language.svg'} // Cambiar el icono según el modo
+          src={isMobile ? '/iconotraduccion.webp' : '/language.webp'} 
           alt="Language Icon"
           width={30}
           height={30}

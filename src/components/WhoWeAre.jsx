@@ -35,11 +35,11 @@ export default function WhoWeAre() {
         <div
         id="WhoWeAre"
         ref={sectionRef}
-        className="h-auto flex items-center md:justify-end bg-[#101820]"
+        className="h-auto  scroll-mt-20 lg:scroll-mt-10 flex items-center md:justify-end bg-[#101820]"
     >
-            <div className="min-h-[70vh] sm:min-h-[70vh] md:min-h-[90vh] lg:min-h-[110vh] xl:min-h-[70vh] 2xl:min-h-[75vh] ml-[24px] md:m-[0px] flex flex-col justify-center text-white   w-full">
-                <div className="md:flex md:flex-col md:items-end h-[120px] 2xl:justify-center lg:h-[35vh] lg:justify-center 2xl:h-[190px]">
-                    <div className="h-[120px] md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
+            <div className=" ml-[24px] md:m-[0px] flex flex-col justify-center text-white   w-full">
+                <div className="md:flex md:flex-col md:items-end h-auto 2xl:justify-center lg:h-[35vh] lg:justify-center 2xl:h-[190px]">
+                    <div className="h-auto md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
                         {/* Título animado letra por letra */}
                         <h3 className="text-[#57B6B2]  font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap whitespace-nowrap overflow-hidden">
                             {t("WhoWeAreTitle").split(" ").map((word, index) => (
@@ -49,7 +49,7 @@ export default function WhoWeAre() {
                                     style={{
                                         opacity: isVisible ? 1 : 0,
                                         transform: isVisible ? "translateY(0)" : "translateY(100%)",
-                                        margin: index === 0 ? "0" : "0 10px", // Sin margen izquierdo en la primera palabra
+                                        margin: index === 0 ? "0" : "0 10px", 
                                         transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
                                     }}
                                 >
@@ -73,7 +73,7 @@ export default function WhoWeAre() {
                 <div className="flex flex-col xl:flex-row items-center justify-between w-full ">
                     <div className="md:flex md:w-full md:justify-end">
                         <div className="w-full md:w-[87%] xl:w-[86%] pr-[20px] md:mr-[10px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
-                            {/* Efecto de aparición palabra por palabra */}
+                            
                             <p className="text-[16px] xl:text-[24px] font-extralight md:w-[600px] lg:w-[80%] xl:w-[100%]">
                                 {t("WhoWeAreP")
                                     .split(" ")
@@ -209,7 +209,7 @@ export default function WhoWeAre() {
                     </div>
                     <div className="w-full flex  justify-center md:justify-end">
                         <Image
-                            src="/WhoWeAre.svg"
+                            src="/WhoWeAre.webp"
                             alt="Imagen"
                             width={766}
                             height={250}

@@ -2,18 +2,18 @@
 import { useEffect, useRef } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
-  const videoRefLarge = useRef(null);  // Video para pantallas grandes (horizontal)
-  const videoRefSmall = useRef(null);  // Video para pantallas pequeñas (vertical)
+  const videoRefLarge = useRef(null);  
+  const videoRefSmall = useRef(null); 
 
   useEffect(() => {
     if (shouldPlay) {
-      // Reproduce el video adecuado según el tamaño de la pantalla
+      
       if (window.innerWidth > 640 && videoRefLarge.current) {
         videoRefLarge.current.play();
-        if (videoRefSmall.current) videoRefSmall.current.pause(); // Pausar el video pequeño si está jugando
+        if (videoRefSmall.current) videoRefSmall.current.pause(); 
       } else if (window.innerWidth <= 640 && videoRefSmall.current) {
         videoRefSmall.current.play();
-        if (videoRefLarge.current) videoRefLarge.current.pause(); // Pausar el video grande si está jugando
+        if (videoRefLarge.current) videoRefLarge.current.pause(); 
       }
     }
   }, [shouldPlay]);
@@ -24,8 +24,8 @@ export default function PrimerComponente({ shouldPlay }) {
       <video
         ref={videoRefLarge}
         src="/New.mp4"
-        preload="auto" // Precarga el video completamente
-        className="w-full h-full object-contain hidden sm:block" // Solo visible en pantallas grandes horizontales (>= 640px)
+        preload="auto" 
+        className="w-full h-full object-contain hidden sm:block" 
         loop
         muted
         playsInline
@@ -34,8 +34,8 @@ export default function PrimerComponente({ shouldPlay }) {
       <video
         ref={videoRefSmall}
         src="/Mobile.mp4"
-        preload="auto" // Precarga el video completamente
-        className="w-full h-full object-contain sm:hidden block" // Solo visible en pantallas pequeñas o verticales (< 640px)
+        preload="auto" 
+        className="w-full h-full object-contain sm:hidden block" 
         loop
         muted
         playsInline

@@ -42,7 +42,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
-                    <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
+                    <Image src="/logoSempen.webp" alt="Logo" width={124} height={30} />
                 </Link>
             </div>
 
@@ -70,8 +70,6 @@ const Navbar = () => {
                 </button>
                 <LanguageChanger />
             </div>
-
-            {/* Botón para el menú móvil en pantallas hasta lg */}
             <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsOpen(!isOpen)} className="text-white">
                     <svg
@@ -95,11 +93,10 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Menú móvil/hamburguesa (visible hasta lg) */}
             <div className={`xl:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full text-white z-50`}>
                 <div className="flex items-center justify-between p-4 bg-[#101820]">
                     <Link href="/" className="flex items-center">
-                        <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
+                        <Image src="/logoSempen.webp" alt="Logo" width={124} height={30} />
                     </Link>
                     <button onClick={() => setIsOpen(false)} className="text-white">
                         <svg

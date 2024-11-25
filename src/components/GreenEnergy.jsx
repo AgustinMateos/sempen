@@ -14,8 +14,8 @@ export default function GreenEnergy() {
         t('safInfo3'),
         t('safInfo4'),
       ],
-      image: '/Saf.svg',
-      activeImage: '/safGreen.svg',
+      image: '/Saf.webp',
+      activeImage: '/safGreen.webp',
     },
     button2: {
       info: [
@@ -24,8 +24,8 @@ export default function GreenEnergy() {
         t('ammoniaInfo3'),
         t('ammoniaInfo4'),
       ],
-      image: '/GreenAmmonia2.svg',
-      activeImage: '/safGreen.svg',
+      image: '/GreenAmmonia2.webp',
+      activeImage: '/safGreen.webp',
     },
   };
 
@@ -35,16 +35,16 @@ export default function GreenEnergy() {
   const handleButtonClick = (button) => {
     const isMobileView = window.innerWidth < 640;
     if (activeButton === button && isMobileView) {
-      setActiveButton(null); // Desactiva el botón si es clicado dos veces en vistas menores a sm
+      setActiveButton(null); 
     } else {
-      setActiveButton(button); // Activa el botón seleccionado
+      setActiveButton(button);
     }
   };
 
   useEffect(() => {
-    // Configura el estado inicial de activeButton solo en el primer renderizado
+   
     if (window.innerWidth >= 640) {
-      setActiveButton('button1'); // En vistas sm o mayores activa button1 por defecto
+      setActiveButton('button1'); 
     }
   }, []);
 
@@ -74,8 +74,8 @@ export default function GreenEnergy() {
                       activeButton === button
                         ? buttonData[button].activeImage
                         : hoveredButton === button
-                        ? '/arrow-down-leftHover.svg'
-                        : '/arrow-down-left.svg'
+                        ? '/arrow-down-leftHover.webp'
+                        : '/arrow-down-left.webp'
                     }
                     alt={`Icono ${button}`}
                     height={24}
@@ -87,7 +87,7 @@ export default function GreenEnergy() {
             ))}
           </div>
 
-          {/* Solo muestra el contenido si activeButton tiene un valor */}
+         
           {currentButtonData && (
             <div className="h-auto rounded-[8px] overflow-hidden shadow-lg mb-4">
               <div 
