@@ -30,7 +30,7 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className="   lg:scroll-mt-[3.5rem] h-auto   bg-[#101820]  " id="AboutUs"  >
+        <div className="   lg:scroll-mt-[3.8rem] h-auto   bg-[#101820]  " id="AboutUs"  >
             <div className=" w-full h-[20vh] flex justify-center md:justify-end">
                 <div className="w-[90%]  md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
                    
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around md:justify-between lg:justify-evenly h-[545px] sm:h-[415px] md:h-[555px] lg:h-[645px]  xl:h-[650px] 2xl:h-[790px] px-4 md:px-0"
+                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around  lg:justify-evenly h-[645px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
