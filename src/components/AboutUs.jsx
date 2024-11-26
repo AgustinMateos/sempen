@@ -30,11 +30,11 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className="   lg:scroll-mt-[3.8rem] h-auto   bg-[#101820]  " id="AboutUs"  >
-            <div className=" w-full h-[20vh] flex justify-center md:justify-end">
-                <div className="w-[90%]  md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end">
+        <div className="scroll-mt-[4rem]   lg:scroll-mt-[3.8rem]  xl:scroll-mt-[4.5rem] h-auto   bg-[#101820]  " id="AboutUs"  >
+            <div className=" w-full h-[12vh] flex justify-center md:justify-end">
+                <div className="w-[90%]  md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end lg:h-[15vh]">
                    
-                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
+                    <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap ">
                         {aboutUsTitle.split(" ").map((word, index) => (
                             <span
                                 key={index}
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
 
             <div
-                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-around  lg:justify-evenly h-[645px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
+                className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-evenly  lg:justify-evenly h-[650px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
@@ -92,7 +92,7 @@ export default function AboutUs() {
 
 
                 <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem]  lg:text-[2rem] xl:text-[3rem] w-full">
-                    <div className="w-[85%] md:w-[75%] xl:w-[80%] text-center mb-4">
+                    <div className="w-[95%] md:w-[75%] xl:w-[80%] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
                                 key={index}
