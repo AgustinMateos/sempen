@@ -35,7 +35,7 @@ export default function WhoWeAre() {
         <div
         id="WhoWeAre"
         ref={sectionRef}
-        className="h-auto   scroll-mt-20  flex items-center md:justify-end bg-[#101820]"
+        className="h-auto   scroll-mt- xl:scroll-mt-[18px]  flex items-center md:justify-end bg-[#101820]"
     >
             <div className=" ml-[24px] md:m-[0px] flex flex-col justify-center text-white min-h-[65vh] md:min-h-[85vh] md:justify-around  lg:min-h-[80vh] xl:min-h-[85vh] lg:justify-evenly  w-full">
                 <div className="md:flex md:flex-col md:items-end h-auto 2xl:justify-center lg:h-auto lg:justify-center 2xl:h-[190px]">

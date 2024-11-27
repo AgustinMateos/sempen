@@ -53,8 +53,8 @@ const Navbar = () => {
                         key={link}
                         href={`#${link}`} 
                         className={`navbar-link text-center font-jakarta transition-all duration-500 ${
-                            index === 0 || index === 1 ? 'lg:w-[150px] xl:w-[110px]' : 
-                            index === 3 ? 'lg:w-[180px] xl:w-[140px]' : 'lg:w-[250px] xl:w-[210px]'
+                            index === 0 || index === 1 ? 'lg:w-[150px] xl:w-[150px]' : 
+                            index === 3 ? 'lg:w-[180px] xl:w-[180px]' : 'lg:w-[260px] xl:w-[220px]'
                         } ${activeLink === link ? 'text-[#57B6B2]' : 'text-white'}`}
                         onClick={() => handleLinkClick(link)}
                     >

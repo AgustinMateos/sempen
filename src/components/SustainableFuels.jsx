@@ -34,12 +34,12 @@ export default function SustainableFuels() {
     <div
     id="SustainableFuels"
     ref={sectionRef}
-    className="min-h-[60vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-20"
+    className="min-h-[60vh] xl:min-h-[90vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-20 xl:scroll-mt-[40px]"
   >
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
     {/* Contenedor superior */}
-    <div className="flex flex-col items-center md:items-center w-full h-[30vh] sm:h-[20vh]  md:h-[30vh] justify-evenly  xl:h-[38vh] 2xl:h-[30vh]">
+    <div className="flex flex-col items-center md:items-center w-full h-[35vh] sm:h-[20vh]  md:h-[30vh] justify-evenly  xl:h-[38vh] 2xl:h-[30vh]">
       <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
         <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden leading-[50px] sm:leading-[70px]">
           {t("SustainableFuelsTitle").split(" ").map((word, index) => (
@@ -58,7 +58,7 @@ export default function SustainableFuels() {
           ))}
         </h3>
         <div
-          className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[31px] 2xl:mb-[10px]"
+          className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[31px] xl:mb-[5px] 2xl:mb-[10px]"
           style={{
             borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
             borderImageSlice: 1,
