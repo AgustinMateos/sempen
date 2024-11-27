@@ -58,7 +58,7 @@ export default function SustainableFuels() {
           ))}
         </h3>
         <div
-          className="flex-1 h-0 border-t-[2px] mt-[4px] md:mb-[31px] xl:mb-[5px] 2xl:mb-[10px]"
+          className="flex-1 h-0 border-t-[2px] mt-[4px] mb-[10px] md:mb-[31px] xl:mb-[5px] 2xl:mb-[10px]"
           style={{
             borderImageSource: "linear-gradient(90deg, #57B6B2 45.5%, #EDEDED00 100%)",
             borderImageSlice: 1,

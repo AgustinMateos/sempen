@@ -11,26 +11,19 @@ export default function AboutUs() {
     const titleRef = useRef([]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setVisible(true);
-                        observer.disconnect();
-                    }
-                });
-            },
-            {
-                root: null, // Observa respecto a la ventana del navegador.
-                rootMargin: "0px", // Cambia esto si necesitas activar el efecto antes o después.
-                threshold: 0.5, // Activa el efecto cuando el 50% del elemento esté visible.
-            }
-        );
-    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect();
+                }
+            });
+        });
+
         if (aboutUsRef.current) {
             observer.observe(aboutUsRef.current);
         }
-    
+
         return () => {
             observer.disconnect();
         };
@@ -72,7 +65,6 @@ export default function AboutUs() {
 
             <div
                 className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-evenly  lg:justify-evenly h-[650px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
-               
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
