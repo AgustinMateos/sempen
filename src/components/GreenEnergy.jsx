@@ -51,7 +51,7 @@ export default function GreenEnergy() {
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
 
   return (
-    <div className="xl:h-[150vh]  2xl:h-[100vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
+    <div className="xl:h-[110vh]  2xl:h-[120vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
           <div className="flex flex-col sm:flex-row mt-[20px] sm:space-x-4 mb-4 w-full ">
@@ -96,7 +96,7 @@ export default function GreenEnergy() {
       }`}
     >
                 {currentButtonData.info.map((text, index) => (
-                  <p key={index} className="leading-[38px] font-extralight w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo max-w-[1090px] ">
+                  <p key={index} className="leading-[38px] font-extralight w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo  ">
                    
                     {activeButton === 'button1' && index === 0 ? (
                       <strong className="font-medium text-[24px] md:text-[32px]  font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>

@@ -34,14 +34,14 @@ export default function Projects() {
       description: t("kahirósDescription"),
       image: "/kahiros.webp",
     },
-    {
-      id: 4,
-      name: t("h24uName"),
-      location: t("h24uLocation"),
-      status: t("h24uStatus"),
-      description: t("h24uDescription"),
-      image: "/h24u.webp",
-    },
+    // {
+    //   id: 4,
+    //   name: t("h24uName"),
+    //   location: t("h24uLocation"),
+    //   status: t("h24uStatus"),
+    //   description: t("h24uDescription"),
+    //   image: "/h24u.webp",
+    // },
     {
       id: 5,
       name: t("projectHoleumName"),

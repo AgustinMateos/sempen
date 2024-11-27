@@ -34,7 +34,7 @@ export default function SustainableFuels() {
     <div
     id="SustainableFuels"
     ref={sectionRef}
-    className="min-h-[60vh] xl:min-h-[90vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-20 xl:scroll-mt-[40px]"
+    className="min-h-[60vh] xl:min-h-[90vh] flex items-center md:justify-end bg-[#EDEDED] sm:scroll-mt-20 xl:scroll-mt-[40px]"
   >
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
