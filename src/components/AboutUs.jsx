@@ -11,26 +11,33 @@ export default function AboutUs() {
     const titleRef = useRef([]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.disconnect();
-                }
-            });
-        });
-
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            {
+                root: null, // Observa respecto a la ventana del navegador.
+                rootMargin: "0px", // Cambia esto si necesitas activar el efecto antes o después.
+                threshold: 0.5, // Activa el efecto cuando el 50% del elemento esté visible.
+            }
+        );
+    
         if (aboutUsRef.current) {
             observer.observe(aboutUsRef.current);
         }
-
+    
         return () => {
             observer.disconnect();
         };
     }, []);
 
     return (
-        <div className="scroll-mt-[4rem]   lg:scroll-mt-[3.8rem]  xl:scroll-mt-[4.5rem] h-auto   bg-[#101820]  " id="AboutUs"  >
+        <div className="scroll-mt-[40px]   lg:scroll-mt-[3.8rem]  xl:scroll-mt-[4.5rem] h-auto   bg-[#101820]  " id="AboutUs"  >
             <div className=" w-full h-[12vh] flex justify-center md:justify-end">
                 <div className="w-[90%]  md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end lg:h-[15vh]">
                    
@@ -65,6 +72,7 @@ export default function AboutUs() {
 
             <div
                 className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-evenly  lg:justify-evenly h-[650px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px]  xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
+               
                 style={{
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
