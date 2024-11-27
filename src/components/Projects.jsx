@@ -70,9 +70,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="OurProjects"  className="scroll-mt-[20px] xl:scroll-mt-[9px] w-full bg-[#EDEDED] py-10 p-[20px]" ref={projectsRef}>
+    <div id="OurProjects"  className="scroll-mt-[30px] xl:scroll-mt-[9px] w-full bg-[#EDEDED] py-10 p-[20px]" ref={projectsRef}>
       <div className="w-full  flex justify-center">
-        <div className="w-full  flex items-end px-4 md:px-0 h-[115px] sm:h-[10vh] md:h-[15vh] lg:h-[20vh] lg:w-[95%] xl:w-[93%] 2xl:w-[90%]">
+        <div className="w-full  flex items-end px-4 md:px-0 h-auto sm:h-[10vh] md:h-[15vh] lg:h-[20vh] lg:w-[95%] xl:w-[93%] 2xl:w-[90%]">
           <h3 className="text-[#57B6B2] leading-[50px] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
             {t("projectsTitle").split(" ").map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block mr-[20px]"> 
