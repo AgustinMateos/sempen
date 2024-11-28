@@ -6,14 +6,14 @@ import { useTranslation } from "react-i18next";
 export default function Footer() {
   const { t } = useTranslation();
   const redes = [
+    // {
+    //   id: 1,
+    //   name: "facebook",
+    //   image: "/facebookSempen.webp",
+    //   link: "https://www.facebook.com",
+    // },
     {
       id: 1,
-      name: "facebook",
-      image: "/facebookSempen.webp",
-      link: "https://www.facebook.com",
-    },
-    {
-      id: 2,
       name: "x",
       image: "/xSempen.webp",
       link: "https://x.com/Sempen_Energy",
@@ -25,7 +25,7 @@ export default function Footer() {
     //   link: "https://www.instagram.com",
     // },
     {
-      id: 4,
+      id: 2,
       name: "linkedin",
       image: "/linkedinSempen.webp",
       link: "https://www.linkedin.com/company/sempen/?originalSubdomain=ar",
