@@ -16,19 +16,19 @@ export default function Footer() {
       id: 2,
       name: "x",
       image: "/xSempen.webp",
-      link: "https://www.twitter.com",
+      link: "https://x.com/Sempen_Energy",
     },
-    {
-      id: 3,
-      name: "instagram",
-      image: "/instagramSempen.webp",
-      link: "https://www.instagram.com",
-    },
+    // {
+    //   id: 3,
+    //   name: "instagram",
+    //   image: "/instagramSempen.webp",
+    //   link: "https://www.instagram.com",
+    // },
     {
       id: 4,
       name: "linkedin",
       image: "/linkedinSempen.webp",
-      link: "https://www.linkedin.com",
+      link: "https://www.linkedin.com/company/sempen/?originalSubdomain=ar",
     },
   ];
 
