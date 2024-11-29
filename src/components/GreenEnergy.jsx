@@ -1,4 +1,3 @@
-'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
@@ -42,7 +41,6 @@ export default function GreenEnergy() {
   };
 
   useEffect(() => {
-   
     if (window.innerWidth >= 640) {
       setActiveButton('button1'); 
     }
@@ -51,10 +49,10 @@ export default function GreenEnergy() {
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
 
   return (
-    <div className="xl:h-[150vh]  2xl:h-[120vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
+    <div className="xl:h-[160vh] 2xl:h-[180vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px]">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col sm:flex-row mt-[20px] sm:space-x-4 mb-4 w-full ">
+          <div className="flex flex-col sm:flex-row mt-[20px] sm:space-x-4 mb-4 w-full space-y-4 sm:space-y-0">
             {Object.keys(buttonData).map((button) => (
               <button
                 key={button}
@@ -87,19 +85,20 @@ export default function GreenEnergy() {
             ))}
           </div>
 
-         
+          {/* Mostrar la información debajo del botón en pantallas pequeñas */}
           {currentButtonData && (
-            <div className="h-auto rounded-[8px] overflow-hidden shadow-lg mb-4">
-              <div 
-      className={`bg-white pt-[20px] pb-[20px]   flex flex-col justify-around items-center ${
-        activeButton === 'button1' ? ' min-h-[75vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[50vh]' : ' min-h-[55vh] sm:min-h-[40vh] md:min-h-[50vh] lg:min-h-[40vh] xl:min-h-[40vh]'
-      }`}
-    >
+            <div className="h-auto rounded-[8px] overflow-hidden shadow-lg mb-4 w-full">
+              <div
+                className={`bg-white pt-[20px] pb-[20px] flex flex-col justify-around items-center ${
+                  activeButton === 'button1'
+                    ? 'min-h-[75vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[50vh]'
+                    : 'min-h-[55vh] sm:min-h-[40vh] md:min-h-[50vh] lg:min-h-[40vh] xl:min-h-[40vh]'
+                }`}
+              >
                 {currentButtonData.info.map((text, index) => (
-                  <p key={index} className="leading-[38px] font-extralight w-[80%]  md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px]  tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo  ">
-                   
+                  <p key={index} className="leading-[38px] font-extralight w-[80%] md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px] tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo">
                     {activeButton === 'button1' && index === 0 ? (
-                      <strong className="font-medium text-[24px] md:text-[32px]  font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : activeButton === 'button2' && index === 1 ? (
                       <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : (

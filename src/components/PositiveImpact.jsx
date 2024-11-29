@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { useTranslation } from "react-i18next";
@@ -9,8 +7,9 @@ export default function PositiveImpact() {
     const OurMisionText = t('OurMissionText');
     const [scrollY, setScrollY] = useState(0);
     const [visible, setVisible] = useState(false); // Estado para la visibilidad del texto
+    const [visibleMission, setVisibleMission] = useState(false); // Estado para la visibilidad del texto de 'Our Mission'
     const aboutUsRef = useRef(null); // Referencia del contenedor
-    const titleRef = useRef([]); // Referencia para las palabras del título
+    const missionRef = useRef(null); // Referencia para el texto de 'Our Mission'
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,19 +25,19 @@ export default function PositiveImpact() {
 
     const startingPosition = -250;
 
-  
+    // Para el texto de 'Our Mission', aplicamos el IntersectionObserver
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    setVisible(true);
+                    setVisibleMission(true);  // Activa la visibilidad para 'Our Mission'
                     observer.disconnect(); 
                 }
             });
         });
 
-        if (aboutUsRef.current) {
-            observer.observe(aboutUsRef.current);
+        if (missionRef.current) {
+            observer.observe(missionRef.current);
         }
 
         return () => {
@@ -47,20 +46,23 @@ export default function PositiveImpact() {
     }, []);
 
     return (
-        <div className="relative overflow-hidden   " ref={aboutUsRef}>
+        <div className="relative overflow-hidden" ref={aboutUsRef}>
             <div
-                className=" overflow-hidden w-full bg-cover bg-center h-[90vh]  sm:h-[80vh] md:h-[100vh] lg:h-[100vh] xl:h-[130vh] 2xl:h-[100vh]  flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative "
+                className="overflow-hidden w-full bg-cover bg-center h-[100vh] sm:h-[120vh] md:h-[140vh] lg:h-[160vh] xl:h-[135vh] 2xl:h-[100vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
                     backgroundImage: `url('/OurMissionImg.webp')`,
                 }}
             >
-               
-                <div className="  text-[#FFFFFF] flex items-center text-center h-[340px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%]   text-[30px] md:text-[32px] lg:text-[32px]">
-                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] md:text-[26px] xl:text-[30px] " >
+                {/* Texto de 'Our Mission' */}
+                <div 
+                    ref={missionRef} // Añadimos la referencia
+                    className="text-[#FFFFFF] flex items-center text-center h-[340px] lg:h-[380px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%] text-[30px] md:text-[32px] lg:text-[32px]"
+                >
+                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] sm:text-[26px] md:text-[30px] lg:text-[40px]  xl:text-[40px]">
                         {OurMisionText.split(" ").map((word, index) => (
                             <span
                                 key={index}
-                                className={`inline transition-opacity font-archivo  duration-500 ${visible ? 'opacity-100' : 'opacity-30'} mr-2.5`} // Cambia a mx-3 o mx-4
+                                className={`inline transition-opacity font-archivo duration-500 ${visibleMission ? 'opacity-100' : 'opacity-30'} mr-2.5`} // Cambia la visibilidad según el estado
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
                                 {word}
@@ -69,7 +71,7 @@ export default function PositiveImpact() {
                     </h4>
                 </div>
 
-             
+                {/* Imagen Parallax */}
                 <Image
                     src="/sempenparallax.webp"
                     alt="Parallax Image"
@@ -87,5 +89,3 @@ export default function PositiveImpact() {
         </div>
     );
 }
-
-
