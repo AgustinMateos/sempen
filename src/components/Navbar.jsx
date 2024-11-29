@@ -65,13 +65,20 @@ const Navbar = () => {
 
             {/* Botón y Selector de Idioma en Desktop */}
             <div className="hidden xl:flex space-x-4 items-center">
-                <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500">
+                <button 
+                    className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500" 
+                    aria-label={t('navbarContactUs')} // Añadido el aria-label
+                >
                     {t('navbarContactUs')}
                 </button>
                 <LanguageChanger />
             </div>
             <div className="xl:hidden flex items-center">
-                <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+                <button 
+                    onClick={() => setIsOpen(!isOpen)} 
+                    className="text-white" 
+                    aria-label={isOpen ? 'Close menu' : 'Open menu'} // Añadido el aria-label
+                >
                     <svg
                         className="w-6 h-6"
                         fill="none"
@@ -96,9 +103,13 @@ const Navbar = () => {
             <div className={`xl:hidden ${isOpen ? 'block' : 'hidden'} fixed top-0 left-0 w-full text-white z-50`}>
                 <div className="flex items-center justify-between p-4 bg-[#101820]">
                     <Link href="/" className="flex items-center">
-                        <Image src="/logoSempen.webp" alt="Logo" width={124} height={30} />
+                        <Image src="/logoSempen.webp" alt="Logo Sempen" width={124} height={30} />
                     </Link>
-                    <button onClick={() => setIsOpen(false)} className="text-white">
+                    <button 
+                        onClick={() => setIsOpen(false)} 
+                        className="text-white"
+                        aria-label="Close menu" // Añadido el aria-label
+                    >
                         <svg
                             className="w-6 h-6"
                             fill="none"
@@ -130,7 +141,10 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className="block px-4 py-2 mt-4">
-                        <button className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4 transition-all duration-500">
+                        <button 
+                            className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4 transition-all duration-500"
+                            aria-label={t('navbarContactUs')} // Añadido el aria-label
+                        >
                             {t('navbarContactUs')}
                         </button>
                         <LanguageChanger />
@@ -142,4 +156,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
