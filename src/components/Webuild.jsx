@@ -30,7 +30,7 @@ export default function WeBuild() {
             {/* {words[currentWordIndex]} */} sustainable fuels
           </p>
         </div>
-        <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[25px] ">to decarbonize global energy</p>
+        <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[25px] ">to decarbonize global energy.</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}
