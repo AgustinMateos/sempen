@@ -36,8 +36,8 @@ export default function AboutUs() {
     }, []);
 
     return (
-        <div className="scroll-mt-[40px] lg:scroll-mt-[3.8rem] xl:scroll-mt-[4.5rem] h-auto bg-[#101820]" id="AboutUs">
-            <div className="w-full h-[12vh] flex justify-center md:justify-end">
+        <div className="scroll-mt-[40px] lg:scroll-mt-[3rem] xl:scroll-mt-[4.5rem] h-auto bg-[#101820]" id="AboutUs">
+            <div className="w-full h-[12vh] md:h-[20vh] lg:h-[20vh] lg:items-end flex justify-center md:justify-end">
                 <div className="w-[90%] md:w-[92%] lg:w-[90%] xl:w-[95%] flex items-end lg:h-[15vh]">
                     <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] border-b-[2px] border-transparent flex flex-wrap ">
                         {aboutUsTitle.split(" ").map((word, index) => (
