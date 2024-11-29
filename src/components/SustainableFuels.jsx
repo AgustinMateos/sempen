@@ -82,6 +82,7 @@ export default function SustainableFuels() {
           width={356}
           height={207}
           className="w-[95%] md:w-[88%] h-auto"
+          loading="lazy"
         />
       </div>
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">

@@ -207,15 +207,22 @@ export default function WhoWeAre() {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full flex  justify-center md:justify-end">
-                        <Image
-                            src="/WhoWeAre.webp"
-                            alt="Imagen"
-                            width={766}
-                            height={250}
-                            className="w-full md:w-[88%] h-auto"
-                        />
-                    </div>
+                    <div className="w-full flex justify-center md:justify-end">
+  <Image
+    src="/WhoWeAre.webp"
+    alt="Imagen"
+    width={766}
+    height={250}
+    className="w-full md:w-[88%] h-auto"
+    loading="lazy"
+    srcSet="
+      /_next/image?url=%2FWhoWeAre.webp&amp;w=768&amp;q=75 1x,
+      /_next/image?url=%2FWhoWeAre.webp&amp;w=1280&amp;q=75 2x,
+      /_next/image?url=%2FWhoWeAre.webp&amp;w=1920&amp;q=75 3x
+    "
+  />
+</div>
+
                 </div>
             </div>
         </div>
