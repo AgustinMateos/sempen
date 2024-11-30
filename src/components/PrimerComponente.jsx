@@ -23,7 +23,7 @@ export default function PrimerComponente({ shouldPlay }) {
       {/* Video para pantallas grandes (horizontal) */}
       <video
         ref={videoRefLarge}
-        src="/New.webm"
+        src="/sempenDesktop.webm"
         preload="auto" 
         className="w-full h-full object-contain hidden sm:block" 
         loop
@@ -33,7 +33,7 @@ export default function PrimerComponente({ shouldPlay }) {
       {/* Video para pantallas medianas a pequeñas (vertical) */}
       <video
         ref={videoRefSmall}
-        src="/sempenMobile.webm"
+        src="/mobileSempen.webm"
         preload="auto" 
         className="w-full h-full object-contain sm:hidden block" 
         loop
