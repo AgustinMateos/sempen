@@ -33,7 +33,7 @@ export default function PrimerComponente({ shouldPlay }) {
       {/* Video para pantallas medianas a pequeñas (vertical) */}
       <video
         ref={videoRefSmall}
-        src="/Mobile.webm"
+        src="/sempenMobile.webm"
         preload="auto" 
         className="w-full h-full object-contain sm:hidden block" 
         loop
