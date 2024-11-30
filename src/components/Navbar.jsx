@@ -65,12 +65,13 @@ const Navbar = () => {
 
             {/* Botón y Selector de Idioma en Desktop */}
             <div className="hidden xl:flex space-x-4 items-center">
-                <button 
-                    className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500" 
-                    aria-label={t('navbarContactUs')} // Añadido el aria-label
-                >
-                    {t('navbarContactUs')}
-                </button>
+            <a
+        href="mailto:agustinrotondomateos@gmail.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
+        className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500"
+        aria-label={t('navbarContactUs')}
+    >
+        {t('navbarContactUs')}
+    </a>
                 <LanguageChanger />
             </div>
             <div className="xl:hidden flex items-center">
@@ -141,12 +142,13 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className="block px-4 py-2 mt-4">
-                        <button 
-                            className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4 transition-all duration-500"
-                            aria-label={t('navbarContactUs')} // Añadido el aria-label
-                        >
-                            {t('navbarContactUs')}
-                        </button>
+                    <a
+                href="mailto:agustinrotondomateos@gmail.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
+                className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4 transition-all duration-500 block text-center"
+                aria-label={t('navbarContactUs')}
+            >
+                {t('navbarContactUs')}
+            </a>
                         <LanguageChanger />
                     </div>
                 </div>

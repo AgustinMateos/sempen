@@ -60,9 +60,15 @@ export default function Footer() {
           
          
           <div className='flex flex-col items-start lg:items-end text-white lg:w-1/3'>
-            <p className='font-archivo'>{t('footerInformation')}</p>
-            <button className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded font-archivo">{t('navbarContactUs')}</button>
-          </div>
+  <p className='font-archivo'>{t('footerInformation')}</p>
+  <a 
+    href="mailto:agustinrotondomateos@gmail.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
+    className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded font-archivo"
+  >
+    {t('navbarContactUs')}
+  </a>
+</div>
+
         </div>
         
         <div className='border-t border-[#CBD5E1] text-white mt-8 pt-4 flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0'>
