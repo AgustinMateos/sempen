@@ -96,11 +96,11 @@ export default function GreenEnergy() {
                 }`}
               >
                 {currentButtonData.info.map((text, index) => (
-                  <p key={index} className="leading-[38px] font-extralight w-[80%] md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px] tracking-[-0.01em] text-[16px] sm:text-[22px] text-justify font-archivo">
+                  <p key={index} className="leading-[38px] font-extralight w-[80%] md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px] tracking-[-0.01em] text-[16px] md:text-[24px] text-justify font-archivo">
                     {activeButton === 'button1' && index === 0 ? (
-                      <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : activeButton === 'button2' && index === 1 ? (
-                      <strong className="font-medium text-[24px] md:text-[32px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
                     ) : (
                       text
                     )}
