@@ -5,18 +5,41 @@ export default function PrimerComponente({ shouldPlay }) {
   const videoRefLarge = useRef(null);
   const videoRefSmall = useRef(null);
 
-  useEffect(() => {
+  const playVideo = () => {
     if (shouldPlay) {
       if (window.innerWidth > 640 && videoRefLarge.current) {
-        videoRefLarge.current.muted = true; // Asegura que mute esté activado
-        videoRefLarge.current.play().catch((err) => console.log('Error al reproducir video:', err));
+        videoRefLarge.current.play().catch((err) => console.log('Error al reproducir video grande:', err));
         if (videoRefSmall.current) videoRefSmall.current.pause();
       } else if (window.innerWidth <= 640 && videoRefSmall.current) {
-        videoRefSmall.current.muted = true; // Asegura que mute esté activado
-        videoRefSmall.current.play().catch((err) => console.log('Error al reproducir video:', err));
+        videoRefSmall.current.play().catch((err) => console.log('Error al reproducir video pequeño:', err));
         if (videoRefLarge.current) videoRefLarge.current.pause();
       }
     }
+  };
+
+  useEffect(() => {
+    // Reproduce el video al volver a la pestaña activa
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        playVideo();
+      }
+    };
+
+    // Detecta cuando el ancho de la ventana cambia (por ejemplo, al rotar el dispositivo)
+    const handleResize = () => {
+      playVideo();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('resize', handleResize);
+
+    // Reproducción inicial
+    playVideo();
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [shouldPlay]);
 
   return (
