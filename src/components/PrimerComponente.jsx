@@ -6,30 +6,22 @@ export default function PrimerComponente({ shouldPlay }) {
   const videoRefSmall = useRef(null);
 
   useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        if (videoRefLarge.current) videoRefLarge.current.pause();
+    if (shouldPlay) {
+      if (window.innerWidth > 640 && videoRefLarge.current) {
+        videoRefLarge.current.muted = true; // Asegura que mute esté activado
+        videoRefLarge.current.play().catch((err) => console.log('Error al reproducir video:', err));
         if (videoRefSmall.current) videoRefSmall.current.pause();
-      } else {
-        if (shouldPlay) {
-          if (window.innerWidth > 640 && videoRefLarge.current) {
-            videoRefLarge.current.play();
-          } else if (window.innerWidth <= 640 && videoRefSmall.current) {
-            videoRefSmall.current.play();
-          }
-        }
+      } else if (window.innerWidth <= 640 && videoRefSmall.current) {
+        videoRefSmall.current.muted = true; // Asegura que mute esté activado
+        videoRefSmall.current.play().catch((err) => console.log('Error al reproducir video:', err));
+        if (videoRefLarge.current) videoRefLarge.current.pause();
       }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
+    }
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#16222F] ">
+    <div className="relative w-full overflow-hidden bg-[#16222F]">
+      {/* Video para pantallas grandes */}
       <video
         ref={videoRefLarge}
         src="/sempenDesktop.webm"
@@ -39,6 +31,7 @@ export default function PrimerComponente({ shouldPlay }) {
         muted
         playsInline
       />
+      {/* Video para pantallas pequeñas */}
       <video
         ref={videoRefSmall}
         src="/mobileSempen.webm"

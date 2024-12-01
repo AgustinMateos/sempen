@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
-import Loader from '@/components/Loader'; 
+import Loader from '@/components/Loader';
 import PrimerComponente from '@/components/PrimerComponente';
 import Navbar from '@/components/Navbar';
 import SustainableFuels from '@/components/SustainableFuels';
@@ -17,19 +17,18 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); 
-    }, 3000); 
+      setLoading(false); // Loader finaliza
+    }, 3000);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
       <Navbar />
-      {loading && <Loader />} 
-      
+      {loading && <Loader />}
       <main
-        className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`} 
+        className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}
       >
         <PrimerComponente shouldPlay={!loading} />
         <AboutUs />
