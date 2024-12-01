@@ -70,7 +70,8 @@ export default function AboutUs() {
 
             <div
                 className="w-full overflow-hidden bg-cover bg-center flex flex-col items-center justify-evenly lg:justify-evenly h-[650px] sm:h-[415px] md:h-[80vh] md:justify-around lg:h-[650px] xl:h-[600px] 2xl:h-[790px] px-4 md:px-0"
-                style={{
+                style={{backgroundRepeat:"no-repeat",
+                    backgroundSize:"cover",
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
                         linear-gradient(0deg, rgba(16, 24, 32, 0) 41.5%, rgba(16, 24, 32, 0.446541) 64%, #101820 97%),
