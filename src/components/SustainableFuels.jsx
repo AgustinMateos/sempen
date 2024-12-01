@@ -38,10 +38,10 @@ export default function SustainableFuels() {
   >
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
-    {/* Contenedor superior */}
+   
     <div className="flex flex-col items-center md:items-center w-full h-[45vh] sm:h-[50vh]  md:h-[40vh] lg:h-[38vh] justify-evenly  xl:h-[38vh] 2xl:h-[30vh]">
       <div className="w-[90%] h-auto md:w-[80%] xl:w-[90%] flex items-end justify-end">
-        <h3 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden leading-[50px] sm:leading-[70px]">
+        <h4 className="text-[#57B6B2] font-archivo text-[40px] md:text-[60px] xl:text-[80px] flex flex-wrap overflow-hidden leading-[50px] sm:leading-[70px]">
           {t("SustainableFuelsTitle").split(" ").map((word, index) => (
             <span
               key={index}
@@ -56,7 +56,7 @@ export default function SustainableFuels() {
               {word}
             </span>
           ))}
-        </h3>
+        </h4>
         <div
           className="flex-1 h-0 border-t-[2px] mt-[4px] mb-[10px] md:mb-[31px] xl:mb-[5px] 2xl:mb-[10px]"
           style={{
@@ -72,7 +72,7 @@ export default function SustainableFuels() {
       </div>
     </div>
 
-    {/* Contenedor inferior */}
+    
     <div className="flex flex-col xl:flex-row items-center justify-between w-full">
       <div className="w-full flex justify-start">
         <Image

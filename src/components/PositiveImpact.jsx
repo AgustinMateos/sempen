@@ -25,7 +25,7 @@ export default function PositiveImpact() {
 
     const startingPosition = -250;
 
-    // Para el texto de 'Our Mission', aplicamos el IntersectionObserver
+   
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -48,14 +48,16 @@ export default function PositiveImpact() {
     return (
         <div className="relative overflow-hidden" ref={aboutUsRef}>
             <div
-                className="overflow-hidden w-full bg-cover bg-center h-[100vh] sm:h-[120vh] md:h-[140vh] lg:h-[160vh] xl:h-[135vh] 2xl:h-[100vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
+                className="overflow-hidden w-full bg-center h-[100vh] sm:h-[120vh] md:h-[140vh] lg:h-[160vh] xl:h-[135vh] 2xl:h-[100vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
+                    backgroundRepeat:"no-repeat",
+                    backgroundSize:"cover",
                     backgroundImage: `url('/OurMissionImg.webp')`,
                 }}
             >
                 {/* Texto de 'Our Mission' */}
                 <div 
-                    ref={missionRef} // Añadimos la referencia
+                    ref={missionRef} 
                     className="text-[#FFFFFF] flex items-center text-center h-[340px] lg:h-[380px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%] text-[30px] md:text-[32px] lg:text-[32px]"
                 >
                     <h4 className="font-archivo flex flex-wrap justify-center text-[22px] sm:text-[26px] md:text-[30px] lg:text-[40px]  xl:text-[40px]">
