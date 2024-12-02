@@ -27,7 +27,7 @@ export default function Loader() {
         </div>
       </div>
 
-      {/* Imagen animada */}
+      
       <div className="absolute bottom-0 flex justify-center w-full">
         <Image
           src="/SempenLoader.webp"

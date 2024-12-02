@@ -50,17 +50,17 @@ export default function PrimerComponente({ shouldPlay }) {
         src="/sempenDesktop.webm"
         preload="auto"
         className="w-full h-full object-contain hidden sm:block"
-        loop
+       
         muted
         playsInline
       />
-      {/* Video para pantallas pequeñas */}
+      
       <video
         ref={videoRefSmall}
         src="/mobileSempen.webm"
         preload="auto"
         className="w-full h-full object-contain sm:hidden block"
-        loop
+       
         muted
         playsInline
       />
