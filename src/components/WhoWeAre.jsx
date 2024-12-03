@@ -211,15 +211,11 @@ export default function WhoWeAre() {
   <Image
     src="/WhoWeAre.webp"
     alt="Imagen"
-    width={766}
-    height={250}
+    width={682}
+    height={466}
     className="w-full md:w-[88%] h-auto"
     loading="lazy"
-    srcSet="
-      /_next/image?url=%2FWhoWeAre.webp&amp;w=768&amp;q=75 1x,
-      /_next/image?url=%2FWhoWeAre.webp&amp;w=1280&amp;q=75 2x,
-      /_next/image?url=%2FWhoWeAre.webp&amp;w=1920&amp;q=75 3x
-    "
+    
   />
 </div>
 
