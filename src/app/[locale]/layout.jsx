@@ -39,6 +39,7 @@ export default function RootLayout({ children, params: { locale } }) {
   // Definir la URL canónica para cada idioma
   const canonicalUrl = `https://sempen.com/${locale}`;
 
+  <link rel="icon" href="/fav1.jpg" />
   return (
     <html lang={locale} dir={dir(locale)}>
       <Head>
