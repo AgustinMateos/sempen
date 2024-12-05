@@ -34,7 +34,7 @@ export default function SustainableFuels() {
     <div
     id="SustainableFuels"
     ref={sectionRef}
-    className="min-h-[60vh] xl:min-h-[90vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-[50px] sm:scroll-mt-20 xl:scroll-mt-[50px]"
+    className="min-h-[60vh]  xl:min-h-[100vh] flex items-center md:justify-end bg-[#EDEDED] scroll-mt-[50px] sm:scroll-mt-20   xl:scroll-mt-[50px]"
   >
   
   <div className="flex flex-col justify-evenly text-[#101820] w-full">
@@ -80,7 +80,7 @@ export default function SustainableFuels() {
     alt="Imagen"
     width={766}
     height={250}
-    className="w-[95%] md:w-[88%] md:h-auto rounded-r-[10px] h-[220px] "
+    className="w-[95%] md:w-[88%] md:h-auto lg:h-[400px] rounded-r-[10px] h-[220px] "
     loading="lazy"
     // srcSet="
     //   /_next/image?url=%2FsustFuels.jpg&amp;w=768&amp;q=75 1x,
