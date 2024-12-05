@@ -9,13 +9,13 @@ export default function PrimerComponente({ shouldPlay }) {
   const loadVideos = async () => {
     try {
       // Cargar video grande
-      const largeResponse = await fetch('/sempenDesktop.webm');
+      const largeResponse = await fetch('/sempenDesktop.mp4');
       const largeBlob = await largeResponse.blob();
       const largeUrl = URL.createObjectURL(largeBlob);
       setVideoSrcLarge(largeUrl);
 
       // Cargar video pequeño
-      const smallResponse = await fetch('/mobileSempen.webm');
+      const smallResponse = await fetch('/mobile.webm');
       const smallBlob = await smallResponse.blob();
       const smallUrl = URL.createObjectURL(smallBlob);
       setVideoSrcSmall(smallUrl);

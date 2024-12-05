@@ -74,16 +74,20 @@ export default function SustainableFuels() {
 
     
     <div className="flex flex-col xl:flex-row items-center justify-between w-full">
-      <div className="w-full flex justify-start">
-        <Image
-          src="/sustainableFuels.webp"
-          alt="Imagen"
-          layout="intrinsic"
-          width={356}
-          height={207}
-          className="w-[95%] md:w-[88%] h-auto"
-          loading="lazy"
-        />
+      <div className="w-full flex justify-start ">
+      <Image
+    src="/sustFuels.jpg"
+    alt="Imagen"
+    width={766}
+    height={250}
+    className="w-full md:w-[88%] h-auto rounded-r-[10px] "
+    loading="lazy"
+    srcSet="
+      /_next/image?url=%2FsustFuels.jpg&amp;w=768&amp;q=75 1x,
+      /_next/image?url=%2FsustFuels.jpg&amp;w=1280&amp;q=75 2x,
+      /_next/image?url=%2FsustFuels.jpg&amp;w=1920&amp;q=75 3x
+    "
+  />
       </div>
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">
         <div className="w-[90%] md:w-[90%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 mt-4 lg:mb-[30px]">
