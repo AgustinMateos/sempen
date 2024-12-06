@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="flex flex-col min-h-[160px] lg:flex-row items-start justify-between lg:space-x-8 space-y-8 lg:space-y-0">
           
           <div className='flex flex-col items-start text-white space-y-4 lg:w-2/3'>
-            <Image src="/logoSempen.svg" alt="Logo" width={124} height={30} />
+            <Image src="/logoSempen.svg" alt="Logo" width={154} height={30} />
             <p className='font-archivo pb-[20px]'>{t('footerFueling')}</p>
     
             <div className='flex  flex-col xs:items-start sm:flex-row lg:flex-row lg:space-x-4 gap-4 lg:w-[850px]'>
