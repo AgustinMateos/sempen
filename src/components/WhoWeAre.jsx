@@ -50,7 +50,7 @@ export default function WhoWeAre() {
                                         opacity: isVisible ? 1 : 0,
                                         transform: isVisible ? "translateY(0)" : "translateY(100%)",
                                         margin: index === 0 ? "0" : "0 10px", 
-                                        transition: `opacity 0.5s ease ${index * 50}ms, transform 0.5s ease ${index * 50}ms`,
+                                        transition: `opacity 0.6s ease ${index * 90}ms, transform 0.6s ease ${index * 90}ms`,
                                     }}
                                 >
                                     {word}

@@ -25,13 +25,13 @@ export default function PositiveImpact() {
 
     const startingPosition = -250;
 
-   
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setVisibleMission(true);  // Activa la visibilidad para 'Our Mission'
-                    observer.disconnect(); 
+                    observer.disconnect();
                 }
             });
         });
@@ -50,13 +50,13 @@ export default function PositiveImpact() {
             <div
                 className="overflow-hidden w-full bg-center h-[50vh] sm:h-[50vh] md:h-[50vh] lg:h-[70vh] xl:h-[100vh] 2xl:h-[90vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
-                    backgroundRepeat:"no-repeat",
-                    backgroundSize:"cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
                     backgroundImage: `linear-gradient(0deg, rgba(16, 24, 32, 0) 20%, rgba(16, 24, 32, 0.6) 59.37%, rgba(16, 24, 32, 0.8) 70.4%, rgba(16, 24, 32, 0.9) 81.03%, #101820 91.93%), linear-gradient(180deg, rgba(237, 237, 237, 0) 56%, #EDEDED 100%), url('/nubes2.jpg')`,
 
                 }}
             >
-               
+
                 {/* <div 
                     ref={missionRef} 
                     className="text-[#FFFFFF] flex items-center text-center h-[340px] lg:h-[380px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%] text-[30px] md:text-[32px] lg:text-[32px]"

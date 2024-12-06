@@ -94,7 +94,7 @@ export default function AboutUs() {
                     </h4>
                 </div>
 
-                <div className="flex flex-col items-center text-[#FFFFFF] text-[1.5rem] md:text-[2rem] lg:text-[2rem] xl:text-[3rem] w-full">
+                <div className="flex flex-col items-center text-[#FFFFFF] text-[24px] md:text-[32px] xl:text-[40px] w-full">
                     <div className="w-[95%] md:w-[75%] xl:w-[80%] text-center mb-4">
                         {developText.split(" ").map((word, index) => (
                             <span
