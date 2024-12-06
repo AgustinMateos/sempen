@@ -16,13 +16,13 @@ export default function WeBuild() {
   }, [words.length]);
 
   return (
-    <div className="h-[650px] lg:h-[750px] relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
+    <div className="h-[650px] lg:h-[850px] relative overflow-hidden text-white flex flex-col items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
     >
       {/* Contenedor en fila */}
-      <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 text-center lg:text-left px-4 lg:px-0 h-[420px] sm:h-[700px] md:h-[4500px]">
+      <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 text-center lg:text-left px-4 lg:px-0 h-[420px] sm:h-[700px] md:h-[450px]">
         <p className="text-[14px] sm:text-[18px] lg:text-[32px] font-light lg:leading-[108.8px] mb-[10px] sm:mb-[25px]">We build</p>
         <div className="relative mb-[25px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] lg:w-[420px]" />
@@ -30,7 +30,7 @@ export default function WeBuild() {
             {/* {words[currentWordIndex]} */} sustainable fuels
           </p>
         </div>
-        <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[25px] ">to decarbonize global energy.</p>
+        <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[30px] ">to decarbonize global energy.</p>
       </div>
 
       {/* Contenedor azul oscuro con max-width */}

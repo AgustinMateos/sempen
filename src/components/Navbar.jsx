@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
 
             {/* Links en desktop (visibles en xl hacia arriba) */}
-            <div className="hidden xl:flex lg:w-[700px] lg:justify-around mx-auto justify-center">
+            <div className="hidden xl:flex lg:w-[700px] lg:jus@tify-around mx-auto justify-center">
                 {['AboutUs', 'WhoWeAre', 'SustainableFuels', 'OurProjects'].map((link, index) => (
                     <Link 
                         key={link}
@@ -66,7 +66,7 @@ const Navbar = () => {
             {/* Botón y Selector de Idioma en Desktop */}
             <div className="hidden xl:flex space-x-4 items-center">
             <a
-        href="mailto:agustinrotondomateos@gmail.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
+        href="mailto:info@sempen.com?subject=Consulta desde la web&body=Hello!!"
         className="bg-[#EDEDED] text-[#101820] px-4 py-2 rounded font-jakarta transition-all duration-500"
         aria-label={t('navbarContactUs')}
     >

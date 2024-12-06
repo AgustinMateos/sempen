@@ -59,10 +59,10 @@ export default function GreenEnergy() {
                 onClick={() => handleButtonClick(button)}
                 onMouseEnter={() => setHoveredButton(button)}
                 onMouseLeave={() => setHoveredButton(null)}
-                className={`h-[78px] mb-[10px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
+                className={`h-[78px] text-[25px]  mb-[10px] leading-[30px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
                   activeButton === button
-                    ? 'bg-[#101820] text-white'
-                    : 'bg-[#D9D8D6] text-[#76777A] hover:bg-[#76777A] hover:text-white'
+                    ? 'bg-[#101820] text-white '
+                    : 'bg-[#D9D8D6] text-[#76777A]  hover:bg-[#76777A] hover:text-white'
                 }`}
               >
                 <div className="flex justify-between w-full px-6">
@@ -78,7 +78,7 @@ export default function GreenEnergy() {
                     alt={`Icono ${button}`}
                     height={24}
                     width={23}
-                    className="ml-2"
+                    className="ml-2 object-contain"
                   />
                 </div>
               </button>
@@ -89,10 +89,10 @@ export default function GreenEnergy() {
           {currentButtonData && (
             <div className="h-auto rounded-[8px] overflow-hidden shadow-lg mb-4 w-full">
               <div
-                className={`bg-white pt-[20px] pb-[20px] flex flex-col justify-around items-center ${
+                className={`bg-white  pt-[20px] pb-[20px] flex flex-col justify-around items-center ${
                   activeButton === 'button1'
                     ? 'min-h-[75vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[50vh]'
-                    : 'min-h-[55vh] sm:min-h-[40vh] md:min-h-[50vh] lg:min-h-[40vh] xl:min-h-[40vh]'
+                    : 'min-h-[55vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[50vh]'
                 }`}
               >
                 {currentButtonData.info.map((text, index) => (
@@ -113,7 +113,7 @@ export default function GreenEnergy() {
                   width={1218}
                   src={currentButtonData.image}
                   alt="Descripción"
-                  className="object-cover w-full"
+                  className="object-cover w-full  "
                 />
               </div>
             </div>
