@@ -34,7 +34,7 @@ export default function Footer() {
 
   return (
     <div className='w-full bg-[#101820] flex justify-center items-center py-8 h-[634px] sm:h-[520px]'>
-      <div className='w-full max-w-[1216px] px-4 min-h-[280px] xs:w-[698px]'>
+      <div className='w-full max-w-[1800px] px-4 md:px-10 min-h-[280px] xs:w-[698px]'>
    
         <div className="flex flex-col min-h-[160px] lg:flex-row items-start justify-between lg:space-x-8 space-y-8 lg:space-y-0">
           
@@ -63,7 +63,7 @@ export default function Footer() {
   <p className='font-archivo'>{t('footerInformation')}</p>
   <a 
     href="mailto:agustinrotondomateos@gmail.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
-    className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded font-archivo"
+    className="bg-[#EDEDED] text-[#101820] px-4  py-2 mt-2 rounded font-archivo"
   >
     {t('navbarContactUs')}
   </a>
