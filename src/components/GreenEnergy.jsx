@@ -59,7 +59,7 @@ export default function GreenEnergy() {
                 onClick={() => handleButtonClick(button)}
                 onMouseEnter={() => setHoveredButton(button)}
                 onMouseLeave={() => setHoveredButton(null)}
-                className={`h-[78px] text-[25px]  mb-[10px] leading-[30px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
+                className={`h-[78px] text-[15px] md:text-[25px]  mb-[10px] leading-[30px] flex items-center justify-center rounded-[8px] transition-colors duration-300 w-full ${
                   activeButton === button
                     ? 'bg-[#101820] text-white '
                     : 'bg-[#D9D8D6] text-[#76777A]  hover:bg-[#76777A] hover:text-white'
