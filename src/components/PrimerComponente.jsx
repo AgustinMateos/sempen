@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => {
+    return typeof window !== 'undefined' && window.innerWidth <= 640;
+  });
   const [videoSrc, setVideoSrc] = useState(null);
 
   useEffect(() => {
@@ -13,10 +15,8 @@ export default function PrimerComponente({ shouldPlay }) {
       setIsMobile(window.innerWidth <= 640);
     };
 
-    checkDeviceSize();
     window.addEventListener('resize', checkDeviceSize);
 
-    // Carga el video en memoria al iniciar el componente
     const videoUrl = isMobile ? '/Mobile.webm' : '/sempenDesktop.mp4';
     fetch(videoUrl)
       .then((response) => response.blob())
@@ -28,21 +28,25 @@ export default function PrimerComponente({ shouldPlay }) {
 
     return () => {
       window.removeEventListener('resize', checkDeviceSize);
-      if (videoSrc) URL.revokeObjectURL(videoSrc); // Libera la memoria usada por el blob
+      if (videoSrc) URL.revokeObjectURL(videoSrc);
     };
   }, [isMobile, shouldPlay]);
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#16222F]">
+    <div
+      className="relative w-full overflow-hidden bg-[#16222F]"
+      style={{ height: '100vh' }} // Mantén un tamaño fijo para evitar "saltos"
+    >
       {videoSrc && (
         <video
           src={videoSrc}
           preload="auto"
-          className="w-full h-full object-contain"
+          className="w-full h-full"
           loop
           muted
           autoPlay
           playsInline
+          style={{ objectFit: 'inherit' }} // Cambia object-contain a inherit
           onLoadedData={() => console.log('Video loaded')}
         />
       )}
