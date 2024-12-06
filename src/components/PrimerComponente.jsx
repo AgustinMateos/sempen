@@ -1,53 +1,52 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     if (!shouldPlay) return;
 
-    const playVideo = () => {
-      const isMobile = window.innerWidth <= 640;
-      const videoLarge = document.getElementById('videoLarge');
-      const videoSmall = document.getElementById('videoSmall');
-
-      if (isMobile) {
-        videoSmall?.play();
-        videoLarge?.pause();
-      } else {
-        videoLarge?.play();
-        videoSmall?.pause();
-      }
+    const checkDeviceSize = () => {
+      setIsMobile(window.innerWidth <= 640);
     };
 
-    window.addEventListener('resize', playVideo);
-    playVideo(); // Inicializa la reproducción correcta
+    checkDeviceSize();
+    window.addEventListener('resize', checkDeviceSize);
 
     return () => {
-      window.removeEventListener('resize', playVideo);
+      window.removeEventListener('resize', checkDeviceSize);
     };
   }, [shouldPlay]);
 
   return (
     <div className="relative w-full overflow-hidden bg-[#16222F]">
-      <video
-        id="videoLarge"
-        src="/sempenDesktop.mp4"
-        preload="auto"
-        className="w-full h-full object-contain hidden sm:block"
-        loop
-        muted
-        playsInline
-      />
-      <video
-        id="videoSmall"
-        src="/Mobile.webm"
-        preload="auto"
-        className="w-full h-full object-contain sm:hidden block"
-        loop
-        muted
-        playsInline
-      />
+      {isMobile ? (
+        <video
+          id="videoSmall"
+          src="/Mobile.webm"
+          preload="auto"
+          className="w-full h-full object-contain"
+          loop
+          muted
+          autoPlay
+          playsInline
+          onLoadedData={() => console.log('Mobile video loaded')}
+        />
+      ) : (
+        <video
+          id="videoLarge"
+          src="/sempenDesktop.mp4"
+          preload="auto"
+          className="w-full h-full object-contain"
+          loop
+          muted
+          autoPlay
+          playsInline
+          onLoadedData={() => console.log('Desktop video loaded')}
+        />
+      )}
     </div>
   );
 }

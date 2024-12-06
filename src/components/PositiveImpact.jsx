@@ -52,7 +52,8 @@ export default function PositiveImpact() {
                 style={{
                     backgroundRepeat:"no-repeat",
                     backgroundSize:"cover",
-                    backgroundImage: `url('/OurMissionImg.webp')`,
+                    backgroundImage: `linear-gradient(0deg, rgba(16, 24, 32, 0) 20%, rgba(16, 24, 32, 0.6) 59.37%, rgba(16, 24, 32, 0.8) 70.4%, rgba(16, 24, 32, 0.9) 81.03%, #101820 91.93%), linear-gradient(180deg, rgba(237, 237, 237, 0) 56%, #EDEDED 100%), url('/nubes2.jpg')`,
+
                 }}
             >
                 {/* Texto de 'Our Mission' */}
