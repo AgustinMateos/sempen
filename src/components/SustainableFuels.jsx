@@ -92,7 +92,7 @@ export default function SustainableFuels() {
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">
         <div className="w-[90%] md:w-[90%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 mt-4 lg:mb-[30px]">
           <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%] lg:pt-[20px]">
-            {t("SustainableFuelsNature")
+            {t("SustainableFuelsNature") 
               .split(" ")
               .map((word, index) => (
                 <span

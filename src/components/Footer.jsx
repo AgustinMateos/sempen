@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         {/* Línea de separación y redes sociales */}
-        <div className="border-t border-[#CBD5E1] text-white mt-8 pt-4 flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+        <div className="border-t  border-[#CBD5E1] text-white mt-8 pt-4 flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
           <div className="text-center lg:text-left">
             <p className="font-archivo">{t("footerCopy")}</p>
           </div>
@@ -78,8 +78,8 @@ export default function Footer() {
                   height={24}
                   src={red.image}
                   alt={red.name}
-                  layout="intrinsic" // Garantiza que la relación de aspecto se mantenga
-                  className="cursor-pointer"
+                  layout="intrinsic"
+                  className="cursor-pointer "
                 />
               </Link>
             ))}
