@@ -40,7 +40,7 @@ export default function WeBuild() {
           <div className="flex justify-around space-x-4 flex-wrap w-[100%] items-center">
             <Image src="/ahk.png" width={300} height={50} alt="RSB Logo" className=" md:w-[400px] md:h-[15vh]" />
             <Image src="/rsb.svg" width={200} height={50} alt="CAC Logo" className=" md:w-[200px]" />
-            <Image src="/aviacaoSAF.png" width={200} height={50} alt="CAC Logo" className=" md:w-[150px] md:h-[15vh] h-[12vh] w-[130px]" />
+            <Image src="/aviacaoSAF.png" width={200} height={50} alt="CAC Logo" className=" md:w-[150px] md:h-[15vh] h-[12vh] w-[110px]" />
           </div>
         </div>
       </div>
