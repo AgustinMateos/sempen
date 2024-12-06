@@ -49,7 +49,7 @@ export default function GreenEnergy() {
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
 
   return (
-    <div className="xl:h-[160vh] 2xl:h-[180vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px] xl:justify-center">
+    <div className="xl:h-[160vh] 2xl:h-[130vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px] xl:justify-center">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
         <div className="flex flex-col items-center">
           <div className="flex flex-col sm:flex-row mt-[20px] sm:space-x-4 mb-4 w-full space-y-4 sm:space-y-0">
