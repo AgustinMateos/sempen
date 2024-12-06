@@ -46,9 +46,42 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 export default function RootLayout({ children, params: { locale } }) {
+  const currentKeywords = metadata.keywords[locale] || metadata.keywords.en;
+
   return (
     <html lang={locale} dir={dir(locale)}>
+      <head>
+        <title>{metadata.title[locale] || metadata.title.en}</title>
+        <meta name="description" content={metadata.description[locale] || metadata.description.en} />
+        <meta name="keywords" content={currentKeywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.title[locale] || metadata.title.en} />
+        <meta property="og:description" content={metadata.description[locale] || metadata.description.en} />
+        <meta property="og:image" content="https://sempen.com/images/imagen.jpg" />
+        <meta property="og:url" content={`https://sempen.com/${locale}`} />
+        <meta property="og:type" content="website" />
+        
+       
+        
+        {/* Favicon */}
+        <link rel="icon" href="/fav1.jpg" type="image/jpg" />
+       
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={`https://sempen.com/${locale}`} />
+        
+        {/* Hreflang tags */}
+        <link rel="alternate" hreflang="en" href="https://sempen.com/en" />
+        <link rel="alternate" hreflang="es" href="https://sempen.com/es" />
+        <link rel="alternate" hreflang="pt" href="https://sempen.com/pt" />
+        
+        {/* Robots meta */}
+        <meta name="robots" content="index, follow" />
+      </head>
       <body className={archivo.className}>{children}</body>
     </html>
   );
 }
+
