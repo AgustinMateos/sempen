@@ -40,7 +40,7 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden bg-[#16222F]">
+    <div className="relative w-full h-[100vh] overflow-hidden ">
       {/* Video para pantallas grandes */}
       <video
         id="videoLarge"
