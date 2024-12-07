@@ -18,10 +18,10 @@ export default function AboutUs() {
                     setVisibleTitle(true); // El título se hace visible inmediatamente
                     observer.disconnect();
 
-                    // Retrasa la activación de la visibilidad del siguiente texto
+                   
                     setTimeout(() => {
-                        setVisibleText(true); // Activa el segundo texto después de un tiempo
-                    }, 500);  // 500ms de retraso
+                        setVisibleText(true); 
+                    }, 1000);  
                 }
             });
         });
