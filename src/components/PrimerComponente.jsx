@@ -56,7 +56,7 @@ export default function PrimerComponente({ shouldPlay }) {
         id="videoSmall"
         src="/Mobile.webm"
         preload="auto"
-        className="absolute top-0 left-0 w-full h-full object-cover sm:hidden block"
+        className="absolute top-0 left-0 w-full h-full object-fill sm:hidden block"
         loop
         muted
         playsInline
