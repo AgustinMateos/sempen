@@ -3,50 +3,90 @@
 import { useEffect, useState } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
-  const [isMobile, setIsMobile] = useState(() => {
-    return typeof window !== 'undefined' && window.innerWidth <= 640;
-  });
-  const [videoSrc, setVideoSrc] = useState(null);
+  const [videoSrcLarge, setVideoSrcLarge] = useState(null);
+  const [videoSrcSmall, setVideoSrcSmall] = useState(null);
+
+  const loadVideos = async () => {
+    try {
+      // Cargar video grande
+      const largeResponse = await fetch('/sempenDesktop.mp4');
+      const largeBlob = await largeResponse.blob();
+      const largeUrl = URL.createObjectURL(largeBlob);
+      setVideoSrcLarge(largeUrl);
+
+      // Cargar video pequeño
+      const smallResponse = await fetch('/mobile.webm');
+      const smallBlob = await smallResponse.blob();
+      const smallUrl = URL.createObjectURL(smallBlob);
+      setVideoSrcSmall(smallUrl);
+    } catch (err) {
+      console.error('Error al cargar los videos:', err);
+    }
+  };
 
   useEffect(() => {
-    if (!shouldPlay) return;
+    // Cargar los videos una vez al montar el componente
+    loadVideos();
+  }, []);
 
-    const checkDeviceSize = () => {
-      setIsMobile(window.innerWidth <= 640);
-    };
+  useEffect(() => {
+    if (shouldPlay) {
+      const playVideo = () => {
+        if (window.innerWidth > 640 && videoSrcLarge) {
+          document.getElementById('videoLarge')?.play();
+          document.getElementById('videoSmall')?.pause();
+        } else if (window.innerWidth <= 640 && videoSrcSmall) {
+          document.getElementById('videoSmall')?.play();
+          document.getElementById('videoLarge')?.pause();
+        }
+      };
 
-    window.addEventListener('resize', checkDeviceSize);
+      const handleVisibilityChange = () => {
+        if (!document.hidden) {
+          playVideo();
+        }
+      };
 
-    const videoUrl = isMobile ? '/Mobile.webm' : '/sempenDesktop.mp4';
-    fetch(videoUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const localVideoUrl = URL.createObjectURL(blob);
-        setVideoSrc(localVideoUrl);
-      })
-      .catch((error) => console.error('Error loading video:', error));
+      const handleResize = () => {
+        playVideo();
+      };
 
-    return () => {
-      window.removeEventListener('resize', checkDeviceSize);
-      if (videoSrc) URL.revokeObjectURL(videoSrc);
-    };
-  }, [isMobile, shouldPlay]);
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      window.addEventListener('resize', handleResize);
+
+      playVideo();
+
+      return () => {
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [shouldPlay, videoSrcLarge, videoSrcSmall]);
 
   return (
-    <div
-      className="relative w-full overflow-hidden bg-[#16222F]"
-      style={{ height: '100vh' }} // Mantén un tamaño fijo para evitar "saltos"
-    >
-      {videoSrc && (
+    <div className="relative w-full overflow-hidden bg-[#16222F]">
+      {/* Video para pantallas grandes */}
+      {videoSrcLarge && (
         <video
-          src={videoSrc}
+          id="videoLarge"
+          src={videoSrcLarge}
           preload="auto"
-          className="w-full h-full object-containe"
+          className="w-full h-full object-contain hidden sm:block"
           loop
           muted
-          autoPlay
           playsInline
-          onLoadedData={() => console.log('Video loaded')}
+        />
+      )}
+      {/* Video para pantallas pequeñas */}
+      {videoSrcSmall && (
+        <video
+          id="videoSmall"
+          src={videoSrcSmall}
+          preload="auto"
+          className="w-full h-full object-contain sm:hidden block"
+          loop
+          muted
+          playsInline
         />
       )}
     </div>
