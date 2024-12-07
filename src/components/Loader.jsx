@@ -5,10 +5,9 @@ export default function Loader() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Reduce el intervalo para que el progreso aumente más rápido
     const interval = setInterval(() => {
-      setProgress(prev => (prev < 100 ? prev + 2 : 100)); // Incrementa más rápido
-    }, 5); // Intervalo más corto para un progreso más rápido
+      setProgress(prev => (prev < 100 ? prev + 1 : 100));
+    }, 20);
 
     return () => clearInterval(interval);
   }, []);
@@ -22,23 +21,24 @@ export default function Loader() {
         </div>
         <div className="h-0.5 bg-gray-300 w-full">
           <div
-            className="h-full bg-[#57B6B2] transition-all duration-150" // Transición más rápida
+            className="h-full bg-[#57B6B2] transition-all duration-200"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
       </div>
 
+      
       <div className="absolute bottom-0 flex justify-center w-full">
         <Image
           src="/SempenLoader.webp"
           alt="Loading Icon"
           width={1323}
           height={329}
-          className="transition-all duration-150" // Transición más rápida
+          className="transition-all duration-300"
           style={{
-            filter: `brightness(${0.2 + (progress / 100) * 0.9})`,  // Incrementa el brillo
-            opacity: `${0.4 + (progress / 100) * 0.8}`,              // Incrementa la opacidad
-            clipPath: `inset(0 ${600 - progress}% 0 0)`              // Revela la imagen más rápido
+            filter: `brightness(${0.2 + (progress / 100) * 0.8})`,  // Incrementa el brillo
+            opacity: `${0.3 + (progress / 100) * 0.7}`,              // Incrementa la opacidad
+            clipPath: `inset(0 ${100 - progress}% 0 0)`              // Revela la imagen de izquierda a derecha
           }}
         />
       </div>

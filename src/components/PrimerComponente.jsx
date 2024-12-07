@@ -17,7 +17,7 @@ export default function PrimerComponente({ shouldPlay }) {
 
     window.addEventListener('resize', checkDeviceSize);
 
-    const videoUrl = isMobile ? '/mmobile.mp4' : '/sempenDesktop.mp4';
+    const videoUrl = isMobile ? '/Mobile.webm' : '/sempenDesktop.mp4';
     fetch(videoUrl)
       .then((response) => response.blob())
       .then((blob) => {
@@ -41,12 +41,11 @@ export default function PrimerComponente({ shouldPlay }) {
         <video
           src={videoSrc}
           preload="auto"
-          className="w-full h-full"
+          className="w-full h-full object-containe"
           loop
           muted
           autoPlay
           playsInline
-          style={{ objectFit: 'unset' }} // Cambia object-contain a inherit
           onLoadedData={() => console.log('Video loaded')}
         />
       )}

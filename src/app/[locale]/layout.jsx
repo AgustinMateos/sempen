@@ -72,10 +72,7 @@ export default function RootLayout({ children, params: { locale } }) {
         {/* Canonical URL */}
         <link rel="canonical" href={`https://sempen.com/${locale}`} />
         
-        {/* Hreflang tags */}
-        <link rel="alternate" hreflang="en" href="https://sempen.com/en" />
-        <link rel="alternate" hreflang="es" href="https://sempen.com/es" />
-        <link rel="alternate" hreflang="pt" href="https://sempen.com/pt" />
+       
         
         {/* Robots meta */}
         <meta name="robots" content="index, follow" />
