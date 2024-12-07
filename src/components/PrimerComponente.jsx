@@ -46,7 +46,7 @@ export default function PrimerComponente({ shouldPlay }) {
           muted
           autoPlay
           playsInline
-          style={{ objectFit: 'inherit' }} // Cambia object-contain a inherit
+          style={{ objectFit: 'unset' }} // Cambia object-contain a inherit
           onLoadedData={() => console.log('Video loaded')}
         />
       )}
