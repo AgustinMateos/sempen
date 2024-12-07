@@ -17,7 +17,7 @@ export default function PrimerComponente({ shouldPlay }) {
 
     window.addEventListener('resize', checkDeviceSize);
 
-    const videoUrl = isMobile ? '/Mobile.webm' : '/sempenDesktop.mp4';
+    const videoUrl = isMobile ? '/mmobile.mp4' : '/sempenDesktop.mp4';
     fetch(videoUrl)
       .then((response) => response.blob())
       .then((blob) => {
