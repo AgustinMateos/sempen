@@ -15,7 +15,7 @@ export default function PrimerComponente({ shouldPlay }) {
       setVideoSrcLarge(largeUrl);
 
       // Cargar video pequeño
-      const smallResponse = await fetch('/mobile.webm');
+      const smallResponse = await fetch('/Mobile.webm');
       const smallBlob = await smallResponse.blob();
       const smallUrl = URL.createObjectURL(smallBlob);
       setVideoSrcSmall(smallUrl);
