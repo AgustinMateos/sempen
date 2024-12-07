@@ -47,14 +47,15 @@ const Navbar = () => {
             </div>
 
             {/* Links en desktop (visibles en xl hacia arriba) */}
-            <div className="hidden xl:flex lg:w-[700px] lg:jus@tify-around mx-auto justify-center">
+            <div className="hidden xl:flex lg:w-[750px] xl:w-[900px] lg:jus@tify-around mx-auto justify-center">
                 {['AboutUs', 'WhoWeAre', 'SustainableFuels', 'OurProjects'].map((link, index) => (
                     <Link 
                         key={link}
                         href={`#${link}`} 
                         className={`navbar-link text-center font-jakarta transition-all duration-500 ${
-                            index === 0 || index === 1 ? 'lg:w-[150px] xl:w-[150px]' : 
-                            index === 3 ? 'lg:w-[180px] xl:w-[180px]' : 'lg:w-[260px] xl:w-[220px]'
+                            index === 0 ? 'lg:w-[260px] xl:w-[150px] text-center pr-[25px]':
+                            index === 1 ? 'lg:w-[260px] xl:w-[210px]' : 
+                            index === 3 ? 'lg:w-[260px] xl:w-[210px]' : 'lg:w-[260px] xl:w-[220px] '
                         } ${activeLink === link ? 'text-[#57B6B2]' : 'text-white'}`}
                         onClick={() => handleLinkClick(link)}
                     >

@@ -46,7 +46,7 @@ export default function PrimerComponente({ shouldPlay }) {
         id="videoLarge"
         src="/sempenDesktop.mp4"
         preload="auto"
-        className="w-full h-full object-cover hidden sm:block"
+        className="w-full h-full object-fill lg:object-fill hidden sm:block"
         loop
         muted
         playsInline
@@ -56,7 +56,7 @@ export default function PrimerComponente({ shouldPlay }) {
         id="videoSmall"
         src="/Mobile.webm"
         preload="auto"
-        className="w-full h-full object-cover sm:hidden block"
+        className="w-full h-full object-fill sm:hidden block"
         loop
         muted
         playsInline
