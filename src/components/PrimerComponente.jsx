@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function PrimerComponente({ shouldPlay }) {
   useEffect(() => {
@@ -40,13 +40,13 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden ">
+    <div className="relative w-full h-[100vh] overflow-hidden">
       {/* Video para pantallas grandes */}
       <video
         id="videoLarge"
         src="/sempenDesktop.mp4"
         preload="auto"
-        className="w-full h-full object-fill lg:object-fill hidden sm:block"
+        className="w-full h-[100%] object-fill hidden sm:block"
         loop
         muted
         playsInline
@@ -56,7 +56,7 @@ export default function PrimerComponente({ shouldPlay }) {
         id="videoSmall"
         src="/Mobile.webm"
         preload="auto"
-        className="w-full h-full object-fill sm:hidden block"
+        className="w-full h-[100%]  object-fill sm:hidden block"
         loop
         muted
         playsInline
