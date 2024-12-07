@@ -81,4 +81,3 @@ export default function RootLayout({ children, params: { locale } }) {
     </html>
   );
 }
-

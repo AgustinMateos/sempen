@@ -12,5 +12,6 @@ export default async function Home({ params: { locale } }) {
     <TranslationsProvider resources={resources} locale={locale} namespaces={i18Namespaces}>
       <ClientHome />
     </TranslationsProvider>
+    
   );
 }
