@@ -42,7 +42,7 @@ export default function PrimerComponente({ shouldPlay }) {
   return (
     <div className="relative w-full h-auto overflow-hidden">
       {/* Contenedor responsivo para video de escritorio */}
-      <div className="aspect-w-2 aspect-h-1 sm:block hidden">
+      <div className="aspect-w-21 aspect-h-9 sm:block hidden">
         <video
           id="videoLarge"
           src="/sempenDesktop.mp4"
