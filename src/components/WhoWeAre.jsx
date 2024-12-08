@@ -83,7 +83,7 @@ export default function WhoWeAre() {
                                             className={`inline transition-opacity font-archivo duration-500 ${isVisible ? "opacity-100" : "opacity-30"
                                                 }`}
                                             style={{
-                                                transitionDelay: `${index * 100}ms`,
+                                                transitionDelay: `${index * 200}ms`,
                                             }}
                                         >
                                             {word}

@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],
-        nunito: ['"Nunito Sans"', 'sans-serif'], 
+        nunito: ['"Nunito Sans"', 'sans-serif'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -18,5 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'), // Aquí agregas el plugin
+  ],
 };

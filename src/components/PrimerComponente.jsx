@@ -40,30 +40,35 @@ export default function PrimerComponente({ shouldPlay }) {
   }, [shouldPlay]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
-      {/* Video para pantallas grandes */}
-      <video
-        id="videoLarge"
-        src="/sempenDesktop.mp4"
-        preload="auto"
-        className="absolute top-0 left-0 w-full h-full object-cover hidden sm:block"
-        loop
-        muted
-        playsInline
-      />
-      {/* Video para pantallas pequeñas */}
-      <video
-        id="videoSmall"
-        src="/Mobile.webm"
-        preload="auto"
-        className="absolute top-0 left-0 w-full h-full object-fill sm:hidden block"
-        loop
-        muted
-        playsInline
-      />
+    <div className="relative w-full h-auto overflow-hidden">
+      {/* Contenedor responsivo para video de escritorio */}
+      <div className="aspect-w-2 aspect-h-1 sm:block hidden">
+        <video
+          id="videoLarge"
+          src="/sempenDesktop.mp4"
+          preload="auto"
+          className="w-full h-full object-cover"
+          loop
+          muted
+          playsInline
+        />
+      </div>
+      {/* Contenedor responsivo para video móvil */}
+      <div className="aspect-w-9 aspect-h-16  sm:hidden block">
+        <video
+          id="videoSmall"
+          src="/Mobile.webm"
+          preload="auto"
+          className="w-full h-full object-cover"
+          loop
+          muted
+          playsInline
+        />
+      </div>
     </div>
   );
 }
+
 
 // 'use client';
 
