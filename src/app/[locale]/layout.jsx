@@ -66,7 +66,7 @@ export default function RootLayout({ children, params: { locale } }) {
        
         
         {/* Favicon */}
-        <link rel="icon" href="/fav2.png" type="image/png" />
+        <link rel="icon" href="/fav2.webp" type="image/png" />
        
         
         {/* Canonical URL */}

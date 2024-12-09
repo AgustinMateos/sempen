@@ -75,7 +75,7 @@ export default function AboutUs() {
                     backgroundImage: `
                         linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 63.5%, #101820 100%),
                         linear-gradient(0deg, rgba(16, 24, 32, 0) 41.5%, rgba(16, 24, 32, 0.446541) 64%, #101820 97%),
-                        url('/aboutUs.webp')
+                        url('/aboutus3.webp')
                     `,
                 }}
                 ref={aboutUsRef}
