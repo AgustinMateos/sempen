@@ -48,7 +48,7 @@ export default function PositiveImpact() {
     return (
         <div className="relative overflow-hidden" ref={aboutUsRef}>
             <div
-                className="overflow-hidden w-full bg-center h-[50vh] sm:h-[50vh] md:h-[50vh] lg:h-[70vh] xl:h-[100vh] 2xl:h-[90vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
+                className="overflow-hidden w-full bg-center h-[50vh] sm:h-[50vh] md:h-[50vh] lg:h-[70vh] xl:h-[100vh] 2xl:h-[100vh] flex flex-col items-center justify-between transition-transform duration-1000 ease-out relative"
                 style={{
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
