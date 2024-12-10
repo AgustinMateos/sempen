@@ -42,7 +42,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
-                    <Image src="/logoSempen.webp" alt="Logo" width={124} height={30} />
+                    <Image src="/sempen.webp" alt="Logo sempen" width={124} height={30} />
                 </Link>
             </div>
 
