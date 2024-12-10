@@ -79,7 +79,7 @@ export default function Footer() {
                   height={24}
                   src={red.image}
                   alt={red.name}
-                  layout="intrinsic"
+                  
                   className="cursor-pointer "
                 />
               </Link>

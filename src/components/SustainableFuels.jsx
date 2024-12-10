@@ -91,22 +91,40 @@ export default function SustainableFuels() {
       </div>
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">
         <div className="w-[90%] md:w-[90%] xl:w-[90%] flex flex-col justify-around leading-8 tracking-tight text-left mb-4 mt-4 lg:mb-[30px]">
-          <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%] lg:pt-[20px]">
-            {t("SustainableFuelsNature") 
-              .split(" ")
-              .map((word, index) => (
-                <span
-                  key={index}
-                  className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
-                  style={{
-                    transitionDelay: `${index * 100}ms`,
-                    transitionDuration: "0.3s",
-                  }}
-                >
-                  {word}{" "}
-                </span>
-              ))}
-          </p>
+        <p className="text-[16px] xl:text-[24px] font-extralight md:w-[85%] lg:w-[80%] xl:w-[100%] lg:pt-[20px]">
+  {t("SustainableFuelsNature")
+    .split(" ")
+    .map((word, index) => {
+      // Si el texto incluye CO2, aplicamos el subíndice
+      if (word === "CO2") {
+        return (
+          <span
+            key={index}
+            className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
+            style={{
+              transitionDelay: `${index * 100}ms`,
+              transitionDuration: "0.3s",
+            }}
+          >
+            CO<sub>2</sub>{" "}
+          </span>
+        );
+      }
+      return (
+        <span
+          key={index}
+          className={`inline transition-opacity font-archivo ${isVisible ? "opacity-100" : "opacity-30"}`}
+          style={{
+            transitionDelay: `${index * 100}ms`,
+            transitionDuration: "0.3s",
+          }}
+        >
+          {word}{" "}
+        </span>
+      );
+    })}
+</p>
+
           <p className="font-archivo text-[16px] xl:text-[24px] font-extralight mt-4 md:w-[600px] lg:w-[80%] xl:w-[100%]">
             {t("SustainableFuelsDropInFuels")
               .split(" ")
@@ -132,4 +150,3 @@ export default function SustainableFuels() {
 
   );
 }
-

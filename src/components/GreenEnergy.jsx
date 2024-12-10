@@ -48,6 +48,19 @@ export default function GreenEnergy() {
 
   const currentButtonData = activeButton ? buttonData[activeButton] : null;
 
+  function renderTextWithSubscript(text) {
+    return text.split(/(CO2)/g).map((part, index) => {
+      if (part === 'CO2') {
+        return (
+          <span key={index}>
+            CO<sub>2</sub>
+          </span>
+        );
+      }
+      return part;
+    });
+  }
+
   return (
     <div className="xl:h-[160vh] 2xl:h-[130vh] 2xl:justify-center w-full bg-[#EDEDED] flex flex-col items-center xl:pt-[20px] xl:justify-center">
       <div className="flex justify-center w-[80%] md:w-[90%] sm:w-[87%] lg:w-[950px] xl:w-[80%] rounded-tl-[8px]">
@@ -98,11 +111,15 @@ export default function GreenEnergy() {
                 {currentButtonData.info.map((text, index) => (
                   <p key={index} className="leading-[38px] font-extralight w-[80%] md:w-[90%] lg:w-[90%] pt-[10px] pb-[10px] tracking-[-0.01em] text-[16px] md:text-[24px] font-archivo">
                     {activeButton === 'button1' && index === 0 ? (
-                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">
+                        {renderTextWithSubscript(text)}
+                      </strong>
                     ) : activeButton === 'button2' && index === 1 ? (
-                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">{text}</strong>
+                      <strong className="font-medium text-[16px] md:text-[24px] font-archivo leading-[38px] tracking-[-0.01em]">
+                        {renderTextWithSubscript(text)}
+                      </strong>
                     ) : (
-                      text
+                      renderTextWithSubscript(text)
                     )}
                   </p>
                 ))}
@@ -113,7 +130,7 @@ export default function GreenEnergy() {
                   width={1218}
                   src={currentButtonData.image}
                   alt="Descripción"
-                  className="object-cover w-full  "
+                  className="object-cover w-full"
                 />
               </div>
             </div>

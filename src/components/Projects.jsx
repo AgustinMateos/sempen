@@ -75,7 +75,8 @@ export default function Projects() {
         <div className="w-full  flex items-end px-4 md:px-0 h-[70px]  lg:w-[95%] xl:w-[93%] 2xl:w-[90%]">
           <h3 className="text-[#57B6B2] leading-[50px] font-archivo text-[40px] md:text-[60px] lg:text-[80px] border-b-[2px] border-transparent flex flex-wrap">
             {t("projectsTitle").split(" ").map((word, wordIndex) => (
-              <span key={wordIndex} className="inline-block mr-[20px]"> 
+             
+             <span key={wordIndex} className="inline-block mr-[20px]"> 
                 {word.split("").map((letter, letterIndex) => (
                   <span
                     key={letterIndex}
@@ -107,53 +108,57 @@ export default function Projects() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center mt-[20px] pt-[20px]">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
-            className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[98%] overflow-hidden transition-all duration-300 ${activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
-              } 
-            lg:h-[390px] 
-            ${activeCard !== project.id && "lg:group-hover:h-[490px]"}`}
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-all duration-300"
-              style={{
-                backgroundImage: `linear-gradient(270deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.64) 58.4%, rgba(16, 24, 32, 0.8) 100%), url('${project.image}')`,
-              }}
-            ></div>
+  {projects.map((project) => (
+    <div
+      key={project.id}
+      onClick={() => setActiveCard(activeCard === project.id ? null : project.id)}
+      className={`rounded-[8px] relative group mb-8 w-full md:w-[750px] lg:w-[98%] overflow-hidden transition-all duration-300 ${activeCard === project.id ? "h-[870px] sm:h-[468px]" : "h-[300px]"
+        } 
+      lg:h-[390px] 
+      ${activeCard !== project.id && "lg:group-hover:h-[490px]"}`}
+    >
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-300"
+        style={{
+          backgroundImage: `linear-gradient(270deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.64) 58.4%, rgba(16, 24, 32, 0.8) 100%), url('${project.image}')`,
+        }}
+      ></div>
 
-            <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
-              <div className="flex items-center">
-                <Image
-                  width={48}
-                  height={48}
-                  src="/angle-double-right.svg"
-                  alt="Right Arrow Icon"
-                />
-                <h4 className="text-white ml-2 font-archivo">{project.name}</h4>
-              </div>
-              <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
-                <p className="mr-4 font-archivo">
-                  {t("projectLocation")}: {project.location}
-                </p>
-                <p className="text-left lg:w-[300px] font-archivo">
-                  {t("projectStatus")}: {project.status}
-                </p>
-              </div>
-            </div>
-
-            <div
-              className={`absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] transition-opacity duration-300 ${activeCard === project.id || "lg:opacity-0 lg:group-hover:opacity-100"
-                } ${activeCard === project.id ? "opacity-100" : "opacity-0"}`}
-            >
-              <p className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%] font-archivo">
-                {project.description}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 text-white">
+        <div className="flex items-center">
+          <Image
+            width={48}
+            height={48}
+            src="/angle-double-right.svg"
+            alt="Right Arrow Icon"
+          />
+          <h4 className="text-white ml-2 font-archivo">{project.name}</h4>
+        </div>
+        <div className="flex justify-between text-sm md:text-base w-full lg:w-[542px]">
+          <p className="mr-4 font-archivo">
+            {t("projectLocation")}: {project.location}
+          </p>
+          <p className="text-left lg:w-[300px] font-archivo">
+            {t("projectStatus")}: {project.status}
+          </p>
+        </div>
       </div>
+
+      <div
+        className={`absolute inset-0 flex items-center justify-center bg-[rgba(16,24,32,0.7)] transition-opacity duration-300 ${activeCard === project.id || "lg:opacity-0 lg:group-hover:opacity-100"
+          } ${activeCard === project.id ? "opacity-100" : "opacity-0"}`}
+      >
+        <p
+          className="text-white text-base md:text-lg px-4 lg:px-0 w-[90%] lg:w-[80%] font-archivo"
+          dangerouslySetInnerHTML={{
+            __html: project.description.replace(/CO2/g, "CO<sub>2</sub>"),
+          }}
+        />
+      </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }

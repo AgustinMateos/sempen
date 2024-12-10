@@ -215,11 +215,7 @@ export default function WhoWeAre() {
     height={250}
     className="w-full md:w-[88%] h-auto rounded-l-[10px]"
     loading="lazy"
-    srcSet="
-      /_next/image?url=%2FwhoSempen.jpg&amp;w=768&amp;q=75 1x,
-      /_next/image?url=%2FwhoSempen.jpg&amp;w=1280&amp;q=75 2x,
-      /_next/image?url=%2FwhoSempen.jpg&amp;w=1920&amp;q=75 3x
-    "
+    
   />
 </div>
 
