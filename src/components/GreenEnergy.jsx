@@ -11,7 +11,7 @@ export default function GreenEnergy() {
         t('safInfo1'),
         t('safInfo2'),
         t('safInfo3'),
-        t('safInfo4'),
+        
       ],
       image: '/Saf.webp',
       activeImage: '/safGreen.webp',

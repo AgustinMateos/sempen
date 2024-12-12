@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
+import { useTranslation } from "react-i18next";
 export default function WeBuild() {
+  const { t } = useTranslation();
   const words = ["sustainable fuels", "game changing teams", "long-term vision"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -36,7 +37,7 @@ export default function WeBuild() {
       {/* Contenedor azul oscuro con max-width */}
       <div className="absolute bottom-0 w-full flex justify-center">
         <div className="max-w-[1050px] rounded-[8px] w-full bg-[#16222F] h-[350px] md:h-[350px] lg:h-[250px] flex flex-col items-center justify-evenly px-4 mx-auto">
-          <h4 className="font-archivo text-white text-[18px] md:text-[24px] mb-2">We are part of </h4>
+          <h4 className="font-archivo text-white text-[18px] md:text-[24px] mb-2">{t('weArePartOf')} </h4>
           <div className="flex justify-around space-x-4 flex-wrap w-[100%] items-center">
             <Image src="/ahk.png" width={300} height={50} alt="ahk Logo" className=" md:w-[400px] md:h-[15vh] 2xl:h-[12vh]" />
             <Image src="/rsb.svg" width={200} height={50} alt=" Logo" className=" md:w-[200px]" />
