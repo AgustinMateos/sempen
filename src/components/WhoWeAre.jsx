@@ -83,7 +83,7 @@ export default function WhoWeAre() {
                                             className={`inline transition-opacity font-archivo duration-500 ${isVisible ? "opacity-100" : "opacity-30"
                                                 }`}
                                             style={{
-                                                transitionDelay: `${index * 200}ms`,
+                                                transitionDelay: `${index * 100}ms`,
                                             }}
                                         >
                                             {word}
@@ -105,7 +105,7 @@ export default function WhoWeAre() {
                                                 style={{
                                                     transitionDelay: `${(t("WhoWeAreP").split(" ").length +
                                                             index) *
-                                                        200
+                                                        100
                                                         }ms`,
                                                 }}
                                             >
@@ -130,7 +130,7 @@ export default function WhoWeAre() {
                                                 transitionDelay: `${(t("WhoWeAreP").split(" ").length +
                                                         t("WhoWeArePstrong").split(" ").length +
                                                         index) *
-                                                    200
+                                                    100
                                                     }ms`,
                                             }}
                                         >
@@ -158,7 +158,7 @@ export default function WhoWeAre() {
                                                             .split(" ")
                                                             .length +
                                                         index) *
-                                                    200
+                                                    100
                                                     }ms`,
                                             }}
                                         >
@@ -190,7 +190,7 @@ export default function WhoWeAre() {
                                                                 .split(" ")
                                                                 .length +
                                                             index) *
-                                                        200
+                                                        100
                                                         }ms`,
                                                 }}
                                             >
@@ -211,7 +211,7 @@ export default function WhoWeAre() {
   <Image
     src="/whoSempen.jpg"
     alt="Imagen"
-    width={766}
+    width={250}
     height={250}
     className="w-full md:w-[88%] h-auto rounded-l-[10px]"
     loading="lazy"
