@@ -80,7 +80,7 @@ export default function SustainableFuels() {
     alt="Imagen"
     width={766}
     height={250}
-    className="w-[95%] md:w-[88%] md:h-auto lg:h-[480px] xl:h-[421px] rounded-r-[10px] h-[220px] "
+    className="w-[95%] md:w-[88%] md:h-[400px] aspect-auto object-cover lg:h-[400px] xl:h-[400px] rounded-r-[10px] h-[250px] "
     loading="lazy"
     // srcSet="
     //   /_next/image?url=%2FsustFuels.jpg&amp;w=768&amp;q=75 1x,

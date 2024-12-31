@@ -213,7 +213,7 @@ export default function WhoWeAre() {
     alt="Imagen"
     width={250}
     height={250}
-    className="w-full md:w-[88%] h-auto rounded-l-[10px]"
+    className="w-full md:w-[88%] h-[250px] object-cover sm:h-auto md:h-[400px] lg:h-[450px] aspect-auto rounded-l-[10px]"
     loading="lazy"
     
   />
