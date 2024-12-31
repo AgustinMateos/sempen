@@ -42,7 +42,7 @@ export default function WeBuild() {
             <Image src="/ahkBrasil_svg.svg" width={200} height={40} alt="ahk Logo" className="sm:w-[250px] sm:h-[12vh] md:w-[400px] md:h-[15vh] 2xl:h-[12vh]" />
             <Image src="/ahkUruguay_svg.svg" width={200} height={40} alt="ahk Logo" className="sm:w-[250px] sm:h-[12vh] md:w-[400px] md:h-[15vh] 2xl:h-[12vh]" />
             <Image src="/arg2.svg" width={200} height={40} alt="ahk Logo" className="sm:w-[250px] sm:h-[12vh] md:w-[400px] md:h-[15vh] 2xl:h-[12vh]" />           
-             <Image src="/rsb_svg.svg" width={200} height={50} alt="RSB Logo" className="w-[160px] h-[10vh] sm:w-[250px] sm:h-[8vh] md:w-[290px] md:h-[17vh] lg:w-[300px] lg:h-[20vh]   2xl:h-[12vh] " />
+             <Image src="/rsb_svg.svg" width={200} height={50} alt="RSB Logo" className="aspect-auto w-[160px] h-[10vh] sm:w-[250px] sm:h-[8vh] md:w-[290px] md:h-[17vh] lg:w-[300px] lg:h-[20vh]   2xl:h-[12vh] " />
             <Image src="/aviacaoSAF.png" width={200} height={50} alt="aviacao Saf Logo" className="w-[90px] h-[9vh] sm:w-[130px] sm:h-[12vh] md:w-[140px] md:h-[14vh] 2xl:h-[10vh]" />
           </div>
         </div>
