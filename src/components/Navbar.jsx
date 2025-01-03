@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
 
             {/* Links en desktop (visibles en xl hacia arriba) */}
-            <div className="hidden xl:flex lg:w-[750px] xl:w-[900px] lg:jus@tify-around mx-auto justify-center">
+            <div className="hidden xl:flex lg:w-[750px] xl:w-[800px] lg:jus@tify-around mx-auto justify-center">
                 {['AboutUs', 'WhoWeAre', 'SustainableFuels', 'OurProjects'].map((link, index) => (
                     <Link 
                         key={link}
