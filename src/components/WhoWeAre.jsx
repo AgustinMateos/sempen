@@ -20,7 +20,7 @@ export default function WhoWeAre() {
             { threshold: 0.3 }
         );
     
-        const currentSection = sectionRef.current; // Guarda la referencia en una variable
+        const currentSection = sectionRef.current; //  Guarda la referencia en una variable
     
         if (currentSection) {
             observer.observe(currentSection);
