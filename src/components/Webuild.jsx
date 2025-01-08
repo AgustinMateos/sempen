@@ -1,14 +1,23 @@
 'use client';
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 export default function WeBuild() {
   const { t } = useTranslation();
+  const words = ["sustainable fuels", "game changing teams", "long-term vision"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 5000);
 
+    return () => clearInterval(interval);
+  }, [words.length]);
 
   return (
-    <div className="h-[750px] md:h-[100vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
+    <div className="h-[750px] md:h-[70vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
@@ -19,7 +28,7 @@ export default function WeBuild() {
         <div className="relative mb-[25px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] lg:w-[420px]" />
           <p className="font-archivo absolute inset-0 flex justify-center items-center mb-[25px] text-[14px] sm:text-[18px] lg:text-[32px]">
-            sustainable fuels
+            {/* {words[currentWordIndex]} */} sustainable fuels
           </p>
         </div>
         <p className="font-archivo text-[14px] sm:text-[18px] lg:text-[32px] pb-[30px] ">to decarbonize global energy.</p>
