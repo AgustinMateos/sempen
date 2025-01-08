@@ -9,7 +9,7 @@ export default function WeBuild() {
 
 
   return (
-    <div className="h-[750px] md:h-[70vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
+    <div className="h-[750px]  md:h-[70vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
