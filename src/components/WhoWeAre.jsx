@@ -19,14 +19,16 @@ export default function WhoWeAre() {
             },
             { threshold: 0.3 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+    
+        const currentSection = sectionRef.current; // Guarda la referencia en una variable
+    
+        if (currentSection) {
+            observer.observe(currentSection);
         }
-
+    
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentSection) {
+                observer.unobserve(currentSection);
             }
         };
     }, []);
