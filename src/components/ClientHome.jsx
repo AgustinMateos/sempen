@@ -4,7 +4,7 @@ import Loader from '@/components/Loader';
 import PrimerComponente from '@/components/PrimerComponente';
 import Navbar from '@/components/Navbar';
 import SustainableFuels from '@/components/SustainableFuels';
-import WeBuild from '@/components/Webuild';
+// import WeBuild from '@/components/Webuild';
 import AboutUs from '@/components/AboutUs';
 import WhoWeAre from '@/components/WhoWeAre';
 import PositiveImpact from '@/components/PositiveImpact';
@@ -30,14 +30,14 @@ export default function Home() {
       <main
         className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}
       >
-        <PrimerComponente shouldPlay={!loading} />
+        <PrimerComponente shouldPlay={!loading}  />
         <AboutUs />
         <WhoWeAre />
         <PositiveImpact />
         <SustainableFuels />
         <GreenEnergy />
         <Projects />
-        <WeBuild />
+        {/* <WeBuild /> */}
         <Footer />
       </main>
     </>
