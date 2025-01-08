@@ -17,13 +17,13 @@ export default function WeBuild() {
   }, [words.length]);
 
   return (
-    <div className="h-[750px] md:h-[120vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
+    <div className="h-[750px] md:h-[70vh] lg:h-[950px] relative overflow-hidden text-white flex flex-col items-center justify-center lg:justify-start bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(16, 24, 32, 0) 0%, rgba(16, 24, 32, 0.446541) 44%, #101820 100%), url('/weBuild.webp')`,
       }}
     >
       {/* Contenedor en fila */}
-      <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 text-center lg:text-left px-4 lg:px-0 h-[600px] sm:h-[620px] md:h-[780px]  lg:h-[550px]">
+      <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 text-center lg:text-left px-4 lg:px-0 h-[600px] sm:h-[620px] md:h-[580px]  lg:h-[550px]">
         <p className="text-[14px] sm:text-[18px] lg:text-[32px] font-light lg:leading-[108.8px] mb-[10px] sm:mb-[25px]">We build</p>
         <div className="relative mb-[25px]">
           <Image src="/Line-3.webp" width={550} height={34} alt="Line Image" className="w-[250px] lg:w-[420px]" />
