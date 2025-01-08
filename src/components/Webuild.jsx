@@ -44,7 +44,7 @@ export default function WeBuild() {
             <div className="w-[200px] sm:w-[300px] md:w-[350px] lg:flex lg:items-center lg:w-[400px] md:h-[70px] lg:h-[140px]"><Image src="/arg2.svg" width={200} height={60} alt="ahk Logo" className="sm:w-[250px] sm:h-[12vh] md:w-[350px] md:h-auto xl:w-[355px] xl:h-[18vh]  2xl:h-[12vh] " /> </div>
             <div className="w-[200px] sm:w-[300px] md:w-[350px] lg:w-[400px] md:h-[70px] lg:h-[140px] flex md:items-center"><Image src="/rsb_svg.svg" width={150} height={50} alt="RSB Logo" className="aspect-auto  sm:w-[150px] sm:h-[8vh] md:w-[200px] md:h-auto lg:w-[300px] lg:h-[20vh]   2xl:h-[12vh] " /></div>
 
-            <div className="w-[200px] sm:w-[300px] md:flex md:items-center md:w-[350px] md:h-[80px] lg:h-[140px] lg:w-[400px]"><Image src="/aviacaoSAF.png" width={70} height={30} alt="aviacao Saf Logo" className=" sm:w-[100px] sm:h-[12vh] md:w-[100px] md:h-[7vh] lg:w-[140px] lg:h-[12vh] xl:w-[145px] xl:h-auto 2xl:w-[142px] 2xl:h-[11vh]" /></div>
+            <div className="w-[200px] sm:w-[300px] md:flex md:items-center md:w-[350px] md:h-[80px] lg:h-[140px] lg:w-[400px]"><Image src="/aviacaoSAF.png" width={70} height={30} alt="aviacao Saf Logo" className=" sm:w-[100px] sm:h-[12vh] md:w-[100px] md:h-[12vh] lg:w-auto lg:h-auto xl:w-[145px] xl:h-auto 2xl:w-[142px] 2xl:h-[11vh]" /></div>
 
           </div>
         </div>
