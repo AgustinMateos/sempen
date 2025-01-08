@@ -82,11 +82,7 @@ export default function SustainableFuels() {
     height={250}
     className="w-[95%] md:w-[88%] md:h-[400px] aspect-auto object-cover lg:h-[400px] xl:h-[400px] rounded-r-[10px] h-[250px] "
     loading="lazy"
-    // srcSet="
-    //   /_next/image?url=%2FsustFuels.jpg&amp;w=768&amp;q=75 1x,
-    //   /_next/image?url=%2FsustFuels.jpg&amp;w=1280&amp;q=75 2x,
-    //   /_next/image?url=%2FsustFuels.jpg&amp;w=1920&amp;q=75 3x
-    // "
+   
   />
       </div>
       <div className="flex justify-center md:w-full md:justify-end xl:justify-start">

@@ -33,10 +33,10 @@ export default function WhoWeAre() {
 
     return (
         <div
-        id="WhoWeAre"
-        ref={sectionRef}
-        className="h-auto   scroll-mt-[60px] sm:scroll-mt-[30px] xl:scroll-mt-[40px]  flex items-center md:justify-end bg-[#101820]"
-    >
+            id="WhoWeAre"
+            ref={sectionRef}
+            className="h-auto   scroll-mt-[60px] sm:scroll-mt-[30px] xl:scroll-mt-[40px]  flex items-center md:justify-end bg-[#101820]"
+        >
             <div className=" ml-[24px] md:m-[0px] flex flex-col justify-center text-white min-h-[65vh] md:min-h-[85vh] md:justify-around  lg:min-h-[80vh] xl:min-h-[85vh] lg:justify-evenly  w-full">
                 <div className="md:flex md:flex-col md:items-end h-auto 2xl:justify-center lg:h-auto lg:justify-center 2xl:h-[190px]">
                     <div className="h-auto md:h-[100px] md:w-[90%] xl:w-[95%] flex items-end justify-end">
@@ -49,7 +49,7 @@ export default function WhoWeAre() {
                                     style={{
                                         opacity: isVisible ? 1 : 0,
                                         transform: isVisible ? "translateY(0)" : "translateY(100%)",
-                                        margin: index === 0 ? "0" : "0 10px", 
+                                        margin: index === 0 ? "0" : "0 10px",
                                         transition: `opacity 0.6s ease ${index * 90}ms, transform 0.6s ease ${index * 90}ms`,
                                     }}
                                 >
@@ -73,7 +73,7 @@ export default function WhoWeAre() {
                 <div className="flex flex-col xl:flex-row items-center xl:justify-between w-full h-auto  justify-around  ">
                     <div className="md:flex md:w-full md:justify-end">
                         <div className="w-full md:w-[87%] xl:w-[86%] pr-[20px] md:mr-[10px] flex flex-col justify-around leading-8 tracking-tight text-left mb-4">
-                            
+
                             <p className="text-[16px] lg:text-[24px] xl:text-[24px] font-extralight md:w-[600px] lg:w-[80%] xl:w-[100%]">
                                 {t("WhoWeAreP")
                                     .split(" ")
@@ -99,12 +99,12 @@ export default function WhoWeAre() {
                                             <span
                                                 key={index}
                                                 className={`inline transition-opacity font-archivo duration-500 ${isVisible
-                                                        ? "opacity-100"
-                                                        : "opacity-30"
+                                                    ? "opacity-100"
+                                                    : "opacity-30"
                                                     }`}
                                                 style={{
                                                     transitionDelay: `${(t("WhoWeAreP").split(" ").length +
-                                                            index) *
+                                                        index) *
                                                         100
                                                         }ms`,
                                                 }}
@@ -128,8 +128,8 @@ export default function WhoWeAre() {
                                                 }`}
                                             style={{
                                                 transitionDelay: `${(t("WhoWeAreP").split(" ").length +
-                                                        t("WhoWeArePstrong").split(" ").length +
-                                                        index) *
+                                                    t("WhoWeArePstrong").split(" ").length +
+                                                    index) *
                                                     100
                                                     }ms`,
                                             }}
@@ -151,13 +151,13 @@ export default function WhoWeAre() {
                                                 }`}
                                             style={{
                                                 transitionDelay: `${(t("WhoWeAreP").split(" ").length +
-                                                        t("WhoWeArePstrong")
-                                                            .split(" ")
-                                                            .length +
-                                                        t("WhoWeArePsecond")
-                                                            .split(" ")
-                                                            .length +
-                                                        index) *
+                                                    t("WhoWeArePstrong")
+                                                        .split(" ")
+                                                        .length +
+                                                    t("WhoWeArePsecond")
+                                                        .split(" ")
+                                                        .length +
+                                                    index) *
                                                     100
                                                     }ms`,
                                             }}
@@ -175,21 +175,21 @@ export default function WhoWeAre() {
                                             <span
                                                 key={index}
                                                 className={`inline transition-opacity font-archivo duration-500 ${isVisible
-                                                        ? "opacity-100"
-                                                        : "opacity-30"
+                                                    ? "opacity-100"
+                                                    : "opacity-30"
                                                     }`}
                                                 style={{
                                                     transitionDelay: `${(t("WhoWeAreP").split(" ").length +
-                                                            t("WhoWeArePstrong")
-                                                                .split(" ")
-                                                                .length +
-                                                            t("WhoWeArePsecond")
-                                                                .split(" ")
-                                                                .length +
-                                                            t("WhoWeArePThird")
-                                                                .split(" ")
-                                                                .length +
-                                                            index) *
+                                                        t("WhoWeArePstrong")
+                                                            .split(" ")
+                                                            .length +
+                                                        t("WhoWeArePsecond")
+                                                            .split(" ")
+                                                            .length +
+                                                        t("WhoWeArePThird")
+                                                            .split(" ")
+                                                            .length +
+                                                        index) *
                                                         100
                                                         }ms`,
                                                 }}
@@ -208,16 +208,16 @@ export default function WhoWeAre() {
                         </div>
                     </div>
                     <div className="w-full flex justify-center md:justify-end">
-  <Image
-    src="/whoSempen.jpg"
-    alt="Imagen"
-    width={250}
-    height={250}
-    className="w-full md:w-[88%] h-[250px] object-cover sm:h-auto md:h-[400px] lg:h-[450px] aspect-auto rounded-l-[10px]"
-    loading="lazy"
-    
-  />
-</div>
+                        <Image
+                            src="/whoSempen.jpg"
+                            alt="Imagen"
+                            width={250}
+                            height={250}
+                            className="w-full md:w-[88%] h-[250px] object-cover sm:h-auto md:h-[400px] lg:h-[450px] aspect-auto rounded-l-[10px]"
+                            loading="lazy"
+
+                        />
+                    </div>
 
                 </div>
             </div>
