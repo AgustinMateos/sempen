@@ -57,23 +57,6 @@ export default function PositiveImpact() {
                 }}
             >
 
-                {/* <div 
-                    ref={missionRef} 
-                    className="text-[#FFFFFF] flex items-center text-center h-[340px] lg:h-[380px] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%] text-[30px] md:text-[32px] lg:text-[32px]"
-                >
-                    <h4 className="font-archivo flex flex-wrap justify-center text-[22px] sm:text-[26px] md:text-[30px] lg:text-[40px]  xl:text-[40px]">
-                        {OurMisionText.split(" ").map((word, index) => (
-                            <span
-                                key={index}
-                                className={`inline transition-opacity font-archivo duration-500 ${visibleMission ? 'opacity-100' : 'opacity-30'} mr-2.5`} // Cambia la visibilidad según el estado
-                                style={{ transitionDelay: `${index * 200}ms` }}
-                            >
-                                {word}
-                            </span>
-                        ))}
-                    </h4>
-                </div> */}
-
                 {/* Imagen Parallax */}
                 <Image
                     src="/sempenparallax.webp"
