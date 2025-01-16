@@ -213,9 +213,9 @@ export default function WhoWeAre() {
                         <Image
                             src="/whoSempen.jpg"
                             alt="Imagen"
-                            width={250}
+                            width={766}
                             height={250}
-                            className="w-full md:w-[88%] h-[250px] object-cover sm:h-auto md:h-[400px] lg:h-[450px] aspect-auto rounded-l-[10px]"
+                            className="w-[95%] md:w-[88%] md:h-[400px] aspect-auto object-cover lg:h-[400px] xl:h-[400px] h-[250px] rounded-l-[10px]"
                             loading="lazy"
 
                         />
@@ -226,3 +226,15 @@ export default function WhoWeAre() {
         </div>
     );
 }
+
+
+
+// width={766}
+// height={250}
+// className="w-[95%] md:w-[88%] md:h-[400px] aspect-auto object-cover lg:h-[400px] xl:h-[400px] h-[250px] rounded-r-[10px] "
+// loading="lazy"
+
+// width={250}
+//                             height={250}
+//                             className="w-full md:w-[88%] h-[250px] object-cover sm:h-auto md:h-[400px] lg:h-[450px] aspect-auto rounded-l-[10px]"
+//                             loading="lazy"

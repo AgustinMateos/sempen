@@ -77,7 +77,7 @@ export default function SustainableFuels() {
           <div className="w-full flex justify-start">
             <Image
               src="/sustFuels.jpg"
-              alt="Imagen"
+              alt="sempen combustible sustentable"
               width={766}
               height={250}
               className="w-[95%] md:w-[88%] md:h-[400px] aspect-auto object-cover lg:h-[400px] xl:h-[400px] rounded-r-[10px] h-[250px]"
