@@ -209,7 +209,7 @@ export default function WhoWeAre() {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full flex justify-center md:justify-end">
+                    <div className="w-full flex justify-end">
                         <Image
                             src="/whoSempen.jpg"
                             alt="Imagen"
