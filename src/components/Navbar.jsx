@@ -144,7 +144,7 @@ const Navbar = () => {
                     ))}
                     <div className="block px-4 py-2 mt-4">
                     <a
-                href="mailto:info@sempen.com?subject=Consulta desde la web&body=Hola, me gustaría recibir más información sobre sus servicios."
+                href="mailto:info@sempen.com?subject=Consult from the website"
                 className="bg-[#101820] font-jakarta text-[#EDEDED] w-[210px] py-2 rounded-[4px] mb-4 transition-all duration-500 block text-center"
                 aria-label={t('navbarContactUs')}
             >

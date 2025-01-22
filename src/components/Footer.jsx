@@ -60,7 +60,7 @@ export default function Footer() {
           <div className="flex flex-col items-start lg:items-end text-white lg:w-1/3">
             <p className="font-archivo">{t("footerInformation")}</p>
             <a
-              href="mailto:info@sempen.com?subject=Consulta desde la web&body=Hello!!"
+              href="mailto:info@sempen.com?subject=Consult from the website"
               className="bg-[#EDEDED] text-[#101820] px-4 py-2 mt-2 rounded font-archivo"
             >
               {t("navbarContactUs")}
